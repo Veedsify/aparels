@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Medic Apparels" />
+  <meta name="keywords" content="Medic Apparels" />
+  <meta name="author" content="Medic Apparels" />
+
+  <title>FileTree - Medic Apparels</title>
+  <meta name="description"
+    content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs. Shop now and experience the comfort and quality of our medical apparel.">
+  <meta name="keywords" content="Medical, Clothing, Medical scrubs,
+  Lab coats,
+  Medical uniforms,
+  Nurse uniforms,
+  Medical shoes,
+  
+  Antimicrobial scrubs,
+  Uniform embroidery,
+  Custom medical apparel,
+  Scrub caps">
+  <meta name="author" content=Veedsify">
+  <meta name="robots" content="index,follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Medical Apparels">
+  <meta property="og:description"
+    content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs. Shop now and experience the comfort and quality of our medical apparel.">
+  <meta property="og:url" content="<%- siteLink %>">
+  <meta property="og:image" content="<%- siteData.SITE_LOGO %>">
+  <meta property="og:type" content="website">
+
+  <!-- Facebook Meta Tags -->
+  <meta property="og:title" content="Medical Apparels">
+  <meta property="og:description"
+    content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs.">
+  <meta property="og:url" content="<%- siteLink %>" <meta property="og:image" content="<%- siteData.SITE_LOGO %>">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:title" content="Medical Apparels">
+  <meta name="twitter:description"
+    content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs.">
+  <meta name="twitter:url" content="<%- siteLink %>">
+  <meta name="twitter:image" content="<%- siteData.SITE_LOGO %>">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- App favicon -->
+  <link rel="shortcut icon" href="<%- siteData.SITE_LOGO %>" />
+
+  <!-- App css -->
+  <link href="/ADMIN/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="/ADMIN/css/icons.css" rel="stylesheet" type="text/css" />
+  <link href="/ADMIN/css/metisMenu.min.css" rel="stylesheet" type="text/css" />
+  <link href="/ADMIN/css/style.css" rel="stylesheet" type="text/css" />
+
+  <style>
+    ul.jqueryFileTree {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .jqueryFileTree li {
+      margin: 0;
+      padding: 0 0 0 16px;
+      background: url(assets/images/file.gif) no-repeat 0 0;
+      line-height: 16px;
+    }
+
+    .jqueryFileTree li.directory {
+      background: url(assets/images/folder.gif) no-repeat 0 0;
+    }
+
+    .jqueryFileTree li.expanded {
+      background: url(assets/images/folderopen.gif) no-repeat 0 0;
+    }
+
+    .jqueryFileTree a {
+      text-decoration: none;
+      display: inline-block;
+      padding: 1px 3px;
+    }
+
+    .jqueryFileTree a:hover {
+      background-color: #eee;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Top Bar Start -->
+  <%- include('includes/nav-bar', {"user": user}) %>
+    <!-- Top Bar End -->
+
+    <div class="page-wrapper">
+      <!-- Page Content-->
+      <div class="page-content">
+        <div class="container-fluid">
+          <!-- Page-Title -->
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="page-title-box">
+                <div class="float-right">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                      <a href="javascript:void(0);">Medic Apparels</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                      <a href="javascript:void(0);">Pages</a>
+                    </li>
+                    <li class="breadcrumb-item active">Starter</li>
+                  </ol>
+                  <!--end breadcrumb-->
+                </div>
+                <!--end /div-->
+                <h4 class="page-title">Starter</h4>
+              </div>
+              <!--end page-title-box-->
+            </div>
+            <!--end col-->
+          </div>
+          <!--end row-->
+          <!-- end page title end breadcrumb -->
+        </div>
+        <!-- container -->
+      </div>
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="card">
+            <div class="card-body">
+              <div id="filetree"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end page content -->
+      <footer class="footer text-center text-sm-left">
+        <div class="boxed-footer">
+          &copy;
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          Medic Apparels
+          <span class="text-muted d-none d-sm-inline-block float-right">Crafted with <i
+              class="mdi mdi-heart text-danger"></i> by
+            <a href="http://veedsify.com" target="_blank">Veedsify</a< /span>
+        </div>
+      </footer>
+      <!--end footer-->
+    </div>
+    <!-- end page-wrapper -->
+
+    <!-- jQuery  -->
+    <script src="/ADMIN/js/jquery.min.js"></script>
+    <script src="/ADMIN/js/bootstrap.bundle.min.js"></script>
+    <script src="/ADMIN/js/metisMenu.min.js"></script>
+    <script src="/ADMIN/js/waves.min.js"></script>
+    <script src="/ADMIN/js/jquery.slimscroll.min.js"></script>
+    <script src="/CUSTOM/js/axios.min.js"></script>
+    <script src="/CUSTOM/js/sweetalert.form.js"></script>
+    <script src="/CUSTOM/js/sweetalert.min.js"></script>
+    <script>const userRole = "<%- user.ROLE %>"</script>
+
+    <!-- App js -->
+    <script src="/ADMIN/js/app.js"></script>
+    <script src="/CUSTOM/js/adminScript.js"></script>
+    <script>
+      $(document).ready(function () {
+        $('#filetree').fileTree({
+          root: '/',
+          script: '/filetree',
+        });
+      });
+    </script>
+</body>
+
+</html>

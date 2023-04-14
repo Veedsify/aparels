@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Medic Apparels" />
+  <meta name="keywords" content="Medic Apparels" />
+  <meta name="author" content="Medic Apparels" />
+  <link rel="icon" href="/IMAGES/logo.png" type="image/x-icon" />
+
+  <title>Categories - Medic Apparels</title>
+  <meta name="description"
+    content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs. Shop now and experience the comfort and quality of our medical apparel.">
+  <meta name="keywords" content="Medical, Clothing, Medical scrubs,
+  Lab coats,
+  Medical uniforms,
+  Nurse uniforms,
+  Medical shoes,
+  
+  Antimicrobial scrubs,
+  Uniform embroidery,
+  Custom medical apparel,
+  Scrub caps">
+  <meta name="author" content=Veedsify">
+  <meta name="robots" content="index,follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Medical Apparels">
+  <meta property="og:description"
+    content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs. Shop now and experience the comfort and quality of our medical apparel.">
+  <meta property="og:url" content="<%- siteLink %>">
+  <meta property="og:image" content="<%- siteData.SITE_LOGO %>">
+  <meta property="og:type" content="website">
+
+  <!-- Facebook Meta Tags -->
+  <meta property="og:title" content="Medical Apparels">
+  <meta property="og:description"
+    content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs.">
+  <meta property="og:url" content="<%- siteLink %>" <meta property="og:image" content="<%- siteData.SITE_LOGO %>">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:title" content="Medical Apparels">
+  <meta name="twitter:description"
+    content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs.">
+  <meta name="twitter:url" content="<%- siteLink %>">
+  <meta name="twitter:image" content="<%- siteData.SITE_LOGO %>">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- App favicon -->
+  <link rel="shortcut icon" href="<%- siteData.SITE_LOGO %>" />
+
+  <!-- App css -->
+  <link href="/ADMIN/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="/ADMIN/css/icons.css" rel="stylesheet" type="text/css" />
+  <link href="/ADMIN/css/metisMenu.min.css" rel="stylesheet" type="text/css" />
+  <link href="/ADMIN/css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <!-- Top Bar Start -->
+  <%- include('includes/nav-bar', {"user": user}) %>
+    <!-- Top Bar End -->
+
+    <div class="page-wrapper">
+      <!-- Page Content-->
+      <div class="page-content">
+        <div class="container-fluid">
+          <!-- Page-Title -->
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="page-title-box">
+                <div class="float-right">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                      <a href="javascript:void(0);">Medic Apparels</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                      <a href="javascript:void(0);">Product</a>
+                    </li>
+                    <li class="breadcrumb-item active">Category</li>
+                  </ol>
+                  <!--end breadcrumb-->
+                </div>
+                <!--end /div-->
+                <h4 class="page-title">Category</h4>
+              </div>
+              <!--end page-title-box-->
+            </div>
+            <!--end col-->
+          </div>
+          <!--end row-->
+          <div class="row mb-3">
+            <div class="col-12">
+              <button class="btn btn-sm btn-primary float-right" id="add-category">
+                New Category <i class="dripicons-plus"></i>
+              </button>
+            </div>
+          </div>
+          <!-- end page title end breadcrumb -->
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="accordion" id="Customers_collapse">
+                <% category.forEach(element=> { %>
+
+                  <div class="card">
+                    <div class="card-body">
+                      <a class="d-lg-flex justify-content-between" data-toggle="collapse"
+                        href="#<%- element.CATEGORY_ID %>" role="button" aria-expanded="true"
+                        aria-controls="<%- element.CATEGORY_ID %>">
+                        <div class="media mb-lg-0 w-100">
+                          <img src="<%- element.CATEGORY_IMAGE %>"
+                            class="mr-3 thumb-md align-self-center rounded-circle ob-fit-square" alt="..." />
+                          <div class="media-body align-self-center">
+                            <h5 class="mt-0 mb-1"><%- element.CATEGORY_NAME %></h5>
+                          </div>
+                          <!--end media body-->
+                          <button class="btn btn-sm btn-danger float-right delete-category"
+                            data-category="<%- element.CATEGORY_ID %>">
+                            <i class="dripicons-trash"></i>
+                          </button>
+                        </div>
+                        <!--end media-->
+                      </a>
+                      <div class="collapse" id="<%- element.CATEGORY_ID %>" data-parent="#Customers_collapse">
+                        <div class="card card-body mb-0">
+                          <p>
+                            <%- element.CATEGORY_DESC %>
+                          </p>
+                        </div>
+                        <!--end card-->
+                      </div>
+                      <!--end collapse-->
+                    </div>
+                    <!--end card-body-->
+                  </div>
+                  <% }) %>
+
+              </div>
+              <!--end Customers_collapse-->
+            </div>
+            <!--end col-->
+          </div>
+          <!--end row-->
+        </div>
+        <!-- container -->
+      </div>
+      <!-- end page content -->
+      <footer class="footer text-center text-sm-left">
+        <div class="boxed-footer">
+          &copy;
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          Medic Apparels
+          <span class="text-muted d-none d-sm-inline-block float-right">Crafted with <i
+              class="mdi mdi-heart text-danger"></i> by
+            <a href="http://veedsify.com" target="_blank">Veedsify</a< /span>
+        </div>
+      </footer>
+      <!--end footer-->
+    </div>
+    <!-- end page-wrapper -->
+    <!-- jQuery  -->
+    <script src="/ADMIN/js/jquery.min.js"></script>
+    <script src="/ADMIN/js/bootstrap.bundle.min.js"></script>
+    <script src="/ADMIN/js/metisMenu.min.js"></script>
+    <script src="/ADMIN/js/waves.min.js"></script>
+    <script src="/ADMIN/js/jquery.slimscroll.min.js"></script>
+
+    <script src="/CUSTOM/js/axios.min.js"></script>
+    <script src="/CUSTOM/js/sweetalert.form.js"></script>
+    <script src="/CUSTOM/js/sweetalert.min.js"></script>
+    <script>const userRole = "<%- user.ROLE %>"</script>
+
+    <!-- App js -->
+    <script src="/ADMIN/js/app.js"></script>
+    <script src="/CUSTOM/js/adminScript.js"></script>
+</body>
+
+</html>

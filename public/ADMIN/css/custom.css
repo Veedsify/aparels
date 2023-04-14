@@ -1,0 +1,113 @@
+.editor {
+  min-height: 300px;
+}
+
+.grid-2-4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.prev-image {
+  aspect-ratio: 1/1;
+  cursor: pointer;
+  object-fit: cover;
+}
+
+.ob-fit {
+  object-fit: cover;
+}
+
+.ob-top {
+  object-position: top;
+}
+
+.ob-fit-square {
+  object-fit: cover;
+  aspect-ratio: 1/1;
+}
+
+/* SWAL LIBRARY */
+.swal-overlay {
+  background-color: rgba(29, 29, 29, 0.45);
+}
+
+.swal-footer {
+  background-color: rgb(245, 248, 250);
+  margin-top: 32px;
+  border-top: 1px solid #e9eef1;
+  overflow: hidden;
+}
+.swal-title {
+  font-size: 1.5rem;
+}
+
+.remove-all {
+  all: unset !important;
+}
+
+.swal-button {
+  padding: 7px 19px;
+  border-radius: 2px;
+  font-size: 12px;
+  box-shadow: none !important;
+  outline: none !important;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+  float: left;
+  outline: none;
+  border: none !important;
+}
+
+.swal-button:not([disabled]):hover {
+  background-color: transparent !important;
+  color: #000;
+}
+
+.swal-button:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.swal-button:hover {
+  box-shadow: none;
+  outline: none;
+  background: transparent;
+}
+
+#elm1 {
+  min-height: 300px;
+}
+
+.no-resize {
+  resize: none;
+}
+
+.curp {
+  cursor: pointer;
+}
+
+.upload-files {
+  position: fixed;
+  top: 50%;
+  transform: translate(-85%, -50%);
+  padding: 2rem;
+  transition: 0.3s ease;
+  border-radius: 0 100vmax 100vmax 0;
+  z-index: 2000;
+  cursor: pointer;
+}
+
+.upload-files img {
+  filter: hue-rotate(180deg);
+}
+
+.upload-files:hover {
+  transform: translate(0%, -50%);
+}
+
+#prev-file {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  height: 0 !important;
+  width: 0 !important;
+}

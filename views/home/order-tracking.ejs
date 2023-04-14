@@ -1,0 +1,317 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Medic Apparels">
+    <meta name="keywords" content="Medic Apparels">
+    <meta name="author" content="Medic Apparels">
+    <link rel="icon" href="<%- siteData.SITE_LOGO %>" type="image/x-icon">
+    <title>Track your order - Medic Apparels - Medical Aparells</title>
+    <meta name="description"
+        content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs. Shop now and experience the comfort and quality of our medical apparel.">
+    <meta name="keywords" content="Medical, Clothing, Medical scrubs,
+  Lab coats,
+  Medical uniforms,
+  Nurse uniforms,
+  Medical shoes,
+  
+  Antimicrobial scrubs,
+  Uniform embroidery,
+  Custom medical apparel,
+  Scrub caps">
+    <meta name="author" content=Veedsify">
+    <meta name="robots" content="index,follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Medical Apparels">
+    <meta property="og:description"
+        content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs. Shop now and experience the comfort and quality of our medical apparel.">
+    <meta property="og:url" content="<%- siteLink %>">
+    <meta property="og:image" content="<%- siteData.SITE_LOGO %>">
+    <meta property="og:type" content="website">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:title" content="Medical Apparels">
+    <meta property="og:description"
+        content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs.">
+    <meta property="og:url" content="<%- siteLink %>" <meta property="og:image" content="<%- siteData.SITE_LOGO %>">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:title" content="Medical Apparels">
+    <meta name="twitter:description"
+        content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs.">
+    <meta name="twitter:url" content="<%- siteLink %>">
+    <meta name="twitter:image" content="<%- siteData.SITE_LOGO %>">
+    <meta name="twitter:card" content="summary_large_image">
+
+
+    <!-- Icons -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/vendors/font-awesome.css">
+
+    <!--Slick slider css-->
+    <link rel="stylesheet" type="text/css" href="/assets/css/vendors/slick.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/vendors/slick-theme.css">
+
+    <!-- Animate icon -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/vendors/animate.css">
+
+    <!-- Themify icon -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/vendors/themify-icons.css">
+
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/vendors/bootstrap.css">
+
+    <!-- Theme css -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+
+    <%- include('includes/head-extra') %>
+
+
+</head>
+
+<body class="theme-color-1" style="overflow: auto !important;">
+
+
+    <!-- loader start -->
+    <%- include('includes/preloader.ejs') %>
+        <!-- loader end -->
+
+        <!-- header start -->
+        <%- include('includes/header.ejs') %>
+            <!-- header end -->
+
+            <!-- breadcrumb start -->
+            <div class="breadcrumb-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="page-title">
+                                <h2>profile</h2>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <nav aria-label="breadcrumb" class="theme-breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="/">Home</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">profile</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- breadcrumb End -->
+
+
+            <!-- tracking page start -->
+            <section class="tracking-page section-b-space">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h3>status for order no: <%= orders[0].ORDER_ID %>
+                            </h3>
+                            <div class="row border-part">
+                                <div class="col-xl-2 col-md-3 col-sm-4">
+                                    <div class="product-detail">
+                                        <img loading="lazy" src="<%= orders[0].ORDER_IMAGE %>"
+                                            class="img-fluid blur-up  lazyload" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-5 col-sm-8">
+                                    <div class="tracking-detail">
+                                        <ul>
+                                            <li>
+                                                <div class="left">
+                                                    <span>Order name</span>
+                                                </div>
+                                                <div class="right">
+                                                    <span>
+                                                        <%= orders[0].ORDER_NAME %>
+                                                    </span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="left">
+                                                    <span>customer number</span>
+                                                </div>
+                                                <div class="right">
+                                                    <span>
+                                                        <%= orders[0].USER_ID %>
+                                                    </span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="left">
+                                                    <span>order quantity</span>
+                                                </div>
+                                                <div class="right">
+                                                    <span>
+                                                        <%= new Number(orders[0].ORDER_QUANTITY)%>
+                                                    </span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="left">
+                                                    <span>order date</span>
+                                                </div>
+                                                <div class="right">
+                                                    <span>
+                                                        <%= new Date(orders[0].DATE).toDateString() %>
+                                                    </span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="left">
+                                                    <span>shipping address</span>
+                                                </div>
+                                                <div class="right">
+                                                    <span>
+                                                        <%= orders[0].ADDRESS %> <br>
+                                                            <%= orders[0].CITY %><br>
+                                                                <%= orders[0].STATE %>, <%= orders[0].POSTAL_CODE %>
+                                                    </span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="left">
+                                                    <span>carrier</span>
+                                                </div>
+                                                <div class="right">
+                                                    <span>Medic Aparells</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="left">
+                                                    <span>Tracking ID</span>
+                                                </div>
+                                                <div class="right">
+                                                    <span>
+                                                        <%= orders[0].TRANSACTION_REF %>
+                                                    </span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-xl-5 col-lg-4">
+                                    <div class="order-map">
+                                        <!-- <iframe
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55107.59629446948!2d-97.77629221286301!3d30.316123884942762!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8644ca7d7a2a6d0d%3A0x209a4c2782a39461!2sCentral%20Market!5e0!3m2!1sen!2sin!4v1607754725548!5m2!1sen!2sin"
+                                            frameborder="0" allowfullscreen="" aria-hidden="false"
+                                            tabindex="0"></iframe> -->
+                                        <iframe width="600" height="450" frameborder="0" scrolling="no"
+                                            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyD7zPpKh3GA-1-SW_vgDc_6hOYFrTWorEA&q=<%- encodeURIComponent(orders[0].CITY) %>">
+                                        </iframe>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wrapper">
+                                <div class="arrow-steps clearfix">
+                                    <div class="step done"> <span> order placed</span> </div>
+                                    <div class="step done"><span>order accepted</span> </div>
+                                    <div class="step done"> <span>preparing to ship</span> </div>
+                                    <div class="step done"><span> shipped</span> </div>
+                                    <div class="step current"><span>delivered</span> </div>
+                                </div>
+                            </div>
+                            <div class="order-table table-responsive-sm">
+                                <table class="table mb-0 table-striped table-borderless">
+                                    <thead class="">
+                                        <tr>
+                                            <th scope="col">Date</th>
+                                            <th scope="col">Time</th>
+                                            <th scope="col">Description</th>
+                                            <th scope="col">Location</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>20 Nov 2020</td>
+                                            <td>12.00 AM</td>
+                                            <td>shipped</td>
+                                            <td>california</td>
+                                        </tr>
+                                        <tr>
+                                            <td>20 Nov 2020</td>
+                                            <td>12.00 AM</td>
+                                            <td>shipping info received</td>
+                                            <td>california</td>
+                                        </tr>
+                                        <tr>
+                                            <td>20 Nov 2020</td>
+                                            <td>12.00 AM</td>
+                                            <td>origin scan</td>
+                                            <td>california</td>
+                                        </tr>
+                                        <tr>
+                                            <td>20 Nov 2020</td>
+                                            <td>12.00 AM</td>
+                                            <td>shipping info received</td>
+                                            <td>california</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- tracking page end -->
+
+
+            <!-- footer start -->
+            <%- include('includes/footer.ejs') %>
+                <!-- footer end -->
+
+                <!-- tap to top -->
+                <div class="tap-top">
+                    <div>
+                        <i class="fa fa-angle-double-up"></i>
+                    </div>
+                </div>
+                <!-- tap to top End -->
+
+
+                <!-- latest jquery-->
+                <script src="/assets/js/jquery-3.3.1.min.js"></script>
+
+                <!-- menu js-->
+                <script src="/assets/js/menu.js"></script>
+
+                <!-- lazyload js-->
+                <script src="/assets/js/lazysizes.min.js"></script>
+
+                <!-- slick js-->
+                <script src="/assets/js/slick.js"></script>
+
+                <!-- Bootstrap js-->
+                <script src="/assets/js/bootstrap.bundle.min.js"></script>
+
+                <!-- Bootstrap Notification js-->
+                <script src="/assets/js/bootstrap-notify.min.js"></script>
+
+                <!-- Theme js-->
+                <script src="/CUSTOM/js/axios.min.js"></script>
+                <script src="/CUSTOM/js/sweetalert.form.js"></script>
+                <script src="/CUSTOM/js/sweetalert.min.js"></script>
+
+                <script src="/assets/js/script.js"></script>
+                <script src="/CUSTOM/js/homeScript.js"></script>
+
+                <script>
+                    function openSearch() {
+                        document.getElementById("search-overlay").style.display = "block";
+                    }
+
+                    function closeSearch() {
+                        document.getElementById("search-overlay").style.display = "none";
+                    }
+                </script>
+
+</body>
+
+</html>

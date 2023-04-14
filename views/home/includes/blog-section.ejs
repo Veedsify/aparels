@@ -1,0 +1,46 @@
+<!-- blog section -->
+<% if (blogs.length> 0) { %>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="title1 section-t-space">
+                    <h4>From the Blog</h4>
+                    <h2 class="title-inner1">New Articles for you</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <% } %>
+        <section class="blog pt-0 ratio2_3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="slide-3 no-arrow slick-default-margin">
+                            <% for(blog of blogs){ %>
+                                <div class="col-md-12">
+                                    <a href="/blog/<%- blog.BLOG_SLUG %>">
+                                        <div class="classic-effect">
+                                            <div>
+                                                <img loading="lazy" src="<%- blog.BLOG_IMAGE %>"
+                                                    class="img-fluid blur-up  lazyload bg-img" alt="">
+                                            </div>
+                                            <span></span>
+                                        </div>
+                                    </a>
+                                    <div class="blog-details">
+                                        <h4><%- blog.DATE.toLocaleDateString('en-us',{ month: 'long' , day: '2-digit'
+                                                ,year: 'numeric' }).toUpperCase() %></h4>
+                                        <a href="/blog/<%- blog.BLOG_SLUG %>">
+                                            <p><%- blog.BLOG_TITLE %></p>
+                                        </a>
+                                        <hr class="style1">
+                                        <h6>by: <%- blog.BLOG_USER_NAME %> , 2 Likes</h6>
+                                    </div>
+                                </div>
+                                <% } %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- blog section end -->

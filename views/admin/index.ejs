@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title><%- user.NAME %> - Medic Apparels</title>
+  <meta name="description"
+    content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs. Shop now and experience the comfort and quality of our medical apparel.">
+  <meta name="keywords" content="Medical, Clothing, Medical scrubs,
+  Lab coats,
+  Medical uniforms,
+  Nurse uniforms,
+  Medical shoes,
+  
+  Antimicrobial scrubs,
+  Uniform embroidery,
+  Custom medical apparel,
+  Scrub caps">
+  <meta name="author" content=Veedsify">
+  <meta name="robots" content="index,follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Medical Apparels">
+  <meta property="og:description"
+    content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs. Shop now and experience the comfort and quality of our medical apparel.">
+
+
+  <!-- App favicon -->
+  <link rel="shortcut icon" href="<%- siteData.SITE_LOGO %>" />
+
+  <link href="/ADMIN/plugins/jvectormap/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
+
+  <!-- App css -->
+  <link href="/ADMIN/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="/ADMIN/css/icons.css" rel="stylesheet" type="text/css" />
+  <link href="/ADMIN/css/metisMenu.min.css" rel="stylesheet" type="text/css" />
+  <link href="/ADMIN/css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <!-- Top Bar Start -->
+  <%- include('includes/nav-bar', {"user": user}) %>
+    <!-- Top Bar End -->
+
+    <div class="page-wrapper">
+      <!-- Page Content-->
+      <div class="page-content">
+        <div class="container-fluid">
+          <!-- Page-Title -->
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="page-title-box">
+                <div class="float-right">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                      <a href="javascript:void(0);">Medic Apparels</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                      <a href="javascript:void(0);">Ecommerce</a>
+                    </li>
+                    <li class="breadcrumb-item active">Dashboard</li>
+                  </ol>
+                  <!--end breadcrumb-->
+                </div>
+                <!--end /div-->
+                <h4 class="page-title">Dashboard</h4>
+              </div>
+              <!--end page-title-box-->
+            </div>
+            <!--end col-->
+          </div>
+          <!--end row-->
+          <!-- end page title end breadcrumb -->
+          <div class="row">
+            <div class="col-lg-3">
+              <div class="card card-eco">
+                <div class="card-body">
+                  <h4 class="title-text mt-0">Total Users</h4>
+                  <div class="d-flex justify-content-between">
+                    <h3 class="font-weight-bold">3</h3>
+                    <i class="dripicons-user-group card-eco-icon text-pink align-self-center"></i>
+                  </div>
+                </div>
+                <!--end card-body-->
+              </div>
+              <!--end card-->
+            </div>
+            <!--end col-->
+            <div class="col-lg-3">
+              <div class="card card-eco">
+                <div class="card-body">
+                  <h4 class="title-text mt-0">Pending Orders</h4>
+                  <div class="d-flex justify-content-between">
+                    <h3 class="font-weight-bold">10k</h3>
+                    <i class="dripicons-cart card-eco-icon text-secondary align-self-center"></i>
+                  </div>
+                </div>
+                <!--end card-body-->
+              </div>
+              <!--end card-->
+            </div>
+            <!--end col-->
+            <div class="col-lg-3">
+              <div class="card card-eco">
+                <div class="card-body">
+                  <h4 class="title-text mt-0">Delivered Orders</h4>
+                  <div class="d-flex justify-content-between">
+                    <h3 class="font-weight-bold">8400</h3>
+                    <i class="dripicons-jewel card-eco-icon text-warning align-self-center"></i>
+                  </div>
+                </div>
+                <!--end card-body-->
+              </div>
+              <!--end card-->
+            </div>
+            <!--end col-->
+            <div class="col-lg-3">
+              <div class="card card-eco">
+                <div class="card-body">
+                  <h4 class="title-text mt-0">Product Count</h4>
+                  <div class="d-flex justify-content-between">
+                    <h3 class="font-weight-bold">$1590</h3>
+
+                    <i class="dripicons-wallet card-eco-icon text-success align-self-center"></i>
+                  </div>
+                </div>
+                <!--end card-body-->
+              </div>
+              <!--end card-->
+            </div>
+            <!--end col-->
+          </div>
+          <div class="row">
+
+            <!--end col-->
+            <div class="col-lg-3">
+              <div class="card card-eco">
+                <div class="card-body">
+                  <h4 class="title-text mt-0">Impressions</h4>
+                  <div class="d-flex justify-content-between">
+                    <h3 class="font-weight-bold">10k</h3>
+                    <i class="dripicons-preview card-eco-icon text-secondary align-self-center"></i>
+                  </div>
+                </div>
+                <!--end card-body-->
+              </div>
+              <!--end card-->
+            </div>
+            <div class="col-lg-3">
+              <div class="card card-eco">
+                <div class="card-body">
+                  <h4 class="title-text mt-0">Visits Today</h4>
+                  <div class="d-flex justify-content-between">
+                    <h3 class="font-weight-bold"><%- visitsToday %></h3>
+                    <i class="dripicons-user-group card-eco-icon text-pink align-self-center"></i>
+                  </div>
+                </div>
+                <!--end card-body-->
+              </div>
+              <!--end card-->
+            </div>
+            <!--end col-->
+            <div class="col-lg-3">
+              <div class="card card-eco">
+                <div class="card-body">
+                  <h4 class="title-text mt-0">Today's Revenue</h4>
+                  <div class="d-flex justify-content-between">
+                    <h3 class="font-weight-bold">8400</h3>
+                    <i class="dripicons-wallet card-eco-icon text-success align-self-center"></i>
+                  </div>
+                </div>
+                <!--end card-body-->
+              </div>
+              <!--end card-->
+            </div>
+            <!--end col-->
+            <div class="col-lg-3">
+              <div class="card card-eco">
+                <div class="card-body">
+                  <h4 class="title-text mt-0">Total Revenue</h4>
+                  <div class="d-flex justify-content-between">
+                    <h3 class="font-weight-bold">$1590</h3>
+
+                    <i class="dripicons-wallet card-eco-icon text-success align-self-center"></i>
+                  </div>
+                </div>
+                <!--end card-body-->
+              </div>
+              <!--end card-->
+            </div>
+            <!--end col-->
+          </div>
+          <!--end row-->
+
+          <div class="row">
+            <div class="col-12">
+              <div class="card">
+                <div class="card-body order-list">
+                  <h4 class="header-title mt-0 mb-3">Order List</h4>
+                  <div class="table-responsive">
+                    <table class="table table-hover mb-0">
+                      <thead class="thead-light">
+                        <tr>
+                          <th class="border-top-0">Product</th>
+                          <th class="border-top-0">Pro Name</th>
+                          <th class="border-top-0">Order Date/Time</th>
+                          <th class="border-top-0">Pcs.</th>
+                          <th class="border-top-0">Amount ($)</th>
+                          <th class="border-top-0">Status</th>
+                        </tr>
+                        <!--end tr-->
+                      </thead>
+                      <tbody>
+                        <!--end tr-->
+                        <tr>
+                          <td>
+                            <img class="" src="/ADMIN/images/products/img-2.png" alt="user" />
+                          </td>
+                          <td>Watch</td>
+                          <td>13/03/2019 1:09 PM</td>
+                          <td>180</td>
+                          <td>$970</td>
+                          <td>
+                            <span class="badge badge-boxed badge-soft-danger">Delivered</span>
+                          </td>
+                        </tr>
+                        <!--end tr-->
+                      </tbody>
+                    </table>
+                    <!--end table-->
+                  </div>
+                  <!--end /div-->
+                </div>
+                <!--end card-body-->
+              </div>
+              <!--end card-->
+            </div>
+            <!--end col-->
+          </div>
+          <!--end row-->
+        </div>
+        <!-- container -->
+      </div>
+
+      <!-- end page content -->
+      <footer class="footer text-center text-sm-left">
+        <div class="boxed-footer">
+          &copy;
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          Medic Apparels
+          <span class="text-muted d-none d-sm-inline-block float-right">Crafted with <i
+              class="mdi mdi-heart text-danger"></i> by
+            <a href="http://veedsify.com" target="_blank">Veedsify</a< /span>
+        </div>
+      </footer>
+      <!--end footer-->
+    </div>
+    <!-- end page-wrapper -->
+
+    <!-- jQuery  -->
+    <script src="/ADMIN/js/jquery.min.js"></script>
+    <script src="/ADMIN/js/bootstrap.bundle.min.js"></script>
+    <script src="/ADMIN/js/metisMenu.min.js"></script>
+    <script src="/ADMIN/js/waves.min.js"></script>
+    <script src="/ADMIN/js/jquery.slimscroll.min.js"></script>
+    <script src="/CUSTOM/js/axios.min.js"></script>
+    <script src="/CUSTOM/js/sweetalert.form.js"></script>
+    <script src="/CUSTOM/js/sweetalert.min.js"></script>
+    <script>const userRole = "<%- user.ROLE %>"</script>
+
+    <script src="/ADMIN/plugins/moment/moment.js"></script>
+    <script src="/ADMIN/plugins/apexcharts/apexcharts.min.js"></script>
+    <script src="/ADMIN/plugins/jvectormap/jquery-jvectormap-2.0.2.min.js"></script>
+    <script src="/ADMIN/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+    <script src="/ADMIN/pages/jquery.eco_dashboard.init.js"></script>
+
+    <!-- App js -->
+    <script src="/ADMIN/js/app.js"></script>
+    <script src="/CUSTOM/js/adminScript.js"></script>
+</body>
+
+</html>

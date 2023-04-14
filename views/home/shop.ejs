@@ -1,0 +1,366 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Medic Apparels">
+    <meta name="keywords" content="Medic Apparels">
+    <meta name="author" content="Medic Apparels">
+    <link rel="icon" href="<%- siteData.SITE_LOGO %>" type="image/x-icon">
+    <title>Our Shop - Medic Apparels - Medical Aparells</title>
+    <meta name="description"
+        content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs. Shop now and experience the comfort and quality of our medical apparel.">
+    <meta name="keywords" content="Medical, Clothing, Medical scrubs,
+  Lab coats,
+  Medical uniforms,
+  Nurse uniforms,
+  Medical shoes,
+  
+  Antimicrobial scrubs,
+  Uniform embroidery,
+  Custom medical apparel,
+  Scrub caps">
+    <meta name="author" content=Veedsify">
+    <meta name="robots" content="index,follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Medical Apparels">
+    <meta property="og:description"
+        content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs. Shop now and experience the comfort and quality of our medical apparel.">
+    <meta property="og:url" content="<%- siteLink %>">
+    <meta property="og:image" content="<%- siteData.SITE_LOGO %>">
+    <meta property="og:type" content="website">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:title" content="Medical Apparels">
+    <meta property="og:description"
+        content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs.">
+    <meta property="og:url" content="<%- siteLink %>" <meta property="og:image" content="<%- siteData.SITE_LOGO %>">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:title" content="Medical Apparels">
+    <meta name="twitter:description"
+        content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs.">
+    <meta name="twitter:url" content="<%- siteLink %>">
+    <meta name="twitter:image" content="<%- siteData.SITE_LOGO %>">
+    <meta name="twitter:card" content="summary_large_image">
+
+
+    <!-- Icons -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/vendors/font-awesome.css">
+
+    <!--Slick slider css-->
+    <link rel="stylesheet" type="text/css" href="/assets/css/vendors/slick.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/vendors/slick-theme.css">
+
+    <!-- Animate icon -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/vendors/animate.css">
+
+    <!-- Price range icon -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/vendors/price-range.css">
+
+    <!-- Themify icon -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/vendors/themify-icons.css">
+
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/vendors/bootstrap.css">
+
+    <!-- Theme css -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+
+    <%- include('includes/head-extra') %>
+
+</head>
+
+<body class="theme-color-1" style="overflow: auto !important;">
+
+    <!-- loader start -->
+    <%- include('includes/preloader') %>
+        <!-- loader end -->
+        <!-- header start -->
+        <%- include('includes/header') %>
+            <!-- header end -->
+
+
+            <!-- breadcrumb start -->
+            <div class="breadcrumb-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="page-title">
+                                <h2>collection</h2>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <nav aria-label="breadcrumb" class="theme-breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="/">home</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">collection</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- breadcrumb end -->
+
+
+            <!-- section start -->
+            <section class="section-b-space ratio_asos">
+                <div class="collection-wrapper">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-3 collection-filter">
+                                <!-- side-bar colleps block stat -->
+                                <div class="collection-filter-block">
+                                    <!-- brand filter start -->
+                                    <div class="collection-mobile-back"><span class="filter-back"><i
+                                                class="fa fa-angle-left" aria-hidden="true"></i> back</span></div>
+                                    <div class="collection-collapse-block open">
+                                        <h3 class="collapse-block-title">Category</h3>
+                                        <div class="collection-collapse-block-content">
+                                            <div class="collection-brand-filter">
+                                                <% for(category of categories){ %>
+                                                    <div class="form-check collection-filter-checkbox d-flex">
+                                                        <input type="checkbox" class="form-check-input shop-category"
+                                                            id="<%- category.CATEGORY_NAME %>"
+                                                            value="<%- category.CATEGORY_NAME %>">
+                                                        <label class="form-check-label"
+                                                            for="<%- category.CATEGORY_NAME %>"><%-
+                                                                category.CATEGORY_NAME %></label>
+                                                    </div>
+                                                    <% } %>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- color filter start here -->
+                                    <div class="collection-collapse-block open">
+                                        <h3 class="collapse-block-title">colors</h3>
+                                        <div class="collection-collapse-block-content">
+                                            <div class="color-selector">
+                                                <ul>
+                                                    <li data-color="blue" class="productColors product-blue active">
+                                                    </li>
+                                                    <li data-color="green" class="productColors product-green"></li>
+                                                    <li data-color="red" class="productColors product-red"></li>
+                                                    <li data-color="black" class="productColors product-black"></li>
+                                                    <li data-color="white" class="productColors product-white"></li>
+                                                    <li data-color="yellow" class="productColors product-yellow"></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- size filter start here -->
+                                    <div class="collection-collapse-block border-0 open">
+                                        <h3 class="collapse-block-title">size</h3>
+                                        <div class="collection-collapse-block-content">
+                                            <div class="collection-brand-filter">
+                                                <div class="form-check collection-filter-checkbox">
+                                                    <input type="checkbox" class="form-check-input sizes" id="small"
+                                                        value="small">
+                                                    <label class="form-check-label" for="small">s</label>
+                                                </div>
+                                                <div class="form-check collection-filter-checkbox">
+                                                    <input type="checkbox" class="form-check-input sizes" id="medium"
+                                                        value="medium">
+                                                    <label class="form-check-label" for="medium">m</label>
+                                                </div>
+                                                <div class="form-check collection-filter-checkbox">
+                                                    <input type="checkbox" class="form-check-input sizes" id="large"
+                                                        value="large">
+                                                    <label class="form-check-label" for="large">l</label>
+                                                </div>
+                                                <div class="form-check collection-filter-checkbox">
+                                                    <input type="checkbox" class="form-check-input sizes"
+                                                        id="extra_large" value="extra_large">
+                                                    <label class="form-check-label" for="extra_large">xl</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-column justify-content-center">
+                                        <button class="btn btn-sm btn-solid">Apply Filter</button>
+                                    </div>
+                                    <!-- price filter start here -->
+                                </div>
+                                <!-- side-bar banner end here -->
+                            </div>
+                            <div class="collection-content col">
+                                <div class="page-main-content">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="collection-product-wrapper">
+                                                <div class="product-top-filter">
+                                                    <div class="container-fluid p-0">
+                                                        <div class="row">
+                                                            <div class="col-12">
+                                                                <div class="product-filter-content">
+                                                                    <div class="search-count">
+                                                                        <h5>Showing All
+                                                                            Products</h5>
+                                                                    </div>
+                                                                    <div class="collection-grid-view">
+                                                                        <ul>
+                                                                            <li><img loading="lazy"
+                                                                                    src="/assets/images/icon/2.png"
+                                                                                    alt=""
+                                                                                    class="product-2-layout-view"></li>
+                                                                            <li><img loading="lazy"
+                                                                                    src="/assets/images/icon/3.png"
+                                                                                    alt=""
+                                                                                    class="product-3-layout-view"></li>
+                                                                            <li><img loading="lazy"
+                                                                                    src="/assets/images/icon/4.png"
+                                                                                    alt=""
+                                                                                    class="product-4-layout-view"></li>
+                                                                            <li><img loading="lazy"
+                                                                                    src="/assets/images/icon/6.png"
+                                                                                    alt=""
+                                                                                    class="product-6-layout-view"></li>
+                                                                        </ul>
+                                                                    </div>
+                                                                    <div class="product-page-per-view">
+                                                                        <select class="list-product">
+                                                                            <option value="25">25 Products Per
+                                                                                Page</option>
+                                                                            <option value="50">50 Products Per
+                                                                                Page</option>
+                                                                            <option value="100">100 Products Per
+                                                                                Page</option>
+                                                                            <option value="all">All Products
+                                                                            </option>
+                                                                        </select>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product-wrapper-grid">
+                                                    <div class="row margin-res">
+                                                        <% if(getLatest && getLatest.length> 0 ){ %>
+                                                            <% for(let tab1 of getLatest ){ %>
+                                                                <div class="col-xl-3 col-6 col-grid-box">
+                                                                    <div class="product-box">
+                                                                        <div class="img-wrapper">
+                                                                            <div class="front">
+                                                                                <a href="/product/<%- tab1.SLUG_ID  %>"><img
+                                                                                        loading="lazy" loading="lazy"
+                                                                                        src="<%- tab1.MAIN_IMAGE  %>"
+                                                                                        class="img-fluid blur-up bg-img"
+                                                                                        alt="" /></a>
+                                                                            </div>
+                                                                            <div class="back">
+                                                                                <a href="/product/<%- tab1.SLUG_ID  %>"><img
+                                                                                        loading="lazy" loading="lazy"
+                                                                                        src="<%- tab1.IMAGE_1  %>"
+                                                                                        class="img-fluid blur-up bg-img"
+                                                                                        alt="" /></a>
+                                                                            </div>
+                                                                            <div class="cart-info cart-wrap"></div>
+                                                                        </div>
+                                                                        <div class="product-detail">
+                                                                            <div class="rating">
+                                                                                <i class="fa fa-star"></i> <i
+                                                                                    class="fa fa-star"></i>
+                                                                                <i class="fa fa-star"></i> <i
+                                                                                    class="fa fa-star"></i>
+                                                                                <i class="fa fa-star"></i>
+                                                                            </div>
+                                                                            <a href="/product/<%- tab1.SLUG_ID  %>">
+                                                                                <h6><%- tab1.PRODUCT_NAME %></h6>
+                                                                            </a>
+                                                                            <h4>
+                                                                                <%- tab1.PRODUCT_CURRENCY %><%-
+                                                                                        tab1.PRODUCT_PRICE.toLocaleString()
+                                                                                        %>
+                                                                            </h4>
+                                                                            <ul class="color-variant">
+                                                                                <%
+                                                                                    JSON.parse(tab1.PRODUCT_COLOR).forEach((color)=>
+                                                                                    { %> <% if (color !==null) { %>
+                                                                                        <li
+                                                                                            class="product-<%- color %>">
+                                                                                        </li>
+                                                                                        <% } %>
+                                                                                            <% }) %>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <% } %>
+                                                                    <% }else{ %>
+                                                                        <h2>No Product to Display</h2>
+                                                                        <% } %>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- section End -->
+
+
+            <!-- footer start -->
+            <%- include('includes/footer.ejs') %>
+                <!-- footer end -->
+
+                <!-- theme setting -->
+
+
+                <!-- tap to top start -->
+                <div class="tap-top">
+                    <div><i class="fa fa-angle-double-up"></i></div>
+                </div>
+                <!-- tap to top end -->
+
+
+                <!-- latest jquery-->
+                <script src="/assets/js/jquery-3.3.1.min.js"></script>
+
+                <!-- menu js-->
+                <script src="/assets/js/menu.js"></script>
+
+                <!-- lazyload js-->
+                <script src="/assets/js/lazysizes.min.js"></script>
+
+                <!-- price range js -->
+                <script src="/assets/js/price-range.js"></script>
+
+                <!-- slick js-->
+                <script src="/assets/js/slick.js"></script>
+
+                <!-- Bootstrap js-->
+                <script src="/assets/js/bootstrap.bundle.min.js"></script>
+
+                <!-- Bootstrap Notification js-->
+                <script src="/assets/js/bootstrap-notify.min.js"></script>
+
+                <!-- Theme js-->
+                <script src="/CUSTOM/js/axios.min.js"></script>
+                <script src="/CUSTOM/js/sweetalert.form.js"></script>
+                <script src="/CUSTOM/js/sweetalert.min.js"></script>
+
+                <script src="/assets/js/script.js"></script>
+                <script src="/CUSTOM/js/homeScript.js"></script>
+
+                <script>
+                    function openSearch() {
+                        document.getElementById("search-overlay").style.display = "block";
+                    }
+
+                    function closeSearch() {
+                        document.getElementById("search-overlay").style.display = "none";
+                    }
+                </script>
+</body>
+
+</html>

@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Medic Apparels" />
+  <meta name="keywords" content="Medic Apparels" />
+  <meta name="author" content="Medic Apparels" />
+
+
+  <title>Configure home - Medic Apparels</title>
+  <meta name="description"
+    content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs. Shop now and experience the comfort and quality of our medical apparel.">
+  <meta name="keywords" content="Medical, Clothing, Medical scrubs,
+  Lab coats,
+  Medical uniforms,
+  Nurse uniforms,
+  Medical shoes,
+  
+  Antimicrobial scrubs,
+  Uniform embroidery,
+  Custom medical apparel,
+  Scrub caps">
+  <meta name="author" content=Veedsify">
+  <meta name="robots" content="index,follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Medical Apparels">
+  <meta property="og:description"
+    content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs. Shop now and experience the comfort and quality of our medical apparel.">
+  <meta property="og:url" content="<%- siteLink %>">
+  <meta property="og:image" content="<%- siteData.SITE_LOGO %>">
+  <meta property="og:type" content="website">
+
+  <!-- Facebook Meta Tags -->
+  <meta property="og:title" content="Medical Apparels">
+  <meta property="og:description"
+    content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs.">
+  <meta property="og:url" content="<%- siteLink %>" <meta property="og:image" content="<%- siteData.SITE_LOGO %>">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:title" content="Medical Apparels">
+  <meta name="twitter:description"
+    content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs.">
+  <meta name="twitter:url" content="<%- siteLink %>">
+  <meta name="twitter:image" content="<%- siteData.SITE_LOGO %>">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- App favicon -->
+  <link rel="shortcut icon" href="<%- siteData.SITE_LOGO %>" />
+
+  <!-- App css -->
+  <link href="/ADMIN/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="/ADMIN/css/icons.css" rel="stylesheet" type="text/css" />
+  <link href="/ADMIN/css/metisMenu.min.css" rel="stylesheet" type="text/css" />
+  <link href="/ADMIN/css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <!-- Top Bar Start -->
+  <%- include('includes/nav-bar', {"user": user}) %>
+    <!-- Top Bar End -->
+
+    <div class="page-wrapper">
+      <!-- Page Content-->
+      <div class="page-content">
+        <div class="container-fluid">
+          <!-- Page-Title -->
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="page-title-box">
+                <div class="float-right">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                      <a href="javascript:void(0);">Medic Apparels</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                      <a href="javascript:void(0);">Configuration</a>
+                    </li>
+                    <li class="breadcrumb-item active">Home Page</li>
+                  </ol>
+                  <!--end breadcrumb-->
+                </div>
+                <!--end /div-->
+                <h4 class="page-title">General Settings Page</h4>
+              </div>
+              <!--end page-title-box-->
+            </div>
+            <!--end col-->
+          </div>
+          <!--end row-->
+          <!-- end page title end breadcrumb -->
+        </div>
+        <!-- container -->
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="card">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="card">
+                      <div class="card-body">
+                        <h4 class="mt-0 header-title">Settings</h4>
+                        <p class="text-muted mb-3">These settings reflect on all pages
+                        </p>
+                        <form class="row" action="/admin/pages/home" method="post" enctype="multipart/form-data">
+                          <div class="col-lg-6">
+                            <div class="form-group row">
+                              <label for="siteName" class="col-sm-2 col-form-label text-right">Site
+                                Name</label>
+                              <div class="col-sm-10">
+                                <input class="form-control" type="text" value="<%- siteData.SITE_NAME %>" id="siteName"
+                                  name="siteName">
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label for="siteDesc" class="col-sm-2 col-form-label text-left">
+                                Description</label>
+                              <div class="col-sm-10">
+                                <textarea class="form-control" name="siteDesc" type="text" value=""
+                                  id="siteDesc"><%- siteData.SITE_FOOTER_DESC %></textarea>
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label for="siteLogo" class="col-sm-2 col-form-label text-right">Site Logo</label>
+                              <div class="col-sm-10">
+                                <input class="form-control" type="file" value="" name="siteLogo" id="siteLogo">
+                                <img src="<%- siteData.SITE_LOGO %>" alt="" class="img-fluid m-2 img-thumbnail"
+                                  width="100">
+                              </div>
+                            </div>
+
+                            <hr>
+                            <div class="form-group row">
+                              <label for="homeBannerImage1" class="col-sm-2 col-form-label text-right">Home Page Banner
+                                Image
+                                1</label>
+                              <div class="col-sm-10">
+                                <input class="form-control" name="homeBannerImage1" type="file" value=""
+                                  id="homeBannerImage1">
+                                <img src="<%- siteData.HOME_IMAGE_1 %>" alt="" class="img-fluid m-2 img-thumbnail"
+                                  width="100">
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label for="homeBannerText1" class="col-sm-2 col-form-label text-right">Home Banner
+                                Text 1 </label>
+                              <div class="col-sm-10">
+                                <input class="form-control" name="homeBannerText1" type="text"
+                                  value="<%- siteData.HOME_TEXT_1 %>" id="homeBannerText1">
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label for="homeBannerText2" class="col-sm-2 col-form-label text-right">Home Banner
+                                Text 2 </label>
+                              <div class="col-sm-10">
+                                <input class="form-control" name="homeBannerText2" type="text"
+                                  value="<%- siteData.HOME_TEXT_2 %>" id="homeBannerText2">
+                              </div>
+                            </div>
+
+                            <hr>
+                            <div class="form-group row">
+                              <label for="secondBannerImage" class="col-sm-2 col-form-label text-right">Second Page
+                                Banner Image
+                              </label>
+                              <div class="col-sm-10">
+                                <input class="form-control" name="secondBannerImage" type="file" value=""
+                                  id="secondBannerImage">
+                                <img src="<%- siteData.HOME_IMAGE_2 %>" alt="" class="img-fluid m-2 img-thumbnail"
+                                  width="100">
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label for="secondBannerText1" class="col-sm-2 col-form-label text-right">Second Banner
+                                Text 2 </label>
+                              <div class="col-sm-10">
+                                <input class="form-control" name="secondBannerText1" type="text"
+                                  value="<%- siteData.HOME_TEXT_4 %>" id="secondBannerText1">
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label for="secondBannerText2" class="col-sm-2 col-form-label text-right">Second Banner
+                                Text 2 </label>
+                              <div class="col-sm-10">
+                                <input class="form-control" name="secondBannerText2" type="text"
+                                  value="<%- siteData.HOME_TEXT_3 %>" id="secondBannerText2">
+                              </div>
+                            </div>
+
+                            <hr>
+                            <div class="form-group row">
+                              <label for="homeFeaturedIMage" class="col-sm-2 col-form-label text-right">Home Featured
+                                Category
+                                1</label>
+                              <div class="col-sm-10">
+                                <input class="form-control" name="homeFeaturedIMage" type="file" value=""
+                                  id="homeFeaturedIMage">
+                                <img src="<%- siteData.HOME_MEN_IMAGE %>" alt="" class="img-fluid m-2 img-thumbnail"
+                                  width="100">
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label for="homeFeaturedText1" class="col-sm-2 col-form-label text-right">Home
+                                Featured Text 1 </label>
+                              <div class="col-sm-10">
+                                <input class="form-control" name="homeFeaturedText1" type="text"
+                                  value="<%- siteData.HOME_MEN_TEXT %>" id="homeFeaturedText1">
+                              </div>
+                            </div>
+                            <hr>
+
+                            <div class="form-group row">
+                              <label for="homeFeaturedIMage2" class="col-sm-2 col-form-label text-right">Home Featured
+                                Category
+                                2</label>
+                              <div class="col-sm-10">
+                                <input class="form-control" name="homeFeaturedIMage2" type="file" value=""
+                                  id="homeFeaturedIMage2 ">
+                                <img src="<%- siteData.HOME_WOMEN_IMAGE %>" alt="" class="img-fluid m-2 img-thumbnail"
+                                  width="100">
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label for="homeFeaturedText2" class="col-sm-2 col-form-label text-right">Home
+                                Featured Text 2 </label>
+                              <div class="col-sm-10">
+                                <input class="form-control" name="homeFeaturedText2" type="text"
+                                  value="<%- siteData.HOME_WOMEN_TEXT %>" id="homeFeaturedText2">
+                              </div>
+                            </div>
+
+                          </div>
+                          <div class="col-lg-6">
+                            <hr>
+
+                            <div class="form-group row">
+                              <label for="homeLatestText" class="col-sm-2 col-form-label text-right">Home Latest
+                                Text</label>
+                              <div class="col-sm-10">
+                                <input class="form-control" value="<%- siteData.HOME_LATEST_TEXT %>" type="text"
+                                  name="homeLatestText" id="homeLatestText">
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label for="homeLatestDesc" class="col-sm-2 col-form-label text-right">Home Latest
+                                Desc</label>
+                              <div class="col-sm-10">
+                                <textarea class="form-control" name="homeLatestDesc" value=""
+                                  id="homeLatestDesc"><%- siteData.HOME_LATEST_DESC %></textarea>
+                              </div>
+                            </div>
+                            <hr>
+                            <div class="form-group row">
+                              <label for="homeParalaxImage" class="col-sm-2 col-form-label text-right">Home
+                                Paralax Image</label>
+                              <div class="col-sm-10">
+                                <input class="form-control" name="homeParalaxImage" type="file" value=""
+                                  id="homeParalaxImage">
+                                <img src="<%- siteData.HOME_PARALAX_IMAGE %>" alt="" class="img-fluid m-2 img-thumbnail"
+                                  width="100">
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label for="homeParalaxText1" class="col-sm-2 col-form-label text-right">Home Paralax
+                                Text 1</label>
+                              <div class="col-sm-10">
+                                <input class="form-control" name="homeParalaxText1" type="text"
+                                  value="<%- siteData.HOME_PARALAX_TEXT1 %>" id="homeParalaxText1">
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label for="homeParalaxText2" class="col-sm-2 col-form-label text-right">Home Paralax
+                                Text 2</label>
+                              <div class="col-sm-10">
+                                <input class="form-control" name="homeParalaxText2" type="text"
+                                  value="<%- siteData.HOME_PARALAX_TEXT2 %>" id="homeParalaxText2">
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label for="homeParalaxText3" class="col-sm-2 col-form-label text-right">Home Paralax
+                                Text 3</label>
+                              <div class="col-sm-10">
+                                <input class="form-control" name="homeParalaxText3" type="text"
+                                  value="<%- siteData.HOME_PARALAX_TEXT3 %>" id="homeParalaxText3">
+                              </div>
+                            </div>
+                            <hr>
+                            <div class="form-group row">
+                              <label for="footerAddress" class="col-sm-2 col-form-label text-right">Footer
+                                Address</label>
+                              <div class="col-sm-10">
+                                <input class="form-control" type="text" name="footerAddress"
+                                  value="<%- siteData.FOOTER_ADDRESS %>" id="footerAddress">
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label for="footerPhone" class="col-sm-2 col-form-label text-right">Footer Phone
+                                Contact</label>
+                              <div class="col-sm-10">
+                                <input class="form-control" type="tel" value="<%- siteData.FOOTER_PHONE_CONTACT %>"
+                                  name="footerPhone" id="footerPhone">
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label for="footerEmail" class="col-sm-2 col-form-label text-right">Footer Email
+                                Contact</label>
+                              <div class="col-sm-10">
+                                <input class="form-control" type="email" value="<%- siteData.FOOTER_EMAIL_CONTACT %>"
+                                  name="footerEmail" id="footerEmail">
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label for="footerFacebook" class="col-sm-2 col-form-label text-right">Footer
+                                Facebook</label>
+                              <div class="col-sm-10">
+                                <input class="form-control" type="url" name="footerFacebook"
+                                  value="<%- siteData.FOOTER_FACEBOOK %>" id="footerFacebook">
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label for="footerGoogle" class="col-sm-2 col-form-label text-right">Footer
+                                Google</label>
+                              <div class="col-sm-10">
+                                <input class="form-control" type="url" name="footerGoogle"
+                                  value="<%- siteData.FOOTER_GOOGLE %>" id="footerGoogle">
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label for="footerTwitter" class="col-sm-2 col-form-label text-right">Footer
+                                Twitter</label>
+                              <div class="col-sm-10">
+                                <input class="form-control" type="url" value="<%- siteData.FOOTER_TWITTER %>"
+                                  name="footerTwitter" id="footerTwitter">
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label for="footerInstagram" class="col-sm-2 col-form-label text-right">Footer
+                                Instagram</label>
+                              <div class="col-sm-10">
+                                <input type="url" name="footerInstagram" class="form-control" id="footerInstagram"
+                                  value="<%- siteData.FOOTER_INSTAGRAM %>" placeholder="name@example.com">
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label for="supportEmail1" class="col-sm-2 col-form-label text-right">Support
+                                Email 1</label>
+                              <div class="col-sm-10">
+                                <input type="email" class="form-control form-control-warning"
+                                  value="<%- siteData.SUPPORT_EMAIL_1 %>" id="supportEmail1" name="supportEmail1"
+                                  placeholder="name@example.com">
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label for="supportEmail2" class="col-sm-2 col-form-label text-right">Support Email
+                                2</label>
+                              <div class="col-sm-10">
+                                <input type="email" name="supportEmail2" class="form-control form-control-danger"
+                                  id="supportEmail2" value="<%- siteData.SUPPORT_EMAIL_2 %>"
+                                  placeholder="name@example.com">
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label for="supportPhone" class="col-sm-2 col-form-label text-right">Support
+                                Phone</label>
+                              <div class="col-sm-10">
+                                <input type="tel" class="form-control form-control-danger" id="supportPhone"
+                                  name="supportPhone" value="<%- siteData.SUPPORT_PHONE %>"
+                                  placeholder="name@example.com">
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label for="shippingInfo" class="col-sm-2 col-form-label text-right">Map</label>
+                              <div class="col-sm-10">
+                                <textarea type="text" class="form-control form-control-danger" id="shippingInfo"
+                                  name="shippingInfo" placeholder=""><%- siteData.SHIPPING_INFO %></textarea>
+                              </div>
+                            </div>
+                          </div>
+                          <button type="submit" class="btn btn-lg d-block m-auto btn-success">Update Settings</button>
+                        </form>
+                      </div>
+                      <!--end card-body-->
+                    </div>
+                    <!--end card-->
+                  </div>
+                  <!--end col-->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end page content -->
+      <footer class="footer text-center text-sm-left">
+        <div class="boxed-footer">
+          &copy;
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          Medic Apparels
+          <span class="text-muted d-none d-sm-inline-block float-right">Crafted with <i
+              class="mdi mdi-heart text-danger"></i> by
+            <a href="http://veedsify.com" target="_blank">Veedsify</a< /span>
+        </div>
+      </footer>
+      <!--end footer-->
+    </div>
+    <!-- end page-wrapper -->
+
+    <!-- jQuery  -->
+    <script src="/ADMIN/js/jquery.min.js"></script>
+    <script src="/ADMIN/js/bootstrap.bundle.min.js"></script>
+    <script src="/ADMIN/js/metisMenu.min.js"></script>
+    <script src="/ADMIN/js/waves.min.js"></script>
+    <script src="/ADMIN/js/jquery.slimscroll.min.js"></script>
+    <script src="/CUSTOM/js/axios.min.js"></script>
+    <script src="/CUSTOM/js/sweetalert.form.js"></script>
+    <script src="/CUSTOM/js/sweetalert.min.js"></script>
+    <script>
+      const userRole = "<%- user.ROLE %>"
+    </script>
+
+    <!-- App js -->
+    <script src="/ADMIN/js/app.js"></script>
+    <script src="/CUSTOM/js/adminScript.js"></script>
+</body>
+
+</html>

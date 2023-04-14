@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Medic Apparels" />
+  <meta name="keywords" content="Medic Apparels" />
+  <meta name="author" content="Medic Apparels" />
+  <link rel="icon" href="<%- siteData.SITE_LOGO %>" type="image/x-icon" />
+
+  <title>Medic Apparels - </title>
+  <meta name="description"
+    content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs. Shop now and experience the comfort and quality of our medical apparel.">
+  <meta name="keywords" content="Medical, Clothing, Medical scrubs,
+  Lab coats,
+  Medical uniforms,
+  Nurse uniforms,
+  Medical shoes,
+  
+  Antimicrobial scrubs,
+  Uniform embroidery,
+  Custom medical apparel,
+  Scrub caps">
+  <meta name="author" content=Veedsify">
+  <meta name="robots" content="index,follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Medical Apparels">
+  <meta property="og:description"
+    content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs. Shop now and experience the comfort and quality of our medical apparel.">
+  <meta property="og:url" content="<%- siteLink %>">
+  <meta property="og:image" content="<%- siteData.SITE_LOGO %>">
+  <meta property="og:type" content="website">
+
+  <!-- Facebook Meta Tags -->
+  <meta property="og:title" content="Medical Apparels">
+  <meta property="og:description"
+    content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs.">
+  <meta property="og:url" content="<%- siteLink %>" <meta property="og:image" content="<%- siteData.SITE_LOGO %>">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:title" content="Medical Apparels">
+  <meta name="twitter:description"
+    content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs.">
+  <meta name="twitter:url" content="<%- siteLink %>">
+  <meta name="twitter:image" content="<%- siteData.SITE_LOGO %>">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- App favicon -->
+  <link rel="shortcut icon" href="<%- siteData.SITE_LOGO %>" />
+
+  <!-- Rating css -->
+  <link rel="stylesheet" href="/ADMIN/plugins/rating/themes/rating.css" />
+
+  <!-- App css -->
+  <link href="/ADMIN/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="/ADMIN/css/icons.css" rel="stylesheet" type="text/css" />
+  <link href="/ADMIN/css/metisMenu.min.css" rel="stylesheet" type="text/css" />
+  <link href="/ADMIN/css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <!-- Top Bar Start -->
+  <%- include('nav/top-bar', {"user": user}) %>
+    <!-- Top Bar End -->
+
+    <div class="page-wrapper">
+      <!-- Page Content-->
+      <div class="page-content">
+        <div class="container-fluid">
+          <!-- Page-Title -->
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="page-title-box">
+                <div class="float-right">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                      <a href="javascript:void(0);">Medic Apparels</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                      <a href="javascript:void(0);">UI Kit</a>
+                    </li>
+                    <li class="breadcrumb-item active">Rating</li>
+                  </ol>
+                  <!--end breadcrumb-->
+                </div>
+                <!--end /div-->
+                <h4 class="page-title">Rating</h4>
+              </div>
+              <!--end page-title-box-->
+            </div>
+            <!--end col-->
+          </div>
+          <!--end row-->
+          <!-- end page title end breadcrumb -->
+          <div class="row">
+            <div class="col-12">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="mt-0 header-title">Ratings</h4>
+                  <p class="text-muted mb-4">
+                    jQuery Bar Rating Plugin works by transforming a standard
+                    select field into a rating widget. The rating widget can be
+                    flexibly styled with CSS. Take a look at a few examples.
+                  </p>
+                  <div class="row">
+                    <div class="col-lg-4">
+                      <div class="p-4">
+                        <h5 class="mt-0 mb-4">Default rating</h5>
+                        <select id="example-fontawesome">
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                        </select>
+                      </div>
+                    </div>
+                    <!--end col-->
+
+                    <div class="col-lg-4">
+                      <div class="p-4">
+                        <h5 class="mt-0 mb-4">CSS Stars</h5>
+                        <select id="example-css" name="rating" autocomplete="off">
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                        </select>
+                      </div>
+                    </div>
+                    <!--end col-->
+
+                    <div class="col-lg-4">
+                      <div class="p-4">
+                        <h5 class="mt-0 mb-4">
+                          Current rating: <span class="value"></span>
+                        </h5>
+                        <select id="example-fontawesome-o" name="rating" data-current-rating="5.6" autocomplete="off">
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                        </select>
+                      </div>
+                    </div>
+                    <!--end col-->
+
+                    <div class="col-lg-4">
+                      <div class="p-4">
+                        <h5 class="mt-0 mb-4">Square Rating</h5>
+                        <select id="example-square" name="rating" autocomplete="off">
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                        </select>
+                      </div>
+                    </div>
+                    <!--end col-->
+
+                    <div class="col-lg-4">
+                      <div class="p-4">
+                        <h5 class="mt-0 mb-4">Pill Rating</h5>
+                        <select id="example-pill" name="rating" autocomplete="off">
+                          <option value="A">A</option>
+                          <option value="B">B</option>
+                          <option value="C">C</option>
+                          <option value="D">D</option>
+                          <option value="E">E</option>
+                          <option value="F">F</option>
+                        </select>
+                      </div>
+                    </div>
+                    <!--end col-->
+
+                    <div class="col-lg-4">
+                      <div class="p-4">
+                        <h5 class="mt-0 mb-4">Reversed Rating</h5>
+                        <select id="example-reversed" name="rating" autocomplete="off">
+                          <option value="Strongly Agree">Strongly Agree</option>
+                          <option value="Agree">Agree</option>
+                          <option value="Neither Agree or Disagree" selected="selected">
+                            Neither Agree or Disagree
+                          </option>
+                          <option value="Disagree">Disagree</option>
+                          <option value="Strongly Disagree">
+                            Strongly Disagree
+                          </option>
+                        </select>
+                      </div>
+                    </div>
+                    <!--end col-->
+
+                    <div class="col-lg-4">
+                      <div class="p-4">
+                        <h5 class="mt-0 mb-4">Horizontal Rating</h5>
+                        <select id="example-horizontal" name="rating" autocomplete="off">
+                          <option value="10">10</option>
+                          <option value="9">9</option>
+                          <option value="8">8</option>
+                          <option value="7">7</option>
+                          <option value="6">6</option>
+                          <option value="5">5</option>
+                          <option value="4">4</option>
+                          <option value="3">3</option>
+                          <option value="2">2</option>
+                          <option value="1" selected="selected">1</option>
+                        </select>
+                      </div>
+                    </div>
+                    <!--end col-->
+
+                    <div class="col-lg-4">
+                      <div class="p-4">
+                        <h5 class="mt-0 mb-4">1/10 Rating</h5>
+                        <select id="example-1to10" name="rating" autocomplete="off">
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7" selected="selected">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                        </select>
+                      </div>
+                    </div>
+                    <!--end col-->
+
+                    <div class="col-lg-4">
+                      <div class="p-4">
+                        <h5 class="mt-0 mb-4">Movie Rating</h5>
+                        <select id="example-movie" name="rating" autocomplete="off">
+                          <option value="Bad">Bad</option>
+                          <option value="Mediocre">Mediocre</option>
+                          <option value="Good" selected="selected">Good</option>
+                          <option value="Awesome">Awesome</option>
+                        </select>
+                      </div>
+                    </div>
+                    <!--end col-->
+                  </div>
+                  <!--end row-->
+                </div>
+                <!--end card-body-->
+              </div>
+              <!--end card-->
+            </div>
+            <!-- end col -->
+          </div>
+          <!-- end row -->
+        </div>
+        <!-- container -->
+      </div>
+      <!-- end page content -->
+      <footer class="footer text-center text-sm-left">
+        <div class="boxed-footer">
+          &copy;
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          Medic Apparels
+          <span class="text-muted d-none d-sm-inline-block float-right">Crafted with <i
+              class="mdi mdi-heart text-danger"></i> by
+            <a href="http://veedsify.com" target="_blank">Veedsify</a< /span>
+        </div>
+      </footer>
+      <!--end footer-->
+    </div>
+    <!-- end page-wrapper -->
+
+    <!-- jQuery  -->
+    <script src="/ADMIN/js/jquery.min.js"></script>
+    <script src="/ADMIN/js/bootstrap.bundle.min.js"></script>
+    <script src="/ADMIN/js/metisMenu.min.js"></script>
+    <script src="/ADMIN/js/waves.min.js"></script>
+    <script src="/ADMIN/js/jquery.slimscroll.min.js"></script>
+    <script src="/CUSTOM/js/axios.min.js"></script>
+    <script src="/CUSTOM/js/sweetalert.form.js"></script>
+    <script src="/CUSTOM/js/sweetalert.min.js"></script>
+    <script>const userRole = "<%- user.ROLE %>"</script>
+
+    <!-- Bootstrap rating js -->
+    <script src="/ADMIN/plugins/rating/jquery.barrating.min.js"></script>
+    <script src="/ADMIN/pages/jquery.rating.init.js"></script>
+
+    <!-- App js -->
+    <script src="/ADMIN/js/app.js"></script>
+    <script src="/CUSTOM/js/adminScript.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Medic Apparels" />
+  <meta name="keywords" content="Medic Apparels" />
+  <meta name="author" content="Medic Apparels" />
+  <link rel="icon" href="<%- siteData.SITE_LOGO %>" type="image/x-icon" />
+
+  <title>Configure email - Medic Apparels</title>
+  <meta name="description"
+    content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs. Shop now and experience the comfort and quality of our medical apparel.">
+  <meta name="keywords" content="Medical, Clothing, Medical scrubs,
+  Lab coats,
+  Medical uniforms,
+  Nurse uniforms,
+  Medical shoes,
+  
+  Antimicrobial scrubs,
+  Uniform embroidery,
+  Custom medical apparel,
+  Scrub caps">
+  <meta name="author" content=Veedsify">
+  <meta name="robots" content="index,follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Medical Apparels">
+  <meta property="og:description"
+    content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs. Shop now and experience the comfort and quality of our medical apparel.">
+  <meta property="og:url" content="<%- siteLink %>">
+  <meta property="og:image" content="<%- siteData.SITE_LOGO %>">
+  <meta property="og:type" content="website">
+
+  <!-- Facebook Meta Tags -->
+  <meta property="og:title" content="Medical Apparels">
+  <meta property="og:description"
+    content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs.">
+  <meta property="og:url" content="<%- siteLink %>" <meta property="og:image" content="<%- siteData.SITE_LOGO %>">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:title" content="Medical Apparels">
+  <meta name="twitter:description"
+    content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs.">
+  <meta name="twitter:url" content="<%- siteLink %>">
+  <meta name="twitter:image" content="<%- siteData.SITE_LOGO %>">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- App favicon -->
+  <link rel="shortcut icon" href="<%- siteData.SITE_LOGO %>" />
+
+  <!-- App css -->
+  <link href="/ADMIN/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="/ADMIN/css/icons.css" rel="stylesheet" type="text/css" />
+  <link href="/ADMIN/css/metisMenu.min.css" rel="stylesheet" type="text/css" />
+  <link href="/ADMIN/css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <!-- Top Bar Start -->
+  <%- include('nav/top-bar', {"user": user}) %>
+    <!-- Top Bar End -->
+
+    <div class="page-wrapper">
+      <!-- Page Content-->
+      <div class="page-content">
+        <div class="container-fluid">
+          <!-- Page-Title -->
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="page-title-box">
+                <div class="float-right">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                      <a href="javascript:void(0);">Medic Apparels</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                      <a href="javascript:void(0);">Configuration</a>
+                    </li>
+                    <li class="breadcrumb-item active">Emails / Server</li>
+                  </ol>
+                  <!--end breadcrumb-->
+                </div>
+                <!--end /div-->
+                <h4 class="page-title">Email Configurations</h4>
+              </div>
+              <!--end page-title-box-->
+            </div>
+            <!--end col-->
+          </div>
+          <!--end row-->
+          <!-- end page title end breadcrumb -->
+        </div>
+        <!-- container -->
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-body">
+
+                <form id="updateEmails" method="POST">
+                  <div class="form-group">
+                    <label class="d-block mb-2 text-muted fw-bold">
+                      Admin Email:
+                    </label>
+                    <input type="email" minlength="5" maxlength="50" required name="admin_email"
+                      value="<%= emails.admin_email %>" class="form-control" id="admin_email"
+                      placeholder="example@mail.com">
+                  </div>
+
+                  <div class="form-group">
+                    <label class="d-block mb-2 text-muted fw-bold">
+                      Contact Email:
+                    </label>
+                    <input type="email" minlength="5" maxlength="50" required name="contact_email"
+                      value="<%= emails.contact_email %>" class="form-control" id="contact_email"
+                      placeholder="example@mail.com">
+                  </div>
+
+                  <div class="form-group">
+                    <label class="d-block mb-2 text-muted fw-bold">
+                      Inbox/Config Email:
+                    </label>
+                    <input type="email" minlength="5" maxlength="50" required name="inbox_email"
+                      value="<%= emails.inbox_email %>" class="form-control" id="inbox_email"
+                      placeholder="example@mail.com">
+                  </div>
+
+                  <div class="form-group">
+                    <label class="d-block mb-2 text-muted fw-bold">
+                      Customer Care Email:
+                    </label>
+                    <input type="email" minlength="5" maxlength="50" required name="customer_email"
+                      value="<%= emails.customer_email %>" class="form-control" id="customer_email"
+                      placeholder="example@mail.com">
+                  </div>
+
+                  <div class="form-group">
+                    <button type="submit" name="adminEmail" class="btn btn-success w-100 btn-lg">Save <i
+                        class="mdi mdi-content-save"></i></button>
+                  </div>
+
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-body">
+
+                <form action="" method="POST" id="updateSMTP">
+                  <div class="form-group">
+                    <label class="d-block mb-2 text-muted fw-bold">
+                      SMTP Host:
+                    </label>
+                    <input type="text" minlength="5" maxlength="50" required name="SMTP_HOST" class="form-control"
+                      id="smtp_host" placeholder="smtp.mail.com" value="<%= smtp.host %>">
+                  </div>
+
+                  <div class="form-group">
+                    <label class="d-block mb-2 text-muted fw-bold">
+                      SMTP port:
+                    </label>
+                    <input type="text" minlength="3" maxlength="50" required name="SMTP_PORT" class="form-control"
+                      id="smtp_port" placeholder="404" value="<%= smtp.port %>">
+                  </div>
+
+                  <div class="form-group">
+                    <label class="d-block mb-2 text-muted fw-bold">
+                      SMTP user:
+                    </label>
+                    <input type="text" minlength="5" maxlength="50" required name="SMTP_USER" class="form-control"
+                      id="smtp_user" placeholder="example@mail.com" value="<%= smtp.user %>">
+                  </div>
+
+                  <div class="form-group">
+                    <label class="d-block mb-2 text-muted fw-bold">
+                      SMTP Password:
+                    </label>
+                    <input type="password" minlength="1" maxlength="50" required name="SMTP_PASSWORD"
+                      class="form-control" id="smtp_password" placeholder="skdksdksjbdsckjbdcs"
+                      value="<%= smtp.password %>">
+                  </div>
+
+                  <div class="form-group">
+                    <button type="submit" name="adminEmail" class="btn btn-success w-100 btn-lg">Save <i
+                        class="mdi mdi-content-save"></i></button>
+                  </div>
+
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6"></div>
+      </div>
+      <!-- end page content -->
+      <footer class="footer text-center text-sm-left">
+        <div class="boxed-footer">
+          &copy;
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          Medic Apparels
+          <span class="text-muted d-none d-sm-inline-block float-right">Crafted with <i
+              class="mdi mdi-heart text-danger"></i> by
+            <a href="http://veedsify.com" target="_blank">Veedsify</a< /span>
+        </div>
+      </footer>
+      <!--end footer-->
+    </div>
+    <!-- end page-wrapper -->
+
+    <!-- jQuery  -->
+    <script src="/ADMIN/js/jquery.min.js"></script>
+    <script src="/ADMIN/js/bootstrap.bundle.min.js"></script>
+    <script src="/ADMIN/js/metisMenu.min.js"></script>
+    <script src="/ADMIN/js/waves.min.js"></script>
+    <script src="/ADMIN/js/jquery.slimscroll.min.js"></script>
+    <script src="/CUSTOM/js/axios.min.js"></script>
+    <script src="/CUSTOM/js/sweetalert.form.js"></script>
+    <script src="/CUSTOM/js/sweetalert.min.js"></script>
+    <script>const userRole = "<%- user.ROLE %>"</script>
+
+    <!-- App js -->
+    <script src="/ADMIN/js/app.js"></script>
+    <script src="/CUSTOM/js/adminScript.js"></script>
+</body>
+
+</html>

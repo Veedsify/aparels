@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title><%- user.NAME %> - Medic Apparels</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta content="A premium admin dashboard template by" name="description" />
+  <meta content="Medic Apparels" name="author" />
+  <meta name="description"
+    content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs. Shop now and experience the comfort and quality of our medical apparel.">
+  <meta name="keywords" content="Medical, Clothing, Medical scrubs,
+  Lab coats,
+  Medical uniforms,
+  Nurse uniforms,
+  Medical shoes,
+  
+  Antimicrobial scrubs,
+  Uniform embroidery,
+  Custom medical apparel,
+  Scrub caps">
+  <meta name="author" content=Veedsify">
+  <meta name="robots" content="index,follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Medical Apparels">
+  <meta property="og:description"
+    content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs. Shop now and experience the comfort and quality of our medical apparel.">
+  <meta property="og:url" content="<%- siteLink %>">
+  <meta property="og:image" content="<%- siteData.SITE_LOGO %>">
+  <meta property="og:type" content="website">
+
+  <!-- Facebook Meta Tags -->
+  <meta property="og:title" content="Medical Apparels">
+  <meta property="og:description"
+    content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs.">
+  <meta property="og:url" content="<%- siteLink %>" <meta property="og:image" content="<%- siteData.SITE_LOGO %>">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:title" content="Medical Apparels">
+  <meta name="twitter:description"
+    content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs.">
+  <meta name="twitter:url" content="<%- siteLink %>">
+  <meta name="twitter:image" content="<%- siteData.SITE_LOGO %>">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- App favicon -->
+  <link rel="shortcut icon" href="<%- siteData.SITE_LOGO %>" />
+
+  <!-- App css -->
+  <link href="/ADMIN/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="/ADMIN/css/icons.css" rel="stylesheet" type="text/css" />
+  <link href="/ADMIN/css/metisMenu.min.css" rel="stylesheet" type="text/css" />
+  <link href="/ADMIN/css/style.css" rel="stylesheet" type="text/css" />
+  <!-- Include the Video.js stylesheet -->
+  <link href="/CUSTOM/css/video-js.css" rel="stylesheet" />
+
+  <!-- Include the Video.js library -->
+  <script src="/CUSTOM/js/video.js"></script>
+</head>
+
+<body>
+  <!-- Top Bar Start -->
+  <%- include('nav/top-bar', {"user": user}) %>
+    <!-- Top Bar End -->
+
+    <div class="page-wrapper">
+      <!-- Page Content-->
+      <div class="page-content">
+        <div class="container-fluid">
+          <!-- Page-Title -->
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="page-title-box">
+                <div class="float-right">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                      <a href="javascript:void(0);">Medic Apparels</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                      <a href="javascript:void(0);">Product</a>
+                    </li>
+                    <li class="breadcrumb-item active">New</li>
+                  </ol>
+                  <!--end breadcrumb-->
+                </div>
+                <!--end /div-->
+                <h4 class="page-title">New Product</h4>
+              </div>
+              <!--end page-title-box-->
+            </div>
+            <!--end col-->
+          </div>
+          <!--end row-->
+          <!-- end page title end breadcrumb -->
+
+          <form method="GET" action="/<%- user.ROLE %>/product/update/<%- product.PRODUCT_ID %>" id="product-form">
+            <div class="row gap-2">
+              <div class="col-md-6">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title mb-5">Product Details</h5>
+                    <div class="form-group">
+                      <label class="fw-bold text-muted"> Product Name: </label>
+                      <input type="text" value="<%- product.PRODUCT_NAME %>" name="productName"
+                        class="form-control w-100" required minlength="5" maxlength="130" />
+                    </div>
+                    <div class="form-group">
+                      <label class="fw-bold text-muted">
+                        Product Description:
+                      </label>
+                      <textarea type="text" name="productDescription" id="elm1" class="form-control w-100 editor"
+                        minlength="5" maxlength="3000"><%- product.PRODUCT_DESCRIPTION %></textarea>
+                    </div>
+                    <div class="form-group">
+                      <label class="fw-bold text-muted">
+                        Product Category:
+                      </label>
+                      <select type="text" name="productCategory"
+                        onchange="if(this.value === 'create') window.location.href = `/<%- user.ROLE %>/product/category` "
+                        class="form-control w-100" required maxlength="40">
+                        <option value="">-- Select --</option>
+                        <% if (myCategories.length> 0) { %>
+                          <% myCategories.forEach((category)=> { %>
+                            <% if( product.PRODUCT_CATEGORY===category.CATEGORY_NAME){ %>
+                              <option selected value="<%- category.CATEGORY_NAME %>"><%- category.CATEGORY_NAME %>
+                              </option>
+                              <% }else{ %>
+                                <option value="<%- category.CATEGORY_NAME %>"><%- category.CATEGORY_NAME %></option>
+                                <% } %>
+                                  <% }); %>
+                                    <% } else { %>
+                                      <option value="create">Create a new category</option>
+                                      <% } %>
+                      </select>
+                    </div>
+                    <div class="row">
+                      <div class="form-group col-sm-6">
+                        <label class="fw-bold text-muted">
+                          Product Price:
+                        </label>
+                        <input type="number" value="<%- product.PRODUCT_PRICE %>" name="productPrice"
+                          class="form-control w-100" required minlength="1" maxlength="11" />
+                      </div>
+                      <div class="form-group col-sm-6">
+                        <label class="fw-bold text-muted">
+                          Product Currency:
+                        </label>
+                        <select type="text" name="productCurrency" class="form-control w-100" required>
+                          <option value="">-- Select --</option>
+                          <option selected value="₦" selected>NGN - Naira</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="form-group col-sm-12">
+                        <label class="fw-bold text-muted">
+                          Product Size:
+                        </label>
+                        <select type="text" name="productSize" class="form-control w-100" required>
+                          <option value="">-- Select --</option>
+                          <option value='["small"]'>S (small)</option>
+                          <option value='["medium"]'>M (medium)</option>
+                          <option value='["small","medium"]'>S & M (small and medium)</option>
+                          <option value='["large"]'>L (large)</option>
+                          <option value='["medium","large"]'>S & M (large and medium)</option>
+                          <option value='["extra_large"]'>XL (extra large)</option>
+                          <option value='["small","medium","large","extra_large"]'>S M L XL (all)</option>
+                        </select>
+                      </div>
+                      <div class="form-group col-sm-12">
+                        <label class="fw-bold text-muted">
+                          Product Color:
+                        </label>
+                        <div class="">
+                          <% const colors=JSON.parse(product.PRODUCT_COLOR) %>
+
+                            <label for="red" class="mx-2">Red
+                              <input type="checkbox" id="red" name="color_variants1" value="red"
+                                class="form-check-inline mx-1" />
+                            </label>
+
+                            <label for="blue" class="mx-2">Blue
+                              <input type="checkbox" id="blue" name="color_variants2" value="blue"
+                                class="form-check-inline mx-1" />
+                            </label>
+
+                            <label for="green" class="mx-2">Green
+                              <input type="checkbox" id="green" name="color_variants3" value="green"
+                                class="form-check-inline mx-1" />
+                            </label>
+
+                            <label for="yellow" class="mx-2">Yellow
+                              <input type="checkbox" id="yellow" name="color_variants4" value="yellow"
+                                class="form-check-inline mx-1" />
+                            </label>
+
+                            <label for="white" class="mx-2">White
+                              <input type="checkbox" id="white" name="color_variants5" value="white"
+                                class="form-check-inline mx-1" />
+                            </label>
+
+                            <label for="black" class="mx-2">Black
+                              <input type="checkbox" id="black" name="color_variants6" value="black"
+                                class="form-check-inline mx-1" />
+                            </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="fw-bold text-muted">
+                        Product Quantity:
+                      </label>
+                      <input type="number" name="productQuantity" value="<%- product.PRODUCT_QUANTITY %>"
+                        class="form-control w-100" required minlength="1" maxlength="130" />
+                    </div>
+                    <input type="submit" value="Publish" class="btn btn-success w-100 d-block m-auto btn-lg" />
+                  </div>
+                </div>
+              </div>
+              <!-- Other details -->
+              <div class="col-md-6">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title mb-3">Other Details</h5>
+                    <div class="form-group">
+                      <label class="fw-bold text-muted"> Product Video: </label>
+                      <label class="d-block">
+                        <video id="my-video" class="video-js vjs-minimalist my-video mb-2 w-100" controls
+                          preload="auto">
+                          <source src="<%- product.PRODUCT_VIDEO %>" style="aspect-ratio: 16/9 !important;"
+                            type="video/mp4" id="video-source" />
+                        </video>
+                        <label class="btn btn-primary w-100" for="video">Upload Video</label>
+                        <input type="hidden" id="video-link" value="<%- product.PRODUCT_VIDEO %>" name="video">
+                        <input type="file" accept="video/*" name="productVideo" class="d-none" id="video" />
+                      </label>
+                    </div>
+                    <div class="form-group">
+                      <label class="d-block">Product Images:</label>
+
+                      <div class="grid-2-4">
+                        <label class="m-1">
+                          <img src="<%- product.MAIN_IMAGE %>"
+                            class="img-fluid rounded rounded-2 shadow shadow-sm prev-image" />
+
+                          <input accept="image/jpeg,image/png,image/tiff,image/webp,image/gif" type="file"
+                            class="form-control " id="prev-file" />
+
+                          <input type="hidden" value="<%- product.MAIN_IMAGE %>" name="image1" class="upload">
+
+                        </label>
+                        <label class="m-1">
+                          <img src="<%- product.IMAGE_1 %>"
+                            class="img-fluid rounded rounded-2 shadow shadow-sm prev-image" />
+
+                          <input accept="image/jpeg,image/png,image/tiff,image/webp,image/gif" type="file"
+                            class="form-control " id="prev-file" />
+
+                          <input type="hidden" value="<%- product.IMAGE_1 %>" name="image2" class="upload">
+
+                        </label>
+                        <label class="m-1">
+                          <img src="<%- product.IMAGE_2 %>"
+                            class="img-fluid rounded rounded-2 shadow shadow-sm prev-image" />
+
+                          <input accept="image/jpeg,image/png,image/tiff,image/webp,image/gif" type="file"
+                            class="form-control " id="prev-file" />
+
+                          <input type="hidden" value="<%- product.IMAGE_2 %>" name="image3" class="upload">
+
+                        </label>
+
+                        <label class="m-1">
+                          <img src="<%- product.IMAGE_3 %>"
+                            class="img-fluid rounded rounded-2 shadow shadow-sm prev-image" />
+
+                          <input accept="image/jpeg,image/png,image/tiff,image/webp,image/gif" type="file"
+                            class="form-control " id="prev-file" />
+
+                          <input type="hidden" value="<%- product.IMAGE_3 %>" name="image4" class="upload">
+                        </label>
+                      </div>
+                      <small>Click On Any Image to Change</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <!-- container -->
+      </div>
+      <!-- end page content -->
+      <footer class="footer text-center text-sm-left">
+        <div class="boxed-footer">
+          &copy;
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          Medic Apparels
+          <span class="text-muted d-none d-sm-inline-block float-right">Crafted with <i
+              class="mdi mdi-heart text-danger"></i> by
+            <a href="http://veedsify.com" target="_blank">Veedsify</a< /span>
+        </div>
+      </footer>
+      <!--end footer-->
+    </div>
+    <!-- end page-wrapper -->
+
+    <!-- jQuery  -->
+    <script src="/ADMIN/js/jquery.min.js"></script>
+    <script src="/ADMIN/js/bootstrap.bundle.min.js"></script>
+    <script src="/ADMIN/js/metisMenu.min.js"></script>
+    <script src="/ADMIN/js/waves.min.js"></script>
+    <script src="/ADMIN/js/jquery.slimscroll.min.js"></script>
+    <script src="/CUSTOM/js/axios.min.js"></script>
+    <script src="/CUSTOM/js/sweetalert.form.js"></script>
+    <script src="/CUSTOM/js/sweetalert.min.js"></script>
+    <script>const userRole = "<%- user.ROLE %>"</script>
+
+    <!--Wysiwig js-->
+    <script src="/ADMIN/plugins/tinymce/tinymce.min.js"></script>
+    <script src="/ADMIN/pages/jquery.form-editor.init.js"></script>
+
+    <!-- App js -->
+    <script src="/ADMIN/js/app.js"></script>
+    <script src="/CUSTOM/js/adminScript.js"></script>
+    <script>
+      var player = videojs("my-video", {
+        autoplay: false,
+        fluid: true,
+        loop: true
+      });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,229 @@
+<div class="topbar">
+  <!-- Navbar -->
+  <nav class="topbar-main">
+    <!-- LOGO -->
+    <div class="topbar-left">
+      <a href="/vendor/" class="logo">
+        <span>
+          <img src="<%- siteData.SITE_LOGO %>" alt="logo-small" class="logo-sm" />
+        </span>
+        <span>
+          <!--                    <img src="" alt="logo-large" class="logo-lg">-->
+        </span>
+      </a>
+    </div>
+    <!--topbar-left-->
+    <!--end logo-->
+    <ul class="list-unstyled topbar-nav float-right mb-0">
+      <li class="dropdown notification-list">
+        <a class="nav-link dropdown-toggle arrow-none waves-light waves-effect" data-toggle="dropdown" href="#"
+          role="button" aria-haspopup="false" aria-expanded="false">
+          <i class="dripicons-bell noti-icon"></i>
+          <span class="badge badge-danger badge-pill noti-icon-badge">2</span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right dropdown-lg">
+          <!-- item-->
+          <h6 class="dropdown-item-text">Notifications (18)</h6>
+          <div class="slimscroll notification-list">
+            <!-- item-->
+            <a href="javascript:void(0);" class="dropdown-item notify-item active">
+              <div class="notify-icon bg-success">
+                <i class="mdi mdi-cart-outline"></i>
+              </div>
+              <p class="notify-details">
+                Your order is placed<small class="text-muted">Dummy text of the printing and typesetting
+                  industry.</small>
+              </p>
+            </a>
+            <!-- item-->
+            <a href="javascript:void(0);" class="dropdown-item notify-item">
+              <div class="notify-icon bg-warning">
+                <i class="mdi mdi-message"></i>
+              </div>
+              <p class="notify-details">
+                New Message received<small class="text-muted">You have 87 unread messages</small>
+              </p>
+            </a>
+            <!-- item-->
+            <a href="javascript:void(0);" class="dropdown-item notify-item">
+              <div class="notify-icon bg-info">
+                <i class="mdi mdi-glass-cocktail"></i>
+              </div>
+              <p class="notify-details">
+                Your item is shipped<small class="text-muted">It is a long established fact that a reader will</small>
+              </p>
+            </a>
+            <!-- item-->
+            <a href="javascript:void(0);" class="dropdown-item notify-item">
+              <div class="notify-icon bg-primary">
+                <i class="mdi mdi-cart-outline"></i>
+              </div>
+              <p class="notify-details">
+                Your order is placed<small class="text-muted">Dummy text of the printing and typesetting
+                  industry.</small>
+              </p>
+            </a>
+            <!-- item-->
+            <a href="javascript:void(0);" class="dropdown-item notify-item">
+              <div class="notify-icon bg-danger">
+                <i class="mdi mdi-message"></i>
+              </div>
+              <p class="notify-details">
+                New Message received<small class="text-muted">You have 87 unread messages</small>
+              </p>
+            </a>
+          </div>
+          <!-- All-->
+          <a href="javascript:void(0);" class="dropdown-item text-center text-primary">
+            View all <i class="fi-arrow-right"></i>
+          </a>
+        </div>
+      </li>
+      <!--end notification-list-->
+
+      <li class="dropdown">
+        <a class="nav-link dropdown-toggle waves-effect waves-light nav-user pr-0" data-toggle="dropdown" href="#"
+          role="button" aria-haspopup="false" aria-expanded="false">
+          <img src="<%- user.PROFILE_IMAGE  %>" alt="profile-user" class="ob-fit rounded-circle" />
+          <span class="ml-1 nav-user-name hidden-sm"><%- user.NAME.split(" ")[0] %> <i class=" mdi
+              mdi-chevron-down"></i>
+          </span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right">
+          <a class="dropdown-item" href="/user"><i class="dripicons-user text-muted mr-2"></i> User Profile</a>
+          <a class="dropdown-item" href="/vendor/profile"><i class="dripicons-user-group text-muted mr-2"></i>Vendor
+            Profile</a>
+          <a class="dropdown-item" href="/vendor/order"><i class="fa fa-dollar-sign text-muted mr-2"></i>Pending
+            Orders</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="/logout"><i class="dripicons-exit text-muted mr-2"></i> Logout</a>
+        </div>
+      </li>
+      <!--end dropdown-->
+      <li class="menu-item">
+        <!-- Mobile menu toggle-->
+        <a class="navbar-toggle nav-link" id="mobileToggle">
+          <div class="lines">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </a>
+        <!-- End mobile menu toggle-->
+      </li>
+      <!--end menu item-->
+    </ul>
+    <!--end topbar-nav-->
+
+    <ul class="list-unstyled topbar-nav mb-0">
+      <li class="hide-phone app-search">
+        <form role="search" class="">
+          <input type="text" placeholder="Search..." class="form-control" />
+          <a href=""><i class="fas fa-search"></i></a>
+        </form>
+      </li>
+    </ul>
+    <!--end topbar-nav-->
+  </nav>
+  <!-- end navbar-->
+  <!-- MENU Start -->
+
+  <div class="navbar-custom-menu">
+    <div class="container-fluid">
+      <div id="navigation">
+        <!-- Navigation Menu-->
+        <ul class="navigation-menu">
+          <li class="">
+            <a href="/vendor">
+              <i class="dripicons-home"></i>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <!--end has-submenu-->
+
+          <li class="has-submenu">
+            <a href="#">
+              <i class="dripicons-document"></i>
+              <span>My Products</span>
+            </a>
+            <ul class="submenu">
+              <li>
+                <a href="/vendor/product/add"><i class="dripicons-document-edit"></i>New Product</a>
+              </li>
+              <li>
+                <a href="/vendor/product"><i class="dripicons-preview"></i>My Products</a>
+              </li>
+              <li>
+                <a href="/vendor/product/category"><i class="dripicons-contract"></i>Manage Category</a>
+              </li>
+            </ul>
+            <!--end submenu-->
+          </li>
+          <!--end has-submenu-->
+          <li class="has-submenu">
+            <a href="#">
+              <i class="dripicons-jewel"></i>
+              <span>Orders</span>
+            </a>
+            <ul class="submenu">
+              <li>
+                <a href="/vendor/order"><i class="fa fa-walking"></i>Pending Orders</a>
+              </li>
+              <li>
+                <a href="/vendor/order/processing"><i class="fa fa-truck-loading"></i>Processing Orders</a>
+              </li>
+              <li>
+                <a href="/vendor/order/ready"><i class="fa fa-hand-holding"></i>Ready for Shipping Orders</a>
+              </li>
+              <li>
+                <a href="/vendor/order/shipped"><i class="dripicons-checkmark"></i>Shipped Orders</a>
+              </li>
+              <li>
+                <a href="/vendor/order/delivered"><i class="dripicons-map"></i>Delivered Orders</a>
+              </li>
+            </ul>
+            <!--end submenu-->
+          </li>
+          <!--end has-submenu-->
+
+          <li class="has-submenu">
+            <a href="#">
+              <i class="dripicons-blog"></i>
+              <span>My Blogs</span>
+            </a>
+            <ul class="submenu">
+              <li>
+                <a href="/vendor/blog/new"><i class="dripicons-blog"></i>New Post</a>
+              </li>
+              <li>
+                <a href="/vendor/blog/views"><i class="dripicons-document-edit"></i>Edit Posts</a>
+              </li>
+            </ul>
+            <!--end submenu-->
+          </li>
+          <!--end has-submenu-->
+
+          <li class="">
+            <a href="/vendor/profile">
+              <i class="dripicons-user"></i>
+              <span>Profile</span>
+            </a>
+          </li>
+          <!--end has-submenu-->
+        </ul>
+        <!-- End navigation menu -->
+      </div>
+      <!-- end navigation -->
+    </div>
+    <!-- end container-fluid -->
+  </div>
+  <!-- end navbar-custom -->
+</div>
+
+<div class="upload-files bg-info">
+  <label class="curp">
+    <input type="file" class="d-none curp" />
+    <img src="/IMAGES/uploadimg.svg" alt="" class="ob-fit-square m-auto d-block" width="80px" />
+    <a href="/vendor/upload/views" class="btn btn-success btn-sm d-block">View Uploads</a>
+  </label>
+</div>

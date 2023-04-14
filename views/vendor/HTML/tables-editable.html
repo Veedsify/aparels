@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Medic Apparels -</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta content="A premium admin dashboard template by" name="description" />
+  <meta content="Medic Apparels" name="author" />
+
+  <!-- App favicon -->
+  <link rel="shortcut icon" href="<%- siteData.SITE_LOGO %>" />
+
+  <!-- App css -->
+  <link href="/ADMIN/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="/ADMIN/css/icons.css" rel="stylesheet" type="text/css" />
+  <link href="/ADMIN/css/metisMenu.min.css" rel="stylesheet" type="text/css" />
+  <link href="/ADMIN/css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <!-- Top Bar Start -->
+  <%- include('nav/top-bar') %>
+    <!-- Top Bar End -->
+
+    <div class="page-wrapper">
+      <!-- Page Content-->
+      <div class="page-content">
+        <div class="container-fluid">
+          <!-- Page-Title -->
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="page-title-box">
+                <div class="float-right">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                      <a href="javascript:void(0);">Medic Apparels</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                      <a href="javascript:void(0);">UI Kit</a>
+                    </li>
+                    <li class="breadcrumb-item active">Edit Table</li>
+                  </ol>
+                  <!--end breadcrumb-->
+                </div>
+                <!--end /div-->
+                <h4 class="page-title">Edit Table</h4>
+              </div>
+              <!--end page-title-box-->
+            </div>
+            <!--end col-->
+          </div>
+          <!--end row-->
+          <!-- end page title end breadcrumb -->
+          <div class="row">
+            <div class="col-12">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="mt-0 header-title">Edit Table With Button</h4>
+                  <p class="text-muted mb-3">
+                    Add toolbar column with edit and delete buttons.
+                  </p>
+
+                  <table class="table mb-0" id="my-table">
+                    <thead>
+                      <tr>
+                        <th>No</th>
+                        <th>Firstname</th>
+                        <th>Lastname</th>
+                        <th>Email</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>John</td>
+                        <td>Doe</td>
+                        <td>john@example.com</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>Mary</td>
+                        <td>Moe</td>
+                        <td>mary@example.com</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>July</td>
+                        <td>Dooley</td>
+                        <td>july@example.com</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <!--end table-->
+                </div>
+                <!--end card-body-->
+              </div>
+              <!--end card-->
+            </div>
+            <!-- end col -->
+          </div>
+          <!-- end row -->
+
+          <div class="row">
+            <div class="col-12">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="mt-0 header-title">Examples</h4>
+                  <p class="text-muted mb-3">
+                    just start typing to edit, or move around with arrow keys or
+                    mouse clicks!
+                  </p>
+
+                  <table id="mainTable" class="table table-striped mb-0">
+                    <thead>
+                      <tr>
+                        <th>Name</th>
+                        <th>Cost</th>
+                        <th>Profit</th>
+                        <th>Fun</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Car</td>
+                        <td>100</td>
+                        <td>200</td>
+                        <td>0</td>
+                      </tr>
+                      <tr>
+                        <td>Bike</td>
+                        <td>330</td>
+                        <td>240</td>
+                        <td>1</td>
+                      </tr>
+                      <tr>
+                        <td>Plane</td>
+                        <td>430</td>
+                        <td>540</td>
+                        <td>3</td>
+                      </tr>
+                      <tr>
+                        <td>Yacht</td>
+                        <td>100</td>
+                        <td>200</td>
+                        <td>0</td>
+                      </tr>
+                      <tr>
+                        <td>Segway</td>
+                        <td>330</td>
+                        <td>240</td>
+                        <td>1</td>
+                      </tr>
+                    </tbody>
+                    <tfoot>
+                      <tr>
+                        <th><strong>TOTAL</strong></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                      </tr>
+                    </tfoot>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <!-- end col -->
+          </div>
+          <!-- end row -->
+        </div>
+        <!-- container -->
+      </div>
+      <!-- end page content -->
+      <footer class="footer text-center text-sm-left">
+        <div class="boxed-footer">
+          &copy;
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          Medic Apparels
+          <span class="text-muted d-none d-sm-inline-block float-right">Crafted with <i
+              class="mdi mdi-heart text-danger"></i> by
+            <a href="http://veedsify.com" target="_blank">Veedsify</a< /span>
+        </div>
+      </footer>
+      <!--end footer-->
+    </div>
+    <!-- end page-wrapper -->
+
+    <!-- jQuery  -->
+    <script src="/ADMIN/js/jquery.min.js"></script>
+    <script src="/ADMIN/js/bootstrap.bundle.min.js"></script>
+    <script src="/ADMIN/js/metisMenu.min.js"></script>
+    <script src="/ADMIN/js/waves.min.js"></script>
+    <script src="/ADMIN/js/jquery.slimscroll.min.js"></script>
+    <script src="/CUSTOM/js/axios.min.js"></script>
+    <script src="/CUSTOM/js/sweetalert.form.js"></script>
+    <script src="/CUSTOM/js/sweetalert.min.js"></script>
+    <script>const userRole = "<%- user.ROLE %>"</script>
+
+    <script src="/ADMIN/plugins/tiny-editable/mindmup-editabletable.js"></script>
+    <script src="/ADMIN/plugins/tiny-editable/numeric-input-example.js"></script>
+    <script src="/ADMIN/plugins/tabledit/jquery.tabledit.js"></script>
+    <script src="/ADMIN/pages/jquery.tabledit.init.js"></script>
+
+    <!-- App js -->
+    <script src="/ADMIN/js/app.js"></script>
+    <script src="/CUSTOM/js/adminScript.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Medic Apparels" />
+  <meta name="keywords" content="Medic Apparels" />
+  <meta name="author" content="Medic Apparels" />
+
+  <title>Order Details - Medic Apparels</title>
+  <meta name="description"
+    content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs. Shop now and experience the comfort and quality of our medical apparel.">
+  <meta name="keywords" content="Medical, Clothing, Medical scrubs,
+  Lab coats,
+  Medical uniforms,
+  Nurse uniforms,
+  Medical shoes,
+  
+  Antimicrobial scrubs,
+  Uniform embroidery,
+  Custom medical apparel,
+  Scrub caps">
+  <meta name="author" content=Veedsify">
+  <meta name="robots" content="index,follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Medical Apparels">
+  <meta property="og:description"
+    content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs. Shop now and experience the comfort and quality of our medical apparel.">
+  <meta property="og:url" content="<%- siteLink %>">
+  <meta property="og:image" content="<%- siteData.SITE_LOGO %>">
+  <meta property="og:type" content="website">
+
+  <!-- Facebook Meta Tags -->
+  <meta property="og:title" content="Medical Apparels">
+  <meta property="og:description"
+    content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs.">
+  <meta property="og:url" content="<%- siteLink %>" <meta property="og:image" content="<%- siteData.SITE_LOGO %>">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:title" content="Medical Apparels">
+  <meta name="twitter:description"
+    content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs.">
+  <meta name="twitter:url" content="<%- siteLink %>">
+  <meta name="twitter:image" content="<%- siteData.SITE_LOGO %>">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- App favicon -->
+  <link rel="shortcut icon" href="<%- siteData.SITE_LOGO %>" />
+
+  <!-- App css -->
+  <link href="/ADMIN/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="/ADMIN/css/icons.css" rel="stylesheet" type="text/css" />
+  <link href="/ADMIN/css/metisMenu.min.css" rel="stylesheet" type="text/css" />
+  <link href="/ADMIN/css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <!-- Top Bar Start -->
+  <%- include('includes/top-bar') %>
+    <!-- Top Bar End -->
+
+    <div class="page-wrapper">
+      <!-- Page Content-->
+      <div class="page-content">
+        <div class="container-fluid">
+          <!-- Page-Title -->
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="page-title-box">
+                <div class="float-right">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                      <a href="javascript:void(0);">Medic Apparels</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                      <a href="javascript:void(0);">Orders</a>
+                    </li>
+                    <li class="breadcrumb-item active">Order Details</li>
+                  </ol>
+                  <!--end breadcrumb-->
+                </div>
+                <!--end /div-->
+                <h4 class="page-title">Starter</h4>
+              </div>
+              <!--end page-title-box-->
+            </div>
+            <!--end col-->
+          </div>
+          <!--end row-->
+          <div class="row">
+            <div class="card">
+              <div class="row">
+                <div class="col-md-4">
+                  <img src="<%- orderDetail.ORDER_IMAGE %>" class="img-fluid" alt="">
+                </div>
+                <div class="col-md-4">
+                  <div class="p-2">
+                    <h3 class="card-title fw-bold">Order Details</h3>
+                    <div class="mt-3">
+                      <p class="font-14"><strong>ID:</strong> <%- orderDetail.ORDER_ID %></p>
+                      <p class="font-14"><strong>QUANTITY:</strong> <%- orderDetail.ORDER_QUANTITY %></p>
+                      <p class="font-14"><strong>PRODUCT PRICE:</strong> ₦<%-
+                          Number(parseInt(orderDetail.ORDER_PRICE).toFixed(0)).toLocaleString() %></p>
+
+                      <p class="font-14"><strong>TOTAL PRICE:</strong> ₦<%-
+                          Number(parseInt(orderDetail.FINAL_PRICE).toFixed(0)).toLocaleString() %></p>
+                      <p class="font-14"><strong>Description:</strong> <%- orderDetail.ORDER_DESC %></p>
+                      <p class="font-14"><strong>Status:</strong> &nbsp;
+                        <% const statusClasses={ "pending" : "bg-soft-warning" , "shipped" : "bg-soft-secondary"
+                          , "ready" : "bg-soft-info" , "cancelled" : "bg-soft-danger" , "delivered" : "bg-soft-success"
+                          , "processing" : "bg-soft-primary" , }; const statusTexts={ "pending" : "Pending" , "shipped"
+                          : "Shipped" , "ready" : "Ready" , "cancelled" : "Cancelled" , "delivered" : "Delivered"
+                          , "processing" : "Processing" , }; const statusClass=statusClasses[orderDetail.ORDER_STATUS]
+                          || "" ; const statusText=statusTexts[orderDetail.ORDER_STATUS] || "" ; %>
+                          <strong class="btn btn-sm <%= statusClass %> text-capitalize">
+                            <%= statusText %>
+                          </strong>
+                      </p>
+                      <p class="font-14 text-capitalize"><strong>Payment Method:</strong> <%- orderDetail.PAYMENT_TYPE
+                          %></p>
+                      <p class="font-14 text-capitalize"><strong>Shipping Method:</strong> <%-
+                          orderDetail.SHIPPING_METHOD %></p>
+                      <p class="font-14"><strong>Customer Contact:</strong> <%- orderDetail.PHONE %></p>
+                      <p class="font-14">
+                        <strong>Customer Address:</strong>
+                        <%= `${orderDetail.ADDRESS} ${orderDetail.CITY}, ${orderDetail.STATE},` %>
+                          <span class="text-capitalize"><%- orderDetail.COUNTRY %>.</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <iframe class="w-100 h-100" frameborder="0" scrolling="no"
+                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyD7zPpKh3GA-1-SW_vgDc_6hOYFrTWorEA&q=<%- encodeURIComponent(orderDetail.CITY) %>">
+                  </iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- container -->
+      </div>
+      <!-- end page content -->
+      <footer class="footer text-center text-sm-left">
+        <div class="boxed-footer">
+          &copy;
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          Medic Apparels
+          <span class="text-muted d-none d-sm-inline-block float-right">Crafted with <i
+              class="mdi mdi-heart text-danger"></i> by
+            <a href="http://veedsify.com" target="_blank">Veedsify</a< /span>
+        </div>
+      </footer>
+      <!--end footer-->
+    </div>
+    <!-- end page-wrapper -->
+
+    <!-- jQuery  -->
+    <script src="/ADMIN/js/jquery.min.js"></script>
+    <script src="/ADMIN/js/bootstrap.bundle.min.js"></script>
+    <script src="/ADMIN/js/metisMenu.min.js"></script>
+    <script src="/ADMIN/js/waves.min.js"></script>
+    <script src="/ADMIN/js/jquery.slimscroll.min.js"></script>
+    <script src="/CUSTOM/js/axios.min.js"></script>
+    <script src="/CUSTOM/js/sweetalert.form.js"></script>
+    <script src="/CUSTOM/js/sweetalert.min.js"></script>
+    <script>const userRole = "<%- user.ROLE %>"</script>
+
+    <!-- App js -->
+    <script src="/ADMIN/js/app.js"></script>
+    <script src="/CUSTOM/js/adminScript.js"></script>
+</body>
+
+</html>

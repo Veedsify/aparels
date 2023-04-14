@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title><%- blogData.BLOG_TITLE %> - Medic Apparels</title>
+  <meta name="description"
+    content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs. Shop now and experience the comfort and quality of our medical apparel.">
+  <meta name="keywords" content="Medical, Clothing, Medical scrubs,
+  Lab coats,
+  Medical uniforms,
+  Nurse uniforms,
+  Medical shoes,
+  
+  Antimicrobial scrubs,
+  Uniform embroidery,
+  Custom medical apparel,
+  Scrub caps">
+  <meta name="author" content=Veedsify">
+  <meta name="robots" content="index,follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Medical Apparels">
+  <meta property="og:description"
+    content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs. Shop now and experience the comfort and quality of our medical apparel.">
+  <meta property="og:url" content="<%- siteLink %>">
+  <meta property="og:image" content="<%- siteData.SITE_LOGO %>">
+  <meta property="og:type" content="website">
+
+  <!-- Facebook Meta Tags -->
+  <meta property="og:title" content="Medical Apparels">
+  <meta property="og:description"
+    content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs.">
+  <meta property="og:url" content="<%- siteLink %>" <meta property="og:image" content="<%- siteData.SITE_LOGO %>">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:title" content="Medical Apparels">
+  <meta name="twitter:description"
+    content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs.">
+  <meta name="twitter:url" content="<%- siteLink %>">
+  <meta name="twitter:image" content="<%- siteData.SITE_LOGO %>">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- App favicon -->
+  <link rel="shortcut icon" href="<%- siteData.SITE_LOGO %>" />
+
+  <!-- App css -->
+  <link href="/ADMIN/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="/ADMIN/css/icons.css" rel="stylesheet" type="text/css" />
+  <link href="/ADMIN/css/metisMenu.min.css" rel="stylesheet" type="text/css" />
+  <link href="/ADMIN/css/style.css" rel="stylesheet" type="text/css" />
+
+  <!-- Dropify -->
+  <link href="/ADMIN/plugins/dropify/css/dropify.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Top Bar Start -->
+  <%- include('includes/top-bar') %>
+    <!-- Top Bar End -->
+
+    <div class="page-wrapper">
+      <!-- Page Content-->
+      <div class="page-content">
+        <div class="container-fluid">
+          <!-- Page-Title -->
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="page-title-box">
+                <div class="float-right">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                      <a href="javascript:void(0);">Medic Apparels</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                      <a href="javascript:void(0);">Blog</a>
+                    </li>
+                    <li class="breadcrumb-item active">New</li>
+                  </ol>
+                  <!--end breadcrumb-->
+                </div>
+                <!--end /div-->
+                <h4 class="page-title">New Post</h4>
+              </div>
+              <!--end page-title-box-->
+            </div>
+            <!--end col-->
+          </div>
+          <!--end row-->
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="card">
+                <div class="card-body">
+                  <form action="/admin/blog/up-new-blog/<%- blogData.BLOG_ID %>" method="post"
+                    enctype="multipart/form-data" class="row">
+                    <div class="col-md-6 mb-3">
+                      <label class="text-muted fw-bold d-block">
+                        Title <small>(* required)</small>
+                        <input type="text" name="title" value="<%- blogData.BLOG_TITLE %>" class="form-control w-100"
+                          required minlength="5" maxlength="120">
+                      </label>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <label class="text-muted fw-bold d-block">
+                        Meta Description <small>(* required)</small>
+                        <input type="text" name="description" value="<%- blogData.BLOG_DESC %>"
+                          class="form-control w-100" required minlength="5" maxlength="120">
+                      </label>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <label class="text-muted fw-bold d-block">
+                        Meta Keywords <small>(* comma seperated)</small>
+                        <input type="text" name="Keywords" value="<%- blogData.BLOG_KEYWORDS %>"
+                          class="form-control w-100" required minlength="5" maxlength="120">
+                      </label>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <label class="text-muted fw-bold d-block">
+                        Category <small>(* required)</small>
+                        <input type="text" name="category" value="<%- blogData.BLOG_CATEGORY %>"
+                          class="form-control w-100" minlength="3">
+                      </label>
+                    </div>
+                    <div class="col-md-12 mb-3">
+                      <label class="text-muted fw-bold d-block">
+                        Blog Post
+                        <textarea name="htmlEditor" id="elm1" class="editor form-control w-100" cols="30"
+                          rows="10"></textarea>
+                      </label>
+                    </div>
+                    <!-- FILE UPLOAD -->
+                    <div class="col-md-12 mb-3 d-flex justify-content-center">
+                      <div class="card col-6">
+                        <div class="card-body">
+                          <h4 class="mt-0 header-title">Featured Image</h4>
+                          <label
+                            class="d-flex flex-column p-2 align-items-center justify-content-center border border-1 curp">
+                            <img src="<%- blogData.BLOG_IMAGE %>" height="200" width="300" class="mb-2 ob-fit">
+                            <small>Click to upload an image</small>
+                            <input type="file" name="image" id="blog_image" class="d-none">
+                          </label>
+                        </div><!--end card-body-->
+                      </div><!--end card-->
+                    </div>
+                    <div class="col-md-12 d-flex justify-content-center mb-2">
+                      <button type="submit" name="action" value="draft" class="btn btn-sm btn-primary w-50">
+                        Save Draft
+                        <i class="ti ti-save"></i>
+                      </button>
+                    </div>
+                    <div class="col-md-12 d-flex justify-content-center">
+                      <button type="submit" name="action" value="public" class="btn btn-sm btn-success w-50">
+                        Publish
+                        <i class="ti ti-save"></i>
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end page title end breadcrumb -->
+        </div>
+        <!-- container -->
+      </div>
+      <!-- end page content -->
+      <footer class="footer text-center text-sm-left">
+        <div class="boxed-footer">
+          &copy;
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          Medic Apparels
+          <span class="text-muted d-none d-sm-inline-block float-right">Crafted with <i
+              class="mdi mdi-heart text-danger"></i> by
+            <a href="http://veedsify.com" target="_blank">Veedsify</a< /span>
+        </div>
+      </footer>
+      <!--end footer-->
+    </div>
+    <!-- end page-wrapper -->
+
+    <!-- jQuery  -->
+    <script src="/ADMIN/js/jquery.min.js"></script>
+    <script src="/ADMIN/js/bootstrap.bundle.min.js"></script>
+    <script src="/ADMIN/js/metisMenu.min.js"></script>
+    <script src="/ADMIN/js/waves.min.js"></script>
+    <script src="/ADMIN/js/jquery.slimscroll.min.js"></script>
+    <script src="/CUSTOM/js/axios.min.js"></script>
+    <script src="/CUSTOM/js/sweetalert.form.js"></script>
+    <script src="/CUSTOM/js/sweetalert.min.js"></script>
+    <script>const userRole = "<%- user.ROLE %>"</script>
+
+    <script src="/ADMIN/plugins/dropify/js/dropify.min.js"></script>
+    <script src="/ADMIN/pages/jquery.form-upload.init.js"></script>
+
+    <!--Wysiwig js-->
+    <script src="/ADMIN/plugins/tinymce/tinymce.min.js"></script>
+    <script src="/ADMIN/pages/jquery.form-editor.init.js"></script>
+    <script>
+      // Initialize TinyMCE
+      tinymce.init({
+        selector: 'textarea',
+        setup: function (editor) {
+          // Wait for initialization
+          editor.on('init', function () {
+            // Set the HTML content
+            editor.setContent(`<%- blogData.BLOG_POST %>`);
+          });
+        }
+      });
+    </script>
+
+    <!-- App js -->
+    <script src="/ADMIN/js/app.js"></script>
+    <script src="/CUSTOM/js/adminScript.js"></script>
+</body>
+
+</html>

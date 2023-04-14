@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>User Roles - Medic Apparels</title>
+    <meta name="description"
+        content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs. Shop now and experience the comfort and quality of our medical apparel.">
+    <meta name="keywords" content="Medical, Clothing, Medical scrubs,
+  Lab coats,
+  Medical uniforms,
+  Nurse uniforms,
+  Medical shoes,
+  
+  Antimicrobial scrubs,
+  Uniform embroidery,
+  Custom medical apparel,
+  Scrub caps">
+    <meta name="author" content=Veedsify">
+    <meta name="robots" content="index,follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Medical Apparels">
+    <meta property="og:description"
+        content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs. Shop now and experience the comfort and quality of our medical apparel.">
+    <meta property="og:url" content="<%- siteLink %>">
+    <meta property="og:image" content="<%- siteData.SITE_LOGO %>">
+    <meta property="og:type" content="website">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:title" content="Medical Apparels">
+    <meta property="og:description"
+        content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs.">
+    <meta property="og:url" content="<%- siteLink %>" <meta property="og:image" content="<%- siteData.SITE_LOGO %>">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:title" content="Medical Apparels">
+    <meta name="twitter:description"
+        content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs.">
+    <meta name="twitter:url" content="<%- siteLink %>">
+    <meta name="twitter:image" content="<%- siteData.SITE_LOGO %>">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="<%- siteData.SITE_LOGO %>" />
+
+    <!-- App css -->
+    <link href="/ADMIN/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="/ADMIN/css/icons.css" rel="stylesheet" type="text/css" />
+    <link href="/ADMIN/css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <!-- Top Bar Start -->
+    <%- include('includes/top-bar') %>
+        <!-- Top Bar End -->
+
+        <div class="page-wrapper">
+            <!-- Page Content-->
+            <div class="page-content">
+                <div class="container-fluid">
+                    <!-- Page-Title -->
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="page-title-box">
+                                <div class="float-right">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item">
+                                            <a href="javascript:void(0);">Medic Apparels</a>
+                                        </li>
+                                        <li class="breadcrumb-item">
+                                            <a href="javascript:void(0);">Users</a>
+                                        </li>
+                                        <li class="breadcrumb-item active">Roles</li>
+                                    </ol>
+                                    <!--end breadcrumb-->
+                                </div>
+                                <!--end /div-->
+                                <h4 class="page-title">User Roles</h4>
+                            </div>
+                            <!--end page-title-box-->
+                        </div>
+                        <!--end col-->
+                    </div>
+                    <!--end row-->
+
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <button class="btn btn-primary btn-sm float-right">
+                                        New User
+                                        <i class="dripicons-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- end page title end breadcrumb -->
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="card profile-card">
+                                <div class="card-body p-0">
+                                    <div class="media p-3 align-items-center">
+                                        <img src="/ADMIN/images/users/user-4.jpg" alt="user"
+                                            class="rounded-circle thumb-xl" />
+                                        <div class="media-body ml-3 align-self-center">
+                                            <h5 class="pro-title">
+                                                Merri Diamond
+                                                <span class="badge badge-warning font-10">New</span>
+                                            </h5>
+                                            <p class="mb-1 text-muted">@SaraHopkins.com</p>
+                                            <p class="mb-0 text-muted">
+                                                <i class="mdi mdi-checkbox-blank-circle text-success mr-1"></i>Active
+                                            </p>
+                                        </div>
+                                        <div class="action-btn">
+                                            <button class="mr-1 btn btn-sm btn-soft-info edit-user" data-users="">
+                                                <i class="fas fa-pen"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-soft-danger delete-user">
+                                                <i class="far fa-trash-alt"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end card-body-->
+                            </div>
+                            <!--end card-->
+                        </div>
+                        <!--end col-->
+                        <div class="col-lg-4">
+                            <div class="card profile-card">
+                                <div class="card-body p-0">
+                                    <div class="media p-3 align-items-center">
+                                        <img src="/ADMIN/images/users/user-5.jpg" alt="user"
+                                            class="rounded-circle thumb-xl" />
+                                        <div class="media-body ml-3 align-self-center">
+                                            <h5 class="pro-title">
+                                                Paul Schmidt
+                                                <span class="badge badge-secondary font-10">New</span>
+                                            </h5>
+                                            <p class="mb-1 text-muted">@SaraHopkins.com</p>
+                                            <p class="mb-0 text-muted">
+                                                <i class="mdi mdi-checkbox-blank-circle text-success mr-1"></i>Active
+                                            </p>
+                                        </div>
+                                        <div class="action-btn">
+                                            <button class="mr-1 btn btn-sm btn-soft-info edit-user" data-users="">
+                                                <i class="fas fa-pen"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-soft-danger delete-user">
+                                                <i class="far fa-trash-alt"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end card-body-->
+                            </div>
+                            <!--end card-->
+                        </div>
+                        <!--end col-->
+                        <div class="col-lg-4">
+                            <div class="card profile-card">
+                                <div class="card-body p-0">
+                                    <div class="media p-3 align-items-center">
+                                        <img src="/ADMIN/images/users/user-8.jpg" alt="user"
+                                            class="rounded-circle thumb-xl" />
+                                        <div class="media-body ml-3 align-self-center">
+                                            <h5 class="pro-title">Harry McCall</h5>
+                                            <p class="mb-1 text-muted">@SaraHopkins.com</p>
+                                            <p class="mb-0 text-muted">
+                                                <i
+                                                    class="mdi mdi-checkbox-blank-circle text-danger mr-1"></i>Deactivated
+                                            </p>
+                                        </div>
+                                        <div class="action-btn">
+                                            <button class="mr-1 btn btn-sm btn-soft-info edit-user" data-users="">
+                                                <i class="fas fa-pen"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-soft-danger delete-user">
+                                                <i class="far fa-trash-alt"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end card-body-->
+                            </div>
+                            <!--end card-->
+                        </div>
+                        <!--end col-->
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="card profile-card">
+                                <div class="card-body p-0">
+                                    <div class="media p-3 align-items-center">
+                                        <img src="/ADMIN/images/users/user-4.jpg" alt="user"
+                                            class="rounded-circle thumb-xl" />
+                                        <div class="media-body ml-3 align-self-center">
+                                            <h5 class="pro-title">
+                                                Merri Diamond
+                                                <span class="badge badge-warning font-10">New</span>
+                                            </h5>
+                                            <p class="mb-1 text-muted">@SaraHopkins.com</p>
+                                            <p class="mb-0 text-muted">
+                                                <i class="mdi mdi-checkbox-blank-circle text-success mr-1"></i>Active
+                                            </p>
+                                        </div>
+                                        <div class="action-btn">
+                                            <button class="mr-1 btn btn-sm btn-soft-info edit-user" data-users="">
+                                                <i class="fas fa-pen"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-soft-danger delete-user">
+                                                <i class="far fa-trash-alt"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end card-body-->
+                            </div>
+                            <!--end card-->
+                        </div>
+                        <!--end col-->
+                        <div class="col-lg-4">
+                            <div class="card profile-card">
+                                <div class="card-body p-0">
+                                    <div class="media p-3 align-items-center">
+                                        <img src="/ADMIN/images/users/user-5.jpg" alt="user"
+                                            class="rounded-circle thumb-xl" />
+                                        <div class="media-body ml-3 align-self-center">
+                                            <h5 class="pro-title">
+                                                Paul Schmidt
+                                                <span class="badge badge-secondary font-10">New</span>
+                                            </h5>
+                                            <p class="mb-1 text-muted">@SaraHopkins.com</p>
+                                            <p class="mb-0 text-muted">
+                                                <i class="mdi mdi-checkbox-blank-circle text-success mr-1"></i>Active
+                                            </p>
+                                        </div>
+                                        <div class="action-btn">
+                                            <button class="mr-1 btn btn-sm btn-soft-info edit-user" data-users="">
+                                                <i class="fas fa-pen"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-soft-danger delete-user">
+                                                <i class="far fa-trash-alt"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end card-body-->
+                            </div>
+                            <!--end card-->
+                        </div>
+                        <!--end col-->
+                        <div class="col-lg-4">
+                            <div class="card profile-card">
+                                <div class="card-body p-0">
+                                    <div class="media p-3 align-items-center">
+                                        <img src="/ADMIN/images/users/user-8.jpg" alt="user"
+                                            class="rounded-circle thumb-xl" />
+                                        <div class="media-body ml-3 align-self-center">
+                                            <h5 class="pro-title">Harry McCall</h5>
+                                            <p class="mb-1 text-muted">@SaraHopkins.com</p>
+                                            <p class="mb-0 text-muted">
+                                                <i
+                                                    class="mdi mdi-checkbox-blank-circle text-danger mr-1"></i>Deactivated
+                                            </p>
+                                        </div>
+                                        <div class="action-btn">
+                                            <button class="mr-1 btn btn-sm btn-soft-info edit-user" data-users="">
+                                                <i class="fas fa-pen"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-soft-danger delete-user">
+                                                <i class="far fa-trash-alt"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end card-body-->
+                            </div>
+                            <!--end card-->
+                        </div>
+                        <!--end col-->
+                    </div>
+                </div>
+                <!-- container -->
+            </div>
+            <!-- end page content -->
+            <footer class="footer text-center text-sm-left">
+                <div class="boxed-footer">
+                    &copy;
+                    <script>
+                        document.write(new Date().getFullYear());
+                    </script>
+                    Medic Apparels
+                    <span class="text-muted d-none d-sm-inline-block float-right">Crafted with <i
+                            class="mdi mdi-heart text-danger"></i> by
+                        <a href="https://veedsify.com" target="_blank">Veedsify</a></span>
+                </div>
+            </footer>
+            <!--end footer-->
+        </div>
+        <!-- end page-wrapper -->
+
+        <!-- jQuery  -->
+        <script src="/ADMIN/js/jquery.min.js"></script>
+        <script src="/ADMIN/js/bootstrap.bundle.min.js"></script>
+        <script src="/ADMIN/js/metisMenu.min.js"></script>
+        <script src="/ADMIN/js/waves.min.js"></script>
+        <script src="/ADMIN/js/jquery.slimscroll.min.js"></script>
+        <script src="/CUSTOM/js/axios.min.js"></script>
+        <script src="/CUSTOM/js/sweetalert.form.js"></script>
+        <script src="/CUSTOM/js/sweetalert.min.js"></script>
+
+        <!-- App js -->
+        <script src="/ADMIN/js/app.js"></script>
+        <script src="/CUSTOM/js/adminScript.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,715 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Medic Apparels">
+    <meta name="keywords" content="Medic Apparels">
+    <meta name="author" content="Medic Apparels">
+    <link rel="icon" href="<%- siteData.SITE_LOGO %>" type="image/x-icon">
+    <title>
+        <%= user.NAME %> - Multi-purpose E-commerce Html Template
+    </title>
+    <meta name="description"
+        content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs. Shop now and experience the comfort and quality of our medical apparel.">
+    <meta name="keywords" content="Medical, Clothing, Medical scrubs,
+  Lab coats,
+  Medical uniforms,
+  Nurse uniforms,
+  Medical shoes,
+  
+  Antimicrobial scrubs,
+  Uniform embroidery,
+  Custom medical apparel,
+  Scrub caps">
+    <meta name="author" content=Veedsify">
+    <meta name="robots" content="index,follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Medical Apparels">
+    <meta property="og:description"
+        content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs. Shop now and experience the comfort and quality of our medical apparel.">
+    <meta property="og:url" content="<%- siteLink %>">
+    <meta property="og:image" content="<%- siteData.SITE_LOGO %>">
+    <meta property="og:type" content="website">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:title" content="Medical Apparels">
+    <meta property="og:description"
+        content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs.">
+    <meta property="og:url" content="<%- siteLink %>" <meta property="og:image" content="<%- siteData.SITE_LOGO %>">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:title" content="Medical Apparels">
+    <meta name="twitter:description"
+        content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs.">
+    <meta name="twitter:url" content="<%- siteLink %>">
+    <meta name="twitter:image" content="<%- siteData.SITE_LOGO %>">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Icons -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/vendors/font-awesome.css">
+
+    <!--Slick slider css-->
+    <link rel="stylesheet" type="text/css" href="/assets/css/vendors/slick.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/vendors/slick-theme.css">
+
+    <!-- Animate icon -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/vendors/animate.css">
+
+    <!-- Themify icon -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/vendors/themify-icons.css">
+
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/vendors/bootstrap.css">
+
+    <!-- Theme css -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+
+    <%- include('../home/includes/head-extra') %>
+
+</head>
+
+<body class="theme-color-1" style="overflow: auto !important;">
+
+
+    <!-- loader start -->
+    <%- include('../home/includes/preloader') %>
+        <!-- loader end -->
+
+        <!-- header start -->
+        <%- include('../home/includes/header') %>
+            <!-- header end -->
+
+
+
+            <!-- breadcrumb start -->
+            <div class="breadcrumb-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="page-title">
+                                <h2>dashboard</h2>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <nav aria-label="breadcrumb" class="theme-breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="/">Home</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">dashboard</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- breadcrumb End -->
+
+
+            <!--  dashboard section start -->
+            <section class="dashboard-section section-b-space user-dashboard-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <div class="dashboard-sidebar">
+                                <div class="profile-top">
+                                    <div class="profile-image">
+                                        <img src="<%- user.PROFILE_IMAGE %>" alt="" class="ob-fit-square">
+                                    </div>
+                                    <div class="profile-detail">
+                                        <h5><%- user.NAME %></h5>
+                                        <h6 class="text-lowercase"><%- user.EMAIL %></h6>
+                                    </div>
+                                </div>
+                                <div class="faq-tab">
+                                    <ul class="nav nav-tabs" id="top-tab" role="tablist">
+                                        <li class="nav-item"><a data-bs-toggle="tab" data-bs-target="#info"
+                                                class="nav-link active">Account Info</a></li>
+                                        <li class="nav-item"><a data-bs-toggle="tab" data-bs-target="#address"
+                                                class="nav-link">Address Book</a></li>
+                                        <li class="nav-item"><a data-bs-toggle="tab" data-bs-target="#orders"
+                                                class="nav-link">My Orders</a></li>
+                                        <li class="nav-item"><a data-bs-toggle="tab" data-bs-target="#wishlist"
+                                                class="nav-link">My Wishlist</a></li>
+                                        <li class="nav-item"><a data-bs-toggle="tab" data-bs-target="#profile"
+                                                class="nav-link">Profile</a></li>
+                                        <li class="nav-item"><a data-bs-toggle="tab" data-bs-target="#security"
+                                                class="nav-link">Security</a> </li>
+                                        <li class="nav-item"><a href="/logout" class="nav-link">Log Out</a> </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-9">
+                            <div class="faq-content tab-content" id="top-tabContent">
+                                <div class="tab-pane fade show active" id="info">
+                                    <div class="counter-section">
+                                        <div class="welcome-msg">
+                                            <h4>Hello, <%- user.NAME %> !</h4>
+                                            <p>From your My Account Dashboard you have the ability to view a
+                                                snapshot of
+                                                your
+                                                recent
+                                                account activity and update your account information. Select a
+                                                link
+                                                below to
+                                                view or
+                                                edit information.</p>
+                                            <% if(user.ROLE=='vendor' ){ %>
+                                                <div class="mb-3">
+                                                    <a href="/vendor" class="btn btn-sm btn-solid">Vendor
+                                                        Profile</a>
+                                                </div>
+                                                <% } %>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="counter-box">
+                                                    <img src="/assets/images/icon/dashboard/sale.png" class="img-fluid">
+                                                    <div>
+                                                        <h3><%- orderCount %></h3>
+                                                        <h5>Total Order</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="counter-box">
+                                                    <img src="/assets/images/icon/dashboard/homework.png"
+                                                        class="img-fluid">
+                                                    <div>
+                                                        <h3><%- orderCountPending %></h3>
+                                                        <h5>Pending Orders</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="counter-box">
+                                                    <img src="/assets/images/icon/dashboard/order.png"
+                                                        class="img-fluid">
+                                                    <div>
+                                                        <h3><%- wishCount %></h3>
+                                                        <h5>Wishlist</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="box-account box-info">
+                                            <div class="box-head">
+                                                <h4>Account Information</h4>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <div class="box">
+                                                        <div class="box-title">
+                                                            <h3>Contact Information</h3><a
+                                                                href="/user/account-info">Edit</a>
+                                                        </div>
+                                                        <div class="box-content">
+                                                            <h6><%- user.NAME %></h6>
+                                                            <h6 class="text-lowercase"><%- user.EMAIL %></h6>
+                                                            <h6><a href="#">Change Password</a></h6>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="box">
+                                                        <div class="box-title">
+                                                            <h3>Newsletters</h3><a href="#">Edit</a>
+                                                        </div>
+                                                        <div class="box-content">
+                                                            <p>You are currently not subscribed to any newsletter.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="box mt-3">
+                                                <div class="box-title">
+                                                    <h3>Address Book</h3><a href="/user/account-info">Manage
+                                                        Addresses</a>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-6">
+                                                        <h6>Default Billing Address</h6>
+                                                        <address>You have not set a default billing address.<br><a
+                                                                href="/user/account-info">Edit
+                                                                Address</a></address>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <h6>Default Shipping Address</h6>
+                                                        <address>You have not set a default shipping address.<br><a
+                                                                href="/user/account-info">Edit Address</a></address>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="address">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="card mt-0">
+                                                <div class="card-body">
+                                                    <div class="top-sec">
+                                                        <h3>Address Book</h3>
+                                                        <a href="/user/account-info" class="btn btn-solid btn-sm">Update
+                                                            Address</a>
+                                                    </div>
+                                                    <div class="address-book-section">
+                                                        <% if (user.COUNTRY) { %>
+                                                            <div class="row g-4">
+                                                                <div class="select-box active col-xl-4 col-md-6">
+                                                                    <div class="address-box">
+                                                                        <div class="top">
+                                                                            <h6><%- user.NAME %> </h6>
+                                                                        </div>
+                                                                        <div class="middle">
+                                                                            <div class="address">
+                                                                                <p><%- user.ADDRESS + user.CITY %></p>
+                                                                                <p><%- user.STATE +','+ user.COUNTRY %>
+                                                                                </p>
+                                                                                <p><%- user.ZIP_CODE %></p>
+                                                                            </div>
+                                                                            <div class="number">
+                                                                                <p>mobile: <span><%- user.PHONE
+                                                                                            %></span>
+                                                                                </p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="bottom">
+                                                                            <a href="/user/account-info"
+                                                                                class="bottom_btn">edit</a>
+                                                                            <a href="#" class="bottom_btn">remove</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <% } %>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="orders">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="card dashboard-table mt-0">
+                                                <div class="card-body table-responsive-sm">
+                                                    <div class="top-sec">
+                                                        <h3>My Orders</h3>
+                                                    </div>
+                                                    <div class="table-responsive-xl">
+                                                        <table class="table cart-table order-table">
+                                                            <thead>
+                                                                <tr class="table-head">
+                                                                    <th scope="col">image</th>
+                                                                    <th scope="col">Order Id</th>
+                                                                    <th scope="col">Product Details</th>
+                                                                    <th scope="col">Status</th>
+                                                                    <th scope="col">Price</th>
+                                                                    <th scope="col">View</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <% if (order && order.length> 0) { %>
+                                                                    <!-- Use `items` here as needed -->
+
+                                                                    <% order.forEach(product=> { %>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <a href="javascript:void(0)">
+                                                                                    <img src="<%- product.ORDER_IMAGE  %>"
+                                                                                        class=" lazyloaded" alt="">
+                                                                                </a>
+                                                                            </td>
+                                                                            <td>
+                                                                                <span class="mt-0"><%- product.ORDER_ID
+                                                                                        %></span>
+                                                                            </td>
+                                                                            <td>
+                                                                                <span class="fs-6"><%-
+                                                                                        product.ORDER_DESC %></span>
+                                                                            </td>
+                                                                            <td>
+                                                                                <% const statusClasses={ "pending"
+                                                                                    : "bg-warning" , "shipped"
+                                                                                    : "bg-secondary" , "ready"
+                                                                                    : "bg-info" , "cancelled"
+                                                                                    : "bg-danger" , "delivered"
+                                                                                    : "bg-success" , "processing"
+                                                                                    : "bg-primary" , }; const
+                                                                                    statusTexts={ "pending" : "Pending"
+                                                                                    , "shipped" : "Shipped" , "ready"
+                                                                                    : "Ready" , "cancelled"
+                                                                                    : "Cancelled" , "delivered"
+                                                                                    : "Delivered" , "processing"
+                                                                                    : "Processing" , }; const
+                                                                                    statusClass=statusClasses[product.ORDER_STATUS]
+                                                                                    || "" ; const
+                                                                                    statusText=statusTexts[product.ORDER_STATUS]
+                                                                                    || "" ; %>
+
+                                                                                    <span
+                                                                                        class="badge rounded-pill <%= statusClass %> custom-badge">
+                                                                                        <%= statusText %>
+                                                                                    </span>
+                                                                            </td>
+                                                                            <td>
+                                                                                <span class="theme-color fs-6">₦<%=
+                                                                                        Number(parseInt(product.FINAL_PRICE).toFixed(0)).toLocaleString()
+                                                                                        %></span>
+                                                                            </td>
+                                                                            <td>
+                                                                                <a
+                                                                                    href="/order/track/<%- product.ORDER_ID  %>">
+                                                                                    <i class="fa fa-eye text-theme"></i>
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <% }) %>
+                                                                            <% } %>
+
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="wishlist">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="card dashboard-table mt-0">
+                                                <div class="card-body table-responsive-sm">
+                                                    <div class="top-sec">
+                                                        <h3>My Wishlist</h3>
+                                                    </div>
+                                                    <div class="table-responsive-xl">
+                                                        <table class="table cart-table wishlist-table">
+                                                            <thead>
+                                                                <tr class="table-head">
+                                                                    <th scope="col">image</th>
+                                                                    <th scope="col">Product Details</th>
+                                                                    <th scope="col">Price</th>
+                                                                    <th scope="col">Action</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <% wishlist.forEach(list=>{ %>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <a href="javascript:void(0)">
+                                                                                <img src="<%- list.PRODUCT_IMAGE  %>"
+                                                                                    class=" lazyloaded" alt="">
+                                                                            </a>
+                                                                        </td>
+                                                                        <td>
+                                                                            <span><%- list.PRODUCT_DETAILS %></span>
+                                                                        </td>
+                                                                        <td>
+                                                                            <span class="theme-color fs-6">$<%-
+                                                                                    Number(list.PRODUCT_PRICE).toLocaleString()
+                                                                                    %></span>
+                                                                        </td>
+                                                                        <td>
+                                                                            <a href="/product/f/<%- list.PRODUCT_ID %>"
+                                                                                class="btn btn-xs btn-solid">
+                                                                                View Product
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <% }) %>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="profile">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="card mt-0">
+                                                <div class="card-body">
+                                                    <div class="dashboard-box">
+                                                        <div class="dashboard-title">
+                                                            <h4>profile</h4>
+                                                            <a class="edit-link" href="/user/account-info">edit</a>
+                                                        </div>
+                                                        <div class="dashboard-detail">
+                                                            <ul>
+                                                                <li>
+                                                                    <div class="details">
+                                                                        <div class="left">
+                                                                            <h6>Name</h6>
+                                                                        </div>
+                                                                        <div class="right">
+                                                                            <h6><%- user.NAME %></h6>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="details">
+                                                                        <div class="left">
+                                                                            <h6>Email address</h6>
+                                                                        </div>
+                                                                        <div class="right">
+                                                                            <h6><%- user.EMAIL %></h6>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="details">
+                                                                        <div class="left">
+                                                                            <h6>Country / Region</h6>
+                                                                        </div>
+                                                                        <div class="right">
+                                                                            <h6><%- user.COUNTRY %></h6>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="details">
+                                                                        <div class="left">
+                                                                            <h6>Occupation</h6>
+                                                                        </div>
+                                                                        <div class="right">
+                                                                            <h6><%- user.OCCUPATION %></h6>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="details">
+                                                                        <div class="left">
+                                                                            <h6>street address</h6>
+                                                                        </div>
+                                                                        <div class="right">
+                                                                            <h6><%- user.ADDRESS %></h6>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="details">
+                                                                        <div class="left">
+                                                                            <h6>city/state</h6>
+                                                                        </div>
+                                                                        <div class="right">
+                                                                            <h6><%- user.CITY %> / <%- user.STATE %>
+                                                                            </h6>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="details">
+                                                                        <div class="left">
+                                                                            <h6>zip</h6>
+                                                                        </div>
+                                                                        <div class="right">
+                                                                            <h6><%- user.ZIP_CODE %></h6>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="dashboard-title mt-lg-5 mt-3">
+                                                            <h4>login details</h4>
+                                                            <a class="edit-link" href="#">edit</a>
+                                                        </div>
+                                                        <div class="dashboard-detail">
+                                                            <ul>
+                                                                <li>
+                                                                    <div class="details">
+                                                                        <div class="left">
+                                                                            <h6>Email Address</h6>
+                                                                        </div>
+                                                                        <div class="right">
+                                                                            <h6 class="edit-link" href="#">edit</a>
+                                                                            </h6>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="details">
+                                                                        <div class="left">
+                                                                            <h6>Password</h6>
+                                                                        </div>
+                                                                        <div class="right">
+                                                                            <h6>******* <a class="edit-link"
+                                                                                    href="#">Edit</a>
+                                                                            </h6>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="security">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="card mt-0">
+                                                <div class="card-body">
+                                                    <div class="dashboard-box">
+                                                        <div class="dashboard-title">
+                                                            <h4>settings</h4>
+                                                        </div>
+                                                        <div class="dashboard-detail">
+                                                            <div class="account-setting">
+                                                                <h5>deactivate account</h5>
+                                                                <div class="row">
+                                                                    <div class="col">
+                                                                        <div class="form-check">
+                                                                            <input
+                                                                                class="radio_animated form-check-input"
+                                                                                type="radio" name="exampleRadios1"
+                                                                                id="exampleRadios4" value="option4"
+                                                                                checked="">
+                                                                            <label class="form-check-label"
+                                                                                for="exampleRadios4">
+                                                                                I have a privacy concern
+                                                                            </label>
+                                                                        </div>
+                                                                        <div class="form-check">
+                                                                            <input
+                                                                                class="radio_animated form-check-input"
+                                                                                type="radio" name="exampleRadios1"
+                                                                                id="exampleRadios5" value="option5">
+                                                                            <label class="form-check-label"
+                                                                                for="exampleRadios5">
+                                                                                This is temporary
+                                                                            </label>
+                                                                        </div>
+                                                                        <div class="form-check">
+                                                                            <input
+                                                                                class="radio_animated form-check-input"
+                                                                                type="radio" name="exampleRadios1"
+                                                                                id="exampleRadios6" value="option6">
+                                                                            <label class="form-check-label"
+                                                                                for="exampleRadios6">
+                                                                                other
+                                                                            </label>
+                                                                        </div>
+                                                                        <button type="button"
+                                                                            class="btn btn-solid btn-xs">Deactivate
+                                                                            Account</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="account-setting">
+                                                                <h5>Delete account</h5>
+                                                                <div class="row">
+                                                                    <div class="col">
+                                                                        <div class="form-check">
+                                                                            <input
+                                                                                class="radio_animated form-check-input"
+                                                                                type="radio" name="exampleRadios3"
+                                                                                id="exampleRadios7" value="option7"
+                                                                                checked="">
+                                                                            <label class="form-check-label"
+                                                                                for="exampleRadios7">
+                                                                                No longer usable
+                                                                            </label>
+                                                                        </div>
+                                                                        <div class="form-check">
+                                                                            <input
+                                                                                class="radio_animated form-check-input"
+                                                                                type="radio" name="exampleRadios3"
+                                                                                id="exampleRadios8" value="option8">
+                                                                            <label class="form-check-label"
+                                                                                for="exampleRadios8">
+                                                                                Want to switch on other account
+                                                                            </label>
+                                                                        </div>
+                                                                        <div class="form-check">
+                                                                            <input
+                                                                                class="radio_animated form-check-input"
+                                                                                type="radio" name="exampleRadios3"
+                                                                                id="exampleRadios9" value="option9">
+                                                                            <label class="form-check-label"
+                                                                                for="exampleRadios9">
+                                                                                other
+                                                                            </label>
+                                                                        </div>
+                                                                        <button type="button"
+                                                                            class="btn btn-solid btn-xs">Delete
+                                                                            Account</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--  dashboard section end 
+            <!-- modal end -->
+
+
+            <!-- footer start -->
+            <%- include('../home/includes/footer') %>
+                <!-- footer end -->
+
+
+                <!-- tap to top -->
+                <div class="tap-top">
+                    <div>
+                        <i class="fa fa-angle-double-up"></i>
+                    </div>
+                </div>
+                <!-- tap to top End -->
+
+
+                <!-- latest jquery-->
+                <script src="/assets/js/jquery-3.3.1.min.js"></script>
+
+                <!-- menu js-->
+                <script src="/assets/js/menu.js"></script>
+
+                <!-- lazyload js-->
+                <script src="/assets/js/lazysizes.min.js"></script>
+
+                <!-- slick js-->
+                <script src="/assets/js/slick.js"></script>
+
+                <!-- Bootstrap js-->
+                <script src="/assets/js/bootstrap.bundle.min.js"></script>
+
+                <!-- Bootstrap Notification js-->
+                <script src="/assets/js/bootstrap-notify.min.js"></script>
+
+                <!-- Theme js-->
+                <script src="/CUSTOM/js/axios.min.js"></script>
+                <script src="/CUSTOM/js/sweetalert.form.js"></script>
+                <script src="/CUSTOM/js/sweetalert.min.js"></script>
+
+                <script src="/assets/js/script.js"></script>
+                <script src="/CUSTOM/js/homeScript.js"></script>
+
+                <script>
+                    function openSearch() {
+                        document.getElementById("search-overlay").style.display = "block";
+                    }
+
+                    function closeSearch() {
+                        document.getElementById("search-overlay").style.display = "none";
+                    }
+                </script>
+
+</body>
+
+</html>
