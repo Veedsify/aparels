@@ -5,13 +5,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Medic Apparels">
-    <meta name="keywords" content="Medic Apparels">
-    <meta name="author" content="Medic Apparels">
+
+    <meta name="author" content="<%- siteData.SITE_NAME %>">
     <link rel="icon" href="<%- siteData.SITE_LOGO %>" type="image/x-icon">
-    <title>Dashboard Vendonr - Medic Apparels - Medical Aparells</title>
-    <meta name="description"
-        content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs. Shop now and experience the comfort and quality of our medical apparel.">
+    <title>Dashboard Vendonr - <%- siteData.SITE_NAME %> - <%- siteData.SITE_NAME %></title>
+    <meta name="description" content="<%- siteData.SITE_FOOTER_DESC %>">
     <meta name="keywords" content="Medical, Clothing, Medical scrubs,
   Lab coats,
   Medical uniforms,
@@ -22,27 +20,24 @@
   Uniform embroidery,
   Custom medical apparel,
   Scrub caps">
-    <meta name="author" content=Veedsify">
+    <meta name="author" content="<%-siteData.SITE_NAME %>">
     <meta name="robots" content="index,follow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="Medical Apparels">
-    <meta property="og:description"
-        content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs. Shop now and experience the comfort and quality of our medical apparel.">
+    <meta property="og:title" content="<%- siteData.SITE_NAME %>">
+    <meta property="og:description" content="<%- siteData.SITE_FOOTER_DESC %>">
     <meta property="og:url" content="<%- siteLink %>">
     <meta property="og:image" content="<%- siteData.SITE_LOGO %>">
     <meta property="og:type" content="website">
 
     <!-- Facebook Meta Tags -->
-    <meta property="og:title" content="Medical Apparels">
-    <meta property="og:description"
-        content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs.">
+    <meta property="og:title" content="<%- siteData.SITE_NAME %>">
+    <meta property="og:description" content="<%- siteData.SITE_FOOTER_DESC %>">
     <meta property="og:url" content="<%- siteLink %>" <meta property="og:image" content="<%- siteData.SITE_LOGO %>">
     <meta property="og:type" content="website">
 
     <!-- Twitter Meta Tags -->
-    <meta name="twitter:title" content="Medical Apparels">
-    <meta name="twitter:description"
-        content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs.">
+    <meta name="twitter:title" content="<%- siteData.SITE_NAME %>">
+    <meta name="twitter:description" content="<%- siteData.SITE_FOOTER_DESC %>">
     <meta name="twitter:url" content="<%- siteLink %>">
     <meta name="twitter:image" content="<%- siteData.SITE_LOGO %>">
     <meta name="twitter:card" content="summary_large_image">
@@ -65,10 +60,10 @@
     <link rel="stylesheet" type="text/css" href="/assets/css/vendors/themify-icons.css">
 
     <!-- Bootstrap css -->
-    <link rel="stylesheet" type="text/css" href="/assets/css/vendors/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/vendors/bootstrap.min.css">
 
     <!-- Theme css -->
-    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.min.css">
 
     <%- include('includes/head-extra') %>
 
@@ -117,8 +112,7 @@
                             <div class="dashboard-sidebar">
                                 <div class="profile-top">
                                     <div class="profile-image">
-                                        <img loading="lazy" src="/assets/images/logos/17.png" alt=""
-                                            class="img-fluid blur-up">
+                                        <img src="/assets/images/logos/17.png" alt="" class="img-fluid ">
                                     </div>
                                     <div class="profile-detail">
                                         <h5>Fashion Store</h5>
@@ -156,8 +150,8 @@
                                         <div class="row">
                                             <div class="col-md-4">
                                                 <div class="counter-box">
-                                                    <img loading="lazy" src="/assets/images/icon/dashboard/order.png"
-                                                        class="img-fluid blur-up">
+                                                    <img src="/assets/images/icon/dashboard/order.png"
+                                                        class="img-fluid ">
                                                     <div>
                                                         <h3>25</h3>
                                                         <h5>total products</h5>
@@ -166,8 +160,8 @@
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="counter-box">
-                                                    <img loading="lazy" src="/assets/images/icon/dashboard/sale.png"
-                                                        class="img-fluid blur-up">
+                                                    <img src="/assets/images/icon/dashboard/sale.png"
+                                                        class="img-fluid ">
                                                     <div>
                                                         <h3>12500</h3>
                                                         <h5>total sales</h5>
@@ -176,8 +170,8 @@
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="counter-box">
-                                                    <img loading="lazy" src="/assets/images/icon/dashboard/homework.png"
-                                                        class="img-fluid blur-up">
+                                                    <img src="/assets/images/icon/dashboard/homework.png"
+                                                        class="img-fluid ">
                                                     <div>
                                                         <h3>50</h3>
                                                         <h5>order pending</h5>
@@ -218,25 +212,24 @@
                                                         </thead>
                                                         <tbody>
                                                             <tr>
-                                                                <th scope="row"><img loading="lazy"
+                                                                <th scope="row"><img
                                                                         src="/assets/images/dashboard/product/1.jpg"
-                                                                        class=" lazyloaded"></th>
+                                                                        class=" ed"></th>
                                                                 <td>neck velvet dress</td>
                                                                 <td>$205</td>
                                                                 <td>1000</td>
                                                             </tr>
                                                             <tr>
-                                                                <th scope="row"><img loading="lazy"
+                                                                <th scope="row"><img
                                                                         src="/assets/images/dashboard/product/9.jpg"
-                                                                        class=" lazyloaded"></th>
+                                                                        class=" ed"></th>
                                                                 <td>belted trench coat</td>
                                                                 <td>$350</td>
                                                                 <td>800</td>
                                                             </tr>
                                                             <tr>
-                                                                <th scope="row"><img loading="lazy"
-                                                                        src="/assets/images/pro3/34.jpg"
-                                                                        class=" lazyloaded"></th>
+                                                                <th scope="row"><img src="/assets/images/pro3/34.jpg"
+                                                                        class=" ed"></th>
                                                                 <td>man print tee</td>
                                                                 <td>$150</td>
                                                                 <td>750</td>
@@ -326,9 +319,9 @@
                                                             </thead>
                                                             <tbody>
                                                                 <tr>
-                                                                    <th scope="row"><img loading="lazy"
+                                                                    <th scope="row"><img
                                                                             src="/assets/images/dashboard/product/1.jpg"
-                                                                            class=" lazyloaded"></th>
+                                                                            class=" ed"></th>
                                                                     <td>neck velvet dress</td>
                                                                     <td>women clothes</td>
                                                                     <td class="fw-bold text-theme">$205</td>
@@ -344,9 +337,9 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <th scope="row"><img loading="lazy"
+                                                                    <th scope="row"><img
                                                                             src="/assets/images/dashboard/product/9.jpg"
-                                                                            class=" lazyloaded"></th>
+                                                                            class=" ed"></th>
                                                                     <td>belted trench coat</td>
                                                                     <td>women clothes</td>
                                                                     <td class="fw-bold text-theme">$350</td>
@@ -362,9 +355,9 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <th scope="row"><img loading="lazy"
+                                                                    <th scope="row"><img
                                                                             src="/assets/images/pro3/34.jpg"
-                                                                            class=" lazyloaded"></th>
+                                                                            class=" ed"></th>
                                                                     <td>men print tee</td>
                                                                     <td>men clothes</td>
                                                                     <td class="fw-bold text-theme">$150</td>
@@ -380,9 +373,8 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <th scope="row"><img loading="lazy"
-                                                                            src="/assets/images/pro3/1.jpg"
-                                                                            class=" lazyloaded"></th>
+                                                                    <th scope="row"><img src="/assets/images/pro3/1.jpg"
+                                                                            class=" ed"></th>
                                                                     <td>woman print tee</td>
                                                                     <td>women clothes</td>
                                                                     <td class="fw-bold text-theme">$150</td>
@@ -398,9 +390,9 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <th scope="row"><img loading="lazy"
+                                                                    <th scope="row"><img
                                                                             src="/assets/images/pro3/27.jpg"
-                                                                            class=" lazyloaded"></th>
+                                                                            class=" ed"></th>
                                                                     <td>men print tee</td>
                                                                     <td>men clothes</td>
                                                                     <td class="fw-bold text-theme">$150</td>
@@ -416,9 +408,9 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <th scope="row"><img loading="lazy"
+                                                                    <th scope="row"><img
                                                                             src="/assets/images/pro3/36.jpg"
-                                                                            class=" lazyloaded"></th>
+                                                                            class=" ed"></th>
                                                                     <td>men print tee</td>
                                                                     <td>men clothes</td>
                                                                     <td class="fw-bold text-theme">$150</td>
@@ -855,8 +847,7 @@
                 <!-- menu js-->
                 <script src="/assets/js/menu.js"></script>
 
-                <!-- lazyload js-->
-                <script src="/assets/js/lazysizes.min.js"></script>
+
 
                 <!-- slick js-->
                 <script src="/assets/js/slick.js"></script>
@@ -879,7 +870,7 @@
                 <script src="/CUSTOM/js/sweetalert.form.js"></script>
                 <script src="/CUSTOM/js/sweetalert.min.js"></script>
 
-                <script src="/assets/js/script.js"></script>
+                <script src="/assets/js/script.min.js"></script>
                 <script src="/CUSTOM/js/homeScript.js"></script>
 
                 <script>

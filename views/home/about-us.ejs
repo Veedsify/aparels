@@ -5,13 +5,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Medic Apparels">
-    <meta name="keywords" content="Medic Apparels">
-    <meta name="author" content="Medic Apparels">
+
+    <meta name="author" content="<%- siteData.SITE_NAME %>">
     <link rel="icon" href="<%- siteData.SITE_LOGO %>" type="image/x-icon">
-    <title><%- data.PAGE_TITLE %> - Medical Aparells</title>
-    <meta name="description"
-        content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs. Shop now and experience the comfort and quality of our medical apparel.">
+    <title><%- data.PAGE_TITLE %> - <%- siteData.SITE_NAME %></title>
+    <meta name="description" content="<%- siteData.SITE_FOOTER_DESC %>">
     <meta name="keywords" content="Medical, Clothing, Medical scrubs,
   Lab coats,
   Medical uniforms,
@@ -22,50 +20,28 @@
   Uniform embroidery,
   Custom medical apparel,
   Scrub caps">
-    <meta name="author" content=Veedsify">
+    <meta name="author" content="<%-siteData.SITE_NAME %>">
     <meta name="robots" content="index,follow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="Medical Apparels">
-    <meta property="og:description"
-        content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs. Shop now and experience the comfort and quality of our medical apparel.">
+    <meta property="og:title" content="<%- siteData.SITE_NAME %>">
+    <meta property="og:description" content="<%- siteData.SITE_FOOTER_DESC %>">
     <meta property="og:url" content="<%- siteLink %>">
     <meta property="og:image" content="<%- siteData.SITE_LOGO %>">
     <meta property="og:type" content="website">
 
     <!-- Facebook Meta Tags -->
-    <meta property="og:title" content="Medical Apparels">
-    <meta property="og:description"
-        content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs.">
-    <meta property="og:url" content="<%- siteLink %>" <meta property="og:image" content="<%- siteData.SITE_LOGO %>">
+    <meta property="og:title" content="<%- siteData.SITE_NAME %>">
+    <meta property="og:description" content="<%- siteData.SITE_FOOTER_DESC %>">
+    <meta property="og:url" content="<%- siteLink %>">
+    <meta property="og:image" content="<%- siteData.SITE_LOGO %>">
     <meta property="og:type" content="website">
 
     <!-- Twitter Meta Tags -->
-    <meta name="twitter:title" content="Medical Apparels">
-    <meta name="twitter:description"
-        content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs.">
+    <meta name="twitter:title" content="<%- siteData.SITE_NAME %>">
+    <meta name="twitter:description" content="<%- siteData.SITE_FOOTER_DESC %>">
     <meta name="twitter:url" content="<%- siteLink %>">
     <meta name="twitter:image" content="<%- siteData.SITE_LOGO %>">
     <meta name="twitter:card" content="summary_large_image">
-
-
-    <!-- Icons -->
-    <link rel="stylesheet" type="text/css" href="/assets/css/vendors/font-awesome.css">
-
-    <!--Slick slider css-->
-    <link rel="stylesheet" type="text/css" href="/assets/css/vendors/slick.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/vendors/slick-theme.css">
-
-    <!-- Animate icon -->
-    <link rel="stylesheet" type="text/css" href="/assets/css/vendors/animate.css">
-
-    <!-- Themify icon -->
-    <link rel="stylesheet" type="text/css" href="/assets/css/vendors/themify-icons.css">
-
-    <!-- Bootstrap css -->
-    <link rel="stylesheet" type="text/css" href="/assets/css/vendors/bootstrap.css">
-
-    <!-- Theme css -->
-    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
 
     <%- include('includes/head-extra') %>
 
@@ -110,9 +86,8 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12">
-                            <div class="banner-section"><img loading="lazy" src="<%- data.PAGE_IMAGE %>"
-                                    class="w-100  ob-fit lazyload" style="aspect-ratio: 16/6; object-position: top;"
-                                    alt=""></div>
+                            <div class="banner-section"><img src="<%- data.PAGE_IMAGE %>" class="w-100  ob-fit "
+                                    style="aspect-ratio: 16/6; object-position: top;" alt=""></div>
                         </div>
                         <div class="col-sm-12 pt-3">
                             <%- data.PAGE_CONTENT %>
@@ -132,9 +107,8 @@
                                 <% for(team of teams){ %>
                                     <div>
                                         <div>
-                                            <img loading="lazy" src="<%- team.TEAM_IMAGE %>"
-                                                class="w-100  lazyload bg-img ob-fit" style="aspect-ratio: 9/14;"
-                                                alt="">
+                                            <img src="<%- team.TEAM_IMAGE %>" class="w-100   bg-img ob-fit"
+                                                style="aspect-ratio: 9/14;" alt="">
                                         </div>
                                         <h4><%- team.TEAM_NAME %></h4>
                                         <h6><%- team.TEAM_ROLE %> At Medic Aparells</h6>
@@ -167,8 +141,7 @@
                 <!-- menu js-->
                 <script type="text/javascript" src="/assets/js/menu.js"></script>
 
-                <!-- lazyload js-->
-                <script src="/assets/js/lazysizes.min.js"></script>
+
 
                 <!-- slick js-->
                 <script type="text/javascript" src="/assets/js/slick.js"></script>
@@ -184,7 +157,7 @@
                 <script src="/CUSTOM/js/sweetalert.form.js"></script>
                 <script src="/CUSTOM/js/sweetalert.min.js"></script>
 
-                <script src="/assets/js/script.js"></script>
+                <script src="/assets/js/script.min.js"></script>
                 <script src="/CUSTOM/js/homeScript.js"></script>
 
                 <script>

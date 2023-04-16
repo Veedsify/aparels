@@ -884,7 +884,7 @@ async function orderStatus(
                       <p style="Margin-top: 20px;Margin-bottom: 0;font-family: Lato,Tahoma,sans-serif;"><span
                           class="font-lato" style="text-decoration: inherit;">ORDER SIZE:&nbsp;&nbsp;${order.PRODUCT_SIZE}</span></p>
                       <p style="Margin-top: 20px;Margin-bottom: 0;font-family: Lato,Tahoma,sans-serif;"><span
-                          class="font-lato" style="text-decoration: inherit;">ORDER PRICE:&nbsp;&nbsp;${Number(order.FINAL_PRICE).toLocaleString()}</span></p>
+                          class="font-lato" style="text-decoration: inherit;">ORDER PRICE:&nbsp;&nbsp;₦${Math.round(Number(order.FINAL_PRICE)).toLocaleString()}</span></p>
                       <p style="Margin-top: 20px;Margin-bottom: 0;font-family: Lato,Tahoma,sans-serif;"><span
                           class="font-lato" style="text-decoration: inherit;">ORDER QUANTITY:&nbsp;&nbsp;${order.ORDER_QUANTITY}</span></p>
                       <p style="Margin-top: 20px;Margin-bottom: 20px;font-family: Lato,Tahoma,sans-serif;"><span

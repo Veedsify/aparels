@@ -5,23 +5,19 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="description" content="Medic Apparels">
-    <meta name="keywords" content="Medic Apparels">
-    <meta name="author" content="Medic Apparels">
+    <meta name="author" content="<%- siteData.SITE_NAME %>">
     <link rel="icon" href="<%- siteData.SITE_LOGO %>" type="image/x-icon">
-    <title><%- info.CATEGORY_NAME %> Category - Medical Aparells</title>
-    <meta name="description" content="">
+    <title><%- info.CATEGORY_NAME %> Category - <%- siteData.SITE_NAME %></title>
+    <meta name="description" content="<%- info.CATEGORY_NAME %> Category">
     <meta name="keywords" content="Medical, Clothing, Medical scrubs,
-  Lab coats,
-  Medical uniforms,
-  Nurse uniforms,
-  Medical shoes,
-  
-  Antimicrobial scrubs,
-  Uniform embroidery,
-  Custom medical apparel,
-  Scrub caps">
-    <meta name="author" content=Veedsify">
+    Lab coats,
+    Medical uniforms,
+    Nurse uniforms,
+    Medical shoes,
+    Antimicrobial scrubs,
+    Custom medical apparel,
+    Scrub caps">
+    <meta name="author" content="<%-siteData.SITE_NAME %>">
     <meta name="robots" content="index,follow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="<%- info.CATEGORY_NAME %> Category">
@@ -31,10 +27,10 @@
     <meta property="og:type" content="website">
 
     <!-- Facebook Meta Tags -->
-    <meta property="og:title" content="Medical Apparels">
+    <meta property="og:title" content="<%- siteData.SITE_NAME %>">
     <meta property="og:description" content="<%- info.CATEGORY_NAME %>.">
-    <meta property="og:url" content="<%- siteLink %>/category/<%- info.CATEGORY_NAME %>" <meta property="og:image"
-        content="<%- info.CATEGORY_IMAGE %>">
+    <meta property="og:url" content="<%- siteLink %>/category/<%- info.CATEGORY_NAME %>">
+    <meta property="og:image" content="<%- info.CATEGORY_IMAGE %>">
     <meta property="og:type" content="website">
 
     <!-- Twitter Meta Tags -->
@@ -59,10 +55,10 @@
     <link rel="stylesheet" type="text/css" href="/assets/css/vendors/themify-icons.css">
 
     <!-- Bootstrap css -->
-    <link rel="stylesheet" type="text/css" href="/assets/css/vendors/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/vendors/bootstrap.min.css">
 
     <!-- Theme css -->
-    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.min.css">
 
     <%- include('includes/head-extra') %>
 
@@ -111,13 +107,12 @@
                                     <div class="row">
                                         <div class="col-sm-12">
                                             <div class="top-banner-wrapper">
-                                                <h1><%- info.CATEGORY_NAME %></h1>
-                                                <strong>Category Id: <%- info.CATEGORY_ID %></strong>
+                                                <h2 class="mb-2"><%- info.CATEGORY_NAME %></h2>
+                                                <p>Category Id: <%- info.CATEGORY_ID %></p>
                                                 <div class="mt-2">
-                                                    <a href="#"><img loading="lazy" src="<%- info.CATEGORY_IMAGE %>"
-                                                            class="w-100 ob-fit lazyload"
+                                                    <span><img src="<%- info.CATEGORY_IMAGE %>" class="w-100 ob-fit"
                                                             style="aspect-ratio: 16/5; object-position: top;"
-                                                            alt="<%- info.CATEGORY_NAME %>"></a>
+                                                            alt="<%- info.CATEGORY_NAME %>"></span>
                                                 </div>
 
                                                 <div class="top-banner-content small-section">
@@ -136,20 +131,16 @@
                                                                     </div>
                                                                     <div class="collection-grid-view">
                                                                         <ul>
-                                                                            <li><img loading="lazy"
-                                                                                    src="/assets/images/icon/2.png"
+                                                                            <li><img src="/assets/images/icon/2.png"
                                                                                     alt=""
                                                                                     class="product-2-layout-view"></li>
-                                                                            <li><img loading="lazy"
-                                                                                    src="/assets/images/icon/3.png"
+                                                                            <li><img src="/assets/images/icon/3.png"
                                                                                     alt=""
                                                                                     class="product-3-layout-view"></li>
-                                                                            <li><img loading="lazy"
-                                                                                    src="/assets/images/icon/4.png"
+                                                                            <li><img src="/assets/images/icon/4.png"
                                                                                     alt=""
                                                                                     class="product-4-layout-view"></li>
-                                                                            <li><img loading="lazy"
-                                                                                    src="/assets/images/icon/6.png"
+                                                                            <li><img src="/assets/images/icon/6.png"
                                                                                     alt=""
                                                                                     class="product-6-layout-view"></li>
                                                                         </ul>
@@ -180,16 +171,14 @@
                                                                     <div class="img-wrapper">
                                                                         <div class="front">
                                                                             <a href="/product/<%- product.SLUG_ID  %>"><img
-                                                                                    loading="lazy" loading="lazy"
                                                                                     src="<%- product.MAIN_IMAGE  %>"
-                                                                                    class="img-fluid blur-up bg-img"
+                                                                                    class="img-fluid  bg-img"
                                                                                     alt="" /></a>
                                                                         </div>
                                                                         <div class="back">
                                                                             <a href="/product/<%- product.SLUG_ID  %>"><img
-                                                                                    loading="lazy" loading="lazy"
                                                                                     src="<%- product.IMAGE_1  %>"
-                                                                                    class="img-fluid blur-up bg-img"
+                                                                                    class="img-fluid  bg-img"
                                                                                     alt="" /></a>
                                                                         </div>
                                                                         <div class="cart-info cart-wrap"></div>
@@ -232,28 +221,30 @@
                                                                 <div class="col-xl-6 col-md-6 col-sm-12">
                                                                     <nav aria-label="Page navigation">
                                                                         <ul class="pagination">
-                                                                            <li class="page-item"><a class="page-link"
-                                                                                    href="#" aria-label="Previous"><span
+                                                                            <li class="page-item"><span
+                                                                                    class="page-link"
+                                                                                    aria-label="Previous"><span
                                                                                         aria-hidden="true"><i
                                                                                             class="fa fa-chevron-left"
                                                                                             aria-hidden="true"></i></span>
                                                                                     <span
-                                                                                        class="sr-only">Previous</span></a>
+                                                                                        class="sr-only">Previous</span></span>
                                                                             </li>
                                                                             <li class="page-item active"><a
-                                                                                    class="page-link" href="#">1</a>
+                                                                                    class="page-link">1</a>
                                                                             </li>
-                                                                            <li class="page-item"><a class="page-link"
-                                                                                    href="#">2</a></li>
-                                                                            <li class="page-item"><a class="page-link"
-                                                                                    href="#">3</a></li>
-                                                                            <li class="page-item"><a class="page-link"
-                                                                                    href="#" aria-label="Next"><span
+                                                                            <li class="page-item"><span
+                                                                                    class="page-link">2</span></li>
+                                                                            <li class="page-item"><span
+                                                                                    class="page-link">3</span></li>
+                                                                            <li class="page-item"><span
+                                                                                    class="page-link"
+                                                                                    aria-label="Next"><span
                                                                                         aria-hidden="true"><i
                                                                                             class="fa fa-chevron-right"
                                                                                             aria-hidden="true"></i></span>
                                                                                     <span
-                                                                                        class="sr-only">Next</span></a>
+                                                                                        class="sr-only">Next</span></span>
                                                                             </li>
                                                                         </ul>
                                                                     </nav>
@@ -283,70 +274,6 @@
             <%- include('includes/footer.ejs') %>
                 <!-- footer end -->
 
-
-                <!-- Quick-view modal popup start-->
-                <div class="modal fade bd-example-modal-lg theme-modal" id="quick-view" tabindex="-1" role="dialog"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-                        <div class="modal-content quick-view-modal">
-                            <div class="modal-body">
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><span
-                                        aria-hidden="true">&times;</span></button>
-                                <div class="row">
-                                    <div class="col-lg-6 col-xs-12">
-                                        <div class="quick-view-img"><img loading="lazy" src="/assets/images/pro3/1.jpg"
-                                                alt="" class="img-fluid blur-up  lazyload"></div>
-                                    </div>
-                                    <div class="col-lg-6 rtl-text">
-                                        <div class="product-right">
-                                            <h2>Women Pink Shirt</h2>
-                                            <h3>$32.96</h3>
-                                            <ul class="color-variant">
-                                                <li class="bg-light0"></li>
-                                                <li class="bg-light1"></li>
-                                                <li class="bg-light2"></li>
-                                            </ul>
-                                            <div class="border-product">
-                                                <h6 class="product-title">product details</h6>
-                                                <p>Sed ut perspiciatis, unde omnis iste natus error sit voluptatem
-                                                    accusantium
-                                                    doloremque laudantium</p>
-                                            </div>
-                                            <div class="product-description border-product">
-                                                <div class="size-box">
-                                                    <ul>
-                                                        <li class="active"><a href="javascript:void(0)">s</a></li>
-                                                        <li><a href="javascript:void(0)">m</a></li>
-                                                        <li><a href="javascript:void(0)">l</a></li>
-                                                        <li><a href="javascript:void(0)">xl</a></li>
-                                                    </ul>
-                                                </div>
-                                                <h6 class="product-title">quantity</h6>
-                                                <div class="qty-box">
-                                                    <div class="input-group"><span class="input-group-prepend"><button
-                                                                type="button" class="btn quantity-left-minus"
-                                                                data-type="minus" data-field=""><i
-                                                                    class="ti-angle-left"></i></button> </span>
-                                                        <input type="text" name="quantity"
-                                                            class="form-control input-number" value="1"> <span
-                                                            class="input-group-prepend"><button type="button"
-                                                                class="btn quantity-right-plus" data-type="plus"
-                                                                data-field=""><i
-                                                                    class="ti-angle-right"></i></button></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="product-buttons"><a href="#" class="btn btn-solid">add to
-                                                    cart</a> <a href="#" class="btn btn-solid">view detail</a></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Quick-view modal popup end-->
-
                 <!-- tap to top start -->
                 <div class="tap-top">
                     <div><i class="fa fa-angle-double-up"></i></div>
@@ -360,12 +287,6 @@
                 <!-- menu js-->
                 <script src="/assets/js/menu.js"></script>
 
-                <!-- lazyload js-->
-                <script src="/assets/js/lazysizes.min.js"></script>
-
-                <!-- slick js-->
-                <script src="/assets/js/slick.js"></script>
-
                 <!-- Bootstrap js-->
                 <script src="/assets/js/bootstrap.bundle.min.js"></script>
 
@@ -377,7 +298,7 @@
                 <script src="/CUSTOM/js/sweetalert.form.js"></script>
                 <script src="/CUSTOM/js/sweetalert.min.js"></script>
 
-                <script src="/assets/js/script.js"></script>
+                <script src="/assets/js/script.min.js"></script>
                 <script src="/CUSTOM/js/homeScript.js"></script>
 
                 <script>

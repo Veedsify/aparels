@@ -108,6 +108,25 @@ router.get('/email-success', (req, res) => {
     res.render('home/email-success')
 })
 
+router.get('/preview/blog/:article', async (req, res) => {
+    const { article } = req.params;
+
+    try {
+        const [blog] = await SQLquery(`SELECT * FROM blogs WHERE BLOG_ID = ?`, [article]);
+
+        if (blog) {
+            const comments = await SQLquery(`SELECT * FROM blogcomments WHERE BLOG_ID = ? ORDER BY ID DESC`, [blog.BLOG_ID]);
+
+            res.render('home/blog-details', { blog, comments });
+        } else {
+            res.redirect('/blog');
+        }
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('Error retrieving blog post');
+    }
+});
+
 
 
 module.exports = router;  

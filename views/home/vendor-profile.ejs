@@ -5,13 +5,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Medic Apparels">
-    <meta name="keywords" content="Medic Apparels">
-    <meta name="author" content="Medic Apparels">
+
+    <meta name="author" content="<%- siteData.SITE_NAME %>">
     <link rel="icon" href="<%- siteData.SITE_LOGO %>" type="image/x-icon">
-    <title>Vendor Profile - Medic Apparels - Medical Aparells</title>
-    <meta name="description"
-        content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs. Shop now and experience the comfort and quality of our medical apparel.">
+    <title>Vendor Profile - <%- siteData.SITE_NAME %> - <%- siteData.SITE_NAME %></title>
+    <meta name="description" content="<%- siteData.SITE_FOOTER_DESC %>">
     <meta name="keywords" content="Medical, Clothing, Medical scrubs,
     Lab coats,
     Medical uniforms,
@@ -37,27 +35,24 @@
     Uniform embroidery,
     Custom medical apparel,
     Scrub caps">
-    <meta name="author" content=Veedsify">
+    <meta name="author" content="<%-siteData.SITE_NAME %>">
     <meta name="robots" content="index,follow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="Medical Apparels">
-    <meta property="og:description"
-        content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs. Shop now and experience the comfort and quality of our medical apparel.">
+    <meta property="og:title" content="<%- siteData.SITE_NAME %>">
+    <meta property="og:description" content="<%- siteData.SITE_FOOTER_DESC %>">
     <meta property="og:url" content="<%- siteLink %>">
     <meta property="og:image" content="<%- siteData.SITE_LOGO %>">
     <meta property="og:type" content="website">
 
     <!-- Facebook Meta Tags -->
-    <meta property="og:title" content="Medical Apparels">
-    <meta property="og:description"
-        content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs.">
+    <meta property="og:title" content="<%- siteData.SITE_NAME %>">
+    <meta property="og:description" content="<%- siteData.SITE_FOOTER_DESC %>">
     <meta property="og:url" content="<%- siteLink %>" <meta property="og:image" content="<%- siteData.SITE_LOGO %>">
     <meta property="og:type" content="website">
 
     <!-- Twitter Meta Tags -->
-    <meta name="twitter:title" content="Medical Apparels">
-    <meta name="twitter:description"
-        content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs.">
+    <meta name="twitter:title" content="<%- siteData.SITE_NAME %>">
+    <meta name="twitter:description" content="<%- siteData.SITE_FOOTER_DESC %>">
     <meta name="twitter:url" content="<%- siteLink %>">
     <meta name="twitter:image" content="<%- siteData.SITE_LOGO %>">
     <meta name="twitter:card" content="summary_large_image">
@@ -77,10 +72,10 @@
     <link rel="stylesheet" type="text/css" href="/assets/css/vendors/themify-icons.css">
 
     <!-- Bootstrap css -->
-    <link rel="stylesheet" type="text/css" href="/assets/css/vendors/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/vendors/bootstrap.min.css">
 
     <!-- Theme css -->
-    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.min.css">
 
     <%- include('includes/head-extra') %>
 
@@ -100,7 +95,7 @@
             <!-- vendor cover start -->
             <div class="vendor-cover">
                 <div>
-                    <img loading="lazy" src="/assets/images/vendor/profile.jpg" alt="" class="bg-img lazyload ">
+                    <img src="/assets/images/vendor/profile.jpg" alt="" class="bg-img  ">
                 </div>
             </div>
             <!-- vendor cover end -->
@@ -114,8 +109,7 @@
                             <div class="profile-left">
                                 <div class="profile-image">
                                     <div>
-                                        <img loading="lazy" src="/assets/images/logos/17.png" alt=""
-                                            class="img-fluid blur-up">
+                                        <img src="/assets/images/logos/17.png" alt="" class="img-fluid ">
                                         <h3>Fashion Store</h3>
                                         <div class="rating">
                                             <i class="fa fa-star"></i>
@@ -129,23 +123,30 @@
                                 </div>
                                 <div class="profile-detail">
                                     <div>
-                                        <p>Based in United States, Fashion store has been an Medic Apparels member since
-                                            May 15,
-                                            2017.
-                                            Fashion Store are engaged in all kinds of western clothing. In garment field
-                                            we have
-                                            maintained 3 years exporting experience. company insist in the principle of
-                                            "Customer
-                                            first, Quality uppermost".Based in United States, Fashion store has been an
+                                        <p>Based in United States, Fashion store has been an <%- siteData.SITE_NAME %>
+                                                member since
+                                                May 15,
+                                                2017.
+                                                Fashion Store are engaged in all kinds of western clothing. In garment
+                                                field
+                                                we have
+                                                maintained 3 years exporting experience. company insist in the principle
+                                                of
+                                                "Customer
+                                                first, Quality uppermost".Based in United States, Fashion store has been
+                                                an
                                         </p>
-                                        <p>Based in United States, Fashion store has been an Medic Apparels member since
-                                            May 15,
-                                            2017.
-                                            Fashion Store are engaged in all kinds of western clothing. In garment field
-                                            we have
-                                            maintained 3 years exporting experience. company insist in the principle of
-                                            "Customer
-                                            first, Quality uppermost"
+                                        <p>Based in United States, Fashion store has been an <%- siteData.SITE_NAME %>
+                                                member since
+                                                May 15,
+                                                2017.
+                                                Fashion Store are engaged in all kinds of western clothing. In garment
+                                                field
+                                                we have
+                                                maintained 3 years exporting experience. company insist in the principle
+                                                of
+                                                "Customer
+                                                first, Quality uppermost"
                                         </p>
                                     </div>
                                 </div>
@@ -258,8 +259,7 @@
                                 </div>
                             </div>
                             <div class="collection-sidebar-banner">
-                                <a href="#"><img loading="lazy" src="/assets/images/side-banner.png"
-                                        class="img-fluid blur-up  lazyload" alt=""></a>
+                                <a href="#"><img src="/assets/images/side-banner.png" class="img-fluid   " alt=""></a>
                             </div>
                             <!-- silde-bar colleps block end here -->
                         </div>
@@ -291,17 +291,13 @@
                                                             </div>
                                                             <div class="collection-grid-view">
                                                                 <ul>
-                                                                    <li><img loading="lazy"
-                                                                            src="/assets/images/icon/2.png" alt=""
+                                                                    <li><img src="/assets/images/icon/2.png" alt=""
                                                                             class="product-2-layout-view"></li>
-                                                                    <li><img loading="lazy"
-                                                                            src="/assets/images/icon/3.png" alt=""
+                                                                    <li><img src="/assets/images/icon/3.png" alt=""
                                                                             class="product-3-layout-view"></li>
-                                                                    <li><img loading="lazy"
-                                                                            src="/assets/images/icon/4.png" alt=""
+                                                                    <li><img src="/assets/images/icon/4.png" alt=""
                                                                             class="product-4-layout-view"></li>
-                                                                    <li><img loading="lazy"
-                                                                            src="/assets/images/icon/6.png" alt=""
+                                                                    <li><img src="/assets/images/icon/6.png" alt=""
                                                                             class="product-6-layout-view"></li>
                                                                 </ul>
                                                             </div>
@@ -332,10 +328,9 @@
                                                         <div class="product-box">
                                                             <div class="img-wrapper">
                                                                 <div class="front">
-                                                                    <a href="#"><img loading="lazy"
+                                                                    <a href="#"><img
                                                                             src="/assets/images/fashion/product/1.jpg"
-                                                                            class="img-fluid blur-up  lazyload bg-img"
-                                                                            alt=""></a>
+                                                                            class="img-fluid    bg-img" alt=""></a>
                                                                 </div>
                                                                 <div class="cart-info cart-wrap">
                                                                     <button data-bs-toggle="modal"
@@ -389,10 +384,8 @@
                                                         <div class="product-box">
                                                             <div class="img-wrapper">
                                                                 <div class="front">
-                                                                    <a href="#"><img loading="lazy"
-                                                                            src="/assets/images/pro/1.jpg"
-                                                                            class="img-fluid blur-up  lazyload bg-img"
-                                                                            alt=""></a>
+                                                                    <a href="#"><img src="/assets/images/pro/1.jpg"
+                                                                            class="img-fluid    bg-img" alt=""></a>
                                                                 </div>
                                                                 <div class="cart-info cart-wrap">
                                                                     <button data-bs-toggle="modal"
@@ -443,10 +436,9 @@
                                                         <div class="product-box">
                                                             <div class="img-wrapper">
                                                                 <div class="front">
-                                                                    <a href="#"><img loading="lazy"
+                                                                    <a href="#"><img
                                                                             src="/assets/images/fashion/pro/04.jpg"
-                                                                            class="img-fluid blur-up  lazyload bg-img"
-                                                                            alt=""></a>
+                                                                            class="img-fluid    bg-img" alt=""></a>
                                                                 </div>
                                                                 <div class="cart-info cart-wrap">
                                                                     <button data-bs-toggle="modal"
@@ -497,10 +489,9 @@
                                                         <div class="product-box">
                                                             <div class="img-wrapper">
                                                                 <div class="front">
-                                                                    <a href="#"><img loading="lazy"
+                                                                    <a href="#"><img
                                                                             src="/assets/images/fashion/product/4.jpg"
-                                                                            class="img-fluid blur-up  lazyload bg-img"
-                                                                            alt=""></a>
+                                                                            class="img-fluid    bg-img" alt=""></a>
                                                                 </div>
                                                                 <div class="cart-info cart-wrap">
                                                                     <button data-bs-toggle="modal"
@@ -551,10 +542,9 @@
                                                         <div class="product-box">
                                                             <div class="img-wrapper">
                                                                 <div class="front">
-                                                                    <a href="#"><img loading="lazy"
+                                                                    <a href="#"><img
                                                                             src="/assets/images/fashion/product/25.jpg"
-                                                                            class="img-fluid blur-up  lazyload bg-img"
-                                                                            alt=""></a>
+                                                                            class="img-fluid    bg-img" alt=""></a>
                                                                 </div>
                                                                 <div class="cart-info cart-wrap">
                                                                     <button data-bs-toggle="modal"
@@ -605,10 +595,9 @@
                                                         <div class="product-box">
                                                             <div class="img-wrapper">
                                                                 <div class="front">
-                                                                    <a href="#"><img loading="lazy"
+                                                                    <a href="#"><img
                                                                             src="/assets/images/beauty/pro/3.jpg"
-                                                                            class="img-fluid blur-up  lazyload bg-img"
-                                                                            alt=""></a>
+                                                                            class="img-fluid    bg-img" alt=""></a>
                                                                 </div>
                                                                 <div class="cart-info cart-wrap">
                                                                     <button data-bs-toggle="modal"
@@ -659,10 +648,9 @@
                                                         <div class="product-box">
                                                             <div class="img-wrapper">
                                                                 <div class="front">
-                                                                    <a href="#"><img loading="lazy"
+                                                                    <a href="#"><img
                                                                             src="/assets/images/fashion/product/44.jpg"
-                                                                            class="img-fluid blur-up  lazyload bg-img"
-                                                                            alt=""></a>
+                                                                            class="img-fluid    bg-img" alt=""></a>
                                                                 </div>
                                                                 <div class="cart-info cart-wrap">
                                                                     <button data-bs-toggle="modal"
@@ -713,10 +701,9 @@
                                                         <div class="product-box">
                                                             <div class="img-wrapper">
                                                                 <div class="front">
-                                                                    <a href="#"><img loading="lazy"
+                                                                    <a href="#"><img
                                                                             src="/assets/images/beauty/pro/1.jpg"
-                                                                            class="img-fluid blur-up  lazyload bg-img"
-                                                                            alt=""></a>
+                                                                            class="img-fluid    bg-img" alt=""></a>
                                                                 </div>
                                                                 <div class="cart-info cart-wrap">
                                                                     <button data-bs-toggle="modal"
@@ -832,8 +819,7 @@
                 <!-- menu js-->
                 <script src="/assets/js/menu.js"></script>
 
-                <!-- lazyload js-->
-                <script src="/assets/js/lazysizes.min.js"></script>
+
 
                 <!-- slick js-->
                 <script src="/assets/js/slick.js"></script>
@@ -849,7 +835,7 @@
                 <script src="/CUSTOM/js/sweetalert.form.js"></script>
                 <script src="/CUSTOM/js/sweetalert.min.js"></script>
 
-                <script src="/assets/js/script.js"></script>
+                <script src="/assets/js/script.min.js"></script>
                 <script src="/CUSTOM/js/homeScript.js"></script>
 
                 <script>

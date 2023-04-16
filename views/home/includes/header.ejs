@@ -6,8 +6,8 @@
         <div class="col-lg-6">
           <div class="header-contact">
             <ul>
-              <li>Welcome to Our store <%- siteData.SITE_NAME %></li>
-              <li>
+              <li class="text-dark">Welcome to Our store <%- siteData.SITE_NAME %></li>
+              <li class="text-dark">
                 <i class="fa fa-phone" aria-hidden="true"></i>Call Us: <%- siteData.FOOTER_PHONE_CONTACT %>
               </li>
             </ul>
@@ -15,15 +15,18 @@
         </div>
         <div class="col-lg-6 text-end">
           <ul class="header-dropdown">
+            <li class="mobile-wishlist"><a href="mailto:<%= siteData.FOOTER_EMAIL_CONTACT %>"><i class="fa fa-envelope" aria-hidden="true"></i>Email Us   </a>
+            </li>
             <li class="onhover-dropdown mobile-account">
-              <% if (user) { %>
-                <a href="/<%= user.ROLE %>"><i class="fa fa-user" aria-hidden="true"></i>
-                  <%= user.NAME.split(" ")[0] %></a>
-              <% } else { %>
-                
-               <a href=" /login"><i class="fa fa-user" aria-hidden="true"></i>Log in
-                </a>
-                <% } %>
+              <i class="fa fa-user" aria-hidden="true"></i> My Account
+              <ul class="onhover-show-div">
+                <% if(user){%>
+                  <li><a href="/<%- user.ROLE %>">Hi, <%- user.NAME.split(" ")[0] %></a></li>
+                <%} else{%>
+                <li><a href=" /login">Login</a></li>
+                  <li><a href="/register">register</a></li>
+                  <% } %>
+              </ul>
             </li>
           </ul>
         </div>
@@ -34,12 +37,9 @@
     <div class="row">
       <div class="col-sm-12">
         <div class="main-menu">
-          <div class="menu-left">
-            <div class="brand-logo">
-              <a href="/"><img loading="lazy" src="<%- siteData.SITE_LOGO %>" class="img-fluid blur-up  lazyload" alt=""
-                  width="120" /></a>
-            </div>
-          </div>
+          <!-- <div class="brand-logo"> -->
+          <a href="/"><img src="<%- siteData.SITE_LOGO %>" class="img-fluid" alt="logo" width="70" /></a>
+          <!-- </div> -->
           <div class="menu-right pull-right">
             <div>
               <nav id="main-nav">
@@ -62,13 +62,7 @@
                   <li>
                     <a href="/about">About</a>
                   </li>
-                  <li>
-                    <a href="#">More</a>
-                    <ul>
-                      <li><a href="/user">My Account</a></li>
-                      <li><a href="/contact">Contact Us</a></li>
-                    </ul>
-                  </li>
+                  <li><a href="/contact">Contact Us</a></li>
                 </ul>
               </nav>
             </div>
@@ -77,8 +71,8 @@
                 <ul>
                   <li class="onhover-div mobile-search">
                     <div>
-                      <img loading="lazy" src="/assets/images/icon/search.png" onclick="openSearch()"
-                        class="img-fluid blur-up  lazyload" alt="" />
+                      <img src="/assets/images/icon/search.png" onclick="openSearch()" class="img-fluid"
+                        alt="search icon" />
                       <i class="ti-search" onclick="openSearch()"></i>
                     </div>
                     <div id="search-overlay" class="search-overlay">
@@ -106,8 +100,7 @@
                   </li>
                   <li class="onhover-div mobile-cart">
                     <div>
-                      <img loading="lazy" src="/assets/images/icon/cart.png" class="img-fluid blur-up  lazyload"
-                        alt="" />
+                      <img src="/assets/images/icon/cart.png" class="img-fluid   " alt="cart icon" />
                       <i class="ti-shopping-cart"></i>
                     </div>
                     <span class="cart_qty_cls" id="cart-qtt"></span>
@@ -131,7 +124,7 @@
                     </ul>
                   </li>
                   <li class="onhover-div mobile-setting">
-                    <div><img loading="lazy" src="/IMAGES/list.svg" class="img-fluid blur-up  lazyloaded" width="30"> <i
+                    <div><img src="/IMAGES/list.svg" class="img-fluid" alt="menu list icon" width="30"> <i
                         class="ti-list"></i>
                     </div>
                     <div class="show-div setting">

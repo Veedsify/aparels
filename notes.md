@@ -189,68 +189,67 @@ console.log('Server started on port 3000');
 });
 
 [
-  {
-    "fieldname": "siteLogo",
-    "originalname": "monika-kesharwani-70g-y92y_Hw-unsplash.jpg",
-    "encoding": "7bit",
-    "mimetype": "image/jpeg",
-    "destination": "public/PAGES/",
-    "filename": "siteLogo.jpg",
-    "path": "public\\PAGES\\siteLogo.jpg",
-    "size": 2834667
-  },
-  {
-    "fieldname": "homeBannerImage1",
-    "originalname": "suheyl-burak-p7I07kuPSyU-unsplash.jpg",
-    "encoding": "7bit",
-    "mimetype": "image/jpeg",
-    "destination": "public/PAGES/",
-    "filename": "homeBannerImage1.jpg",
-    "path": "public\\PAGES\\homeBannerImage1.jpg",
-    "size": 967931
-  },
-  {
-    "fieldname": "secondBannerImage",
-    "originalname": "image (1).png",
-    "encoding": "7bit",
-    "mimetype": "image/png",
-    "destination": "public/PAGES/",
-    "filename": "secondBannerImage.png",
-    "path": "public\\PAGES\\secondBannerImage.png",
-    "size": 161850
-  },
-  {
-    "fieldname": "homeFeaturedIMage",
-    "originalname": "shcvc.png",
-    "encoding": "7bit",
-    "mimetype": "image/png",
-    "destination": "public/PAGES/",
-    "filename": "homeFeaturedIMage.png",
-    "path": "public\\PAGES\\homeFeaturedIMage.png",
-    "size": 168088
-  },
-  {
-    "fieldname": "homeFeaturedIMage2",
-    "originalname": "National ID.jpg",
-    "encoding": "7bit",
-    "mimetype": "image/jpeg",
-    "destination": "public/PAGES/",
-    "filename": "homeFeaturedIMage2.jpg",
-    "path": "public\\PAGES\\homeFeaturedIMage2.jpg",
-    "size": 29651
-  },
-  {
-    "fieldname": "homeParalaxImage",
-    "originalname": "fluxweed-hcpsKre3rO8-unsplash.jpg",
-    "encoding": "7bit",
-    "mimetype": "image/jpeg",
-    "destination": "public/PAGES/",
-    "filename": "homeParalaxImage.jpg",
-    "path": "public\\PAGES\\homeParalaxImage.jpg",
-    "size": 2058817
-  }
+{
+"fieldname": "siteLogo",
+"originalname": "monika-kesharwani-70g-y92y_Hw-unsplash.jpg",
+"encoding": "7bit",
+"mimetype": "image/jpeg",
+"destination": "public/PAGES/",
+"filename": "siteLogo.jpg",
+"path": "public\\PAGES\\siteLogo.jpg",
+"size": 2834667
+},
+{
+"fieldname": "homeBannerImage1",
+"originalname": "suheyl-burak-p7I07kuPSyU-unsplash.jpg",
+"encoding": "7bit",
+"mimetype": "image/jpeg",
+"destination": "public/PAGES/",
+"filename": "homeBannerImage1.jpg",
+"path": "public\\PAGES\\homeBannerImage1.jpg",
+"size": 967931
+},
+{
+"fieldname": "secondBannerImage",
+"originalname": "image (1).png",
+"encoding": "7bit",
+"mimetype": "image/png",
+"destination": "public/PAGES/",
+"filename": "secondBannerImage.png",
+"path": "public\\PAGES\\secondBannerImage.png",
+"size": 161850
+},
+{
+"fieldname": "homeFeaturedIMage",
+"originalname": "shcvc.png",
+"encoding": "7bit",
+"mimetype": "image/png",
+"destination": "public/PAGES/",
+"filename": "homeFeaturedIMage.png",
+"path": "public\\PAGES\\homeFeaturedIMage.png",
+"size": 168088
+},
+{
+"fieldname": "homeFeaturedIMage2",
+"originalname": "National ID.jpg",
+"encoding": "7bit",
+"mimetype": "image/jpeg",
+"destination": "public/PAGES/",
+"filename": "homeFeaturedIMage2.jpg",
+"path": "public\\PAGES\\homeFeaturedIMage2.jpg",
+"size": 29651
+},
+{
+"fieldname": "homeParalaxImage",
+"originalname": "fluxweed-hcpsKre3rO8-unsplash.jpg",
+"encoding": "7bit",
+"mimetype": "image/jpeg",
+"destination": "public/PAGES/",
+"filename": "homeParalaxImage.jpg",
+"path": "public\\PAGES\\homeParalaxImage.jpg",
+"size": 2058817
+}
 ]
-
 
 <!-- NOTES -->
 
@@ -258,3 +257,9 @@ Work on shop page / 50% fixed
 update profile address settings for user
 Complete shipping, policy, contact page,
 work on email templates
+
+<!-- WORK ON PRODUCT FILE SYSTEM JUST LIKE BLOG FILE SYSTEM -->
+<!-- ADD EMAIL NOTIFICATION FOR WHEN A POST IS APPROVED  -->
+<!-- EMAIL NOTIFICATION FOR WHEN A VENDOR IS ADDED -->
+<!-- EMAIL NOTIFICATION FOR WHEN A RATING FOR A PRODUCT IS ADDED -->
+<!-- WORK ON SEARCH FUNCTUNALITY -->

@@ -8,7 +8,8 @@
                         <div class="subscribe">
                             <div>
                                 <h4>KNOW IT ALL FIRST!</h4>
-                                <p>Never Miss Anything From Medic Apparels By Signing Up To Our Newsletter.</p>
+                                <p>Never Miss Anything From <%- siteData.SITE_NAME %> By Signing Up To Our Newsletter.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -34,8 +35,7 @@
                         <h4>about</h4>
                     </div>
                     <div class="footer-contant">
-                        <div class="footer-logo"><img loading="lazy" src="<%- siteData.SITE_LOGO %>" alt=""
-                                width="150px"></div>
+                        <div class="footer-logo"><img src="<%- siteData.SITE_LOGO %>" alt="logo" width="150px"></div>
                         <p><%- siteData.SITE_FOOTER_DESC %></p>
                         <div class="footer-social">
                             <ul>
@@ -105,7 +105,7 @@
                 <div class="col-xl-6 col-md-6 col-sm-12">
                     <div class="footer-end">
                         <p>Copyright <i class="fa fa-copyright" aria-hidden="true"></i>
-                            <script>document.write(new Date().getFullYear())</script> Medic Apparels
+                            <span id="year"></span> <%- siteData.SITE_NAME %>
                         </p>
                     </div>
                 </div>
@@ -113,13 +113,13 @@
                     <div class="payment-card-bottom">
                         <ul>
                             <li>
-                                <a href="#"><img loading="lazy" src="/assets/images/icon/visa.png" alt=""></a>
+                                <span><img src="/assets/images/icon/visa.png" alt="accepted credit card"></span>
                             </li>
                             <li>
-                                <a href="#"><img loading="lazy" src="/assets/images/icon/mastercard.png" alt=""></a>
+                                <span><img src="/assets/images/icon/mastercard.png" alt="accepted credit card"></span>
                             </li>
                             <li>
-                                <a href="#"><img loading="lazy" src="/assets/images/icon/discover.png" alt=""></a>
+                                <span><img src="/assets/images/icon/discover.png" alt="accepted credit card"></span>
                             </li>
                         </ul>
                     </div>

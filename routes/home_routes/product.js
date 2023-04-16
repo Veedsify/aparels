@@ -23,23 +23,24 @@ router.get('/:slugid', async (req, res) => {
 })
 
 router.get('/f/:slugid', async (req, res) => {
-    const { slugid } = req.params
-    const sql = "SELECT * FROM products WHERE PRODUCT_ID = ?  LIMIT 1"
-    const [productDetails] = await new Promise((resolve, reject) => {
-        mysqlPool.query(sql, [slugid], (err, rows) => {
-            if (err) throw err
-            resolve(rows)
+    try {
+        const { slugid } = req.params
+        const sql = "SELECT * FROM products WHERE PRODUCT_ID = ?  LIMIT 1"
+        const [productDetails] = await new Promise((resolve, reject) => {
+            mysqlPool.query(sql, [slugid], (err, rows) => {
+                if (err) throw err
+                resolve(rows)
+            })
         })
-    })
-    res.redirect(`/product/${productDetails.SLUG_ID}`)
+        res.redirect(`/product/${productDetails.SLUG_ID}`)
+    } catch (err) {
+        console.error(err)
+        res.redirect(`/`)
+    }
 })
 
 router.get('/compare', (req, res) => {
     res.render('home/compare')
-})
-
-router.get('/cart', (req, res) => {
-    res.render('home/cart')
 })
 
 

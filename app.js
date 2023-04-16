@@ -73,6 +73,9 @@ async function userLocals(req, res, next) {
   }
 }
 
+app.use('/robots.txt', express.static(path.join(__dirname, 'robots.txt')));
+
+
 app.get('/logout', (req, res, next) => {
   req.session.destroy();
   res.redirect('/login');

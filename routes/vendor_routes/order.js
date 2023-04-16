@@ -3,6 +3,7 @@ const router = express.Router();
 const mysqlPool = require("../../database/mysql");
 const util = require("util");
 const orderStatus = require("../../mailer/orderStatus");
+const deliveredStatus = require("../../mailer/deliveredStatus");
 const SQLquery = util.promisify(mysqlPool.query).bind(mysqlPool);
 
 router.get("/", async (req, res) => {
@@ -180,7 +181,7 @@ router.post("/deliveredOrder", async (req, res) => {
       orderData.USER_ID,
     ]);
 
-    await orderStatus(
+    await deliveredStatus(
       userData.NAME,
       userData.EMAIL,
       `Your order is has delivered successfully`,

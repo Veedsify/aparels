@@ -5,55 +5,34 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="description" content="Medic Apparels">
-    <meta name="keywords" content="Medic Apparels">
-    <meta name="author" content="Medic Apparels">
+
+    <meta name="author" content="<%- siteData.SITE_NAME %>">
     <link rel="icon" href="<%- siteData.SITE_LOGO %>" type="image/x-icon">
-    <title><%- blog.BLOG_TITLE %> Medical Aparells</title>
+    <title><%- blog.BLOG_TITLE %> <%- siteData.SITE_NAME %></title>
     <meta name="description" content="<%- blog.BLOG_DESC %>">
-    <meta name="keywords" content="Medical, Clothing, Medical scrubs,
- <%- blog.BLOG_KEYWORDS %>">
-    <meta name="author" content=Veedsify">
+    <meta name="keywords" content="Medical, Clothing, Medical scrubs, <%- blog.BLOG_KEYWORDS %>">
+    <meta name="author" content="<%-siteData.SITE_NAME %>">
     <meta name="robots" content="index,follow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="<%- blog.BLOG_TITLE %> - Medical Apparels">
+    <meta property="og:title" content="<%- blog.BLOG_TITLE %> - <%- siteData.SITE_NAME %>">
     <meta property="og:description" content="<%- blog.BLOG_DESC %>">
     <meta property="og:url" content="<%- siteLink %>/blog/<%- blog.BLOG_SLUG %>">
     <meta property="og:image" content="<%- siteData.SITE_LOGO %>">
     <meta property="og:type" content="article">
 
     <!-- Facebook Meta Tags -->
-    <meta property="og:title" content="<%- blog.BLOG_TITLE %> - Medical Apparels">
+    <meta property="og:title" content="<%- blog.BLOG_TITLE %> - <%- siteData.SITE_NAME %>">
     <meta property="og:description" content="<%- blog.BLOG_DESC %>">
-    <meta property="og:url" content="<%- siteLink %>/blog/<%- blog.BLOG_SLUG %>" <meta property="og:image"
-        content="<%- blog.BLOG_IMAGE %>">
+    <meta property="og:url" content="<%- siteLink %>/blog/<%- blog.BLOG_SLUG %>">
+    <meta property="og:image" content="<%- blog.BLOG_IMAGE %>">
     <meta property="og:type" content="website">
 
     <!-- Twitter Meta Tags -->
-    <meta name="twitter:title" content="<%- blog.BLOG_TITLE %> - Medical Apparels">
+    <meta name="twitter:title" content="<%- blog.BLOG_TITLE %> - <%- siteData.SITE_NAME %>">
     <meta name="twitter:description" content="<%- blog.BLOG_DESC %>">
     <meta name="twitter:url" content="<%- siteLink %>/blog/<%- blog.BLOG_SLUG %>">
     <meta name="twitter:image" content="<%- blog.BLOG_IMAGE %>">
     <meta name="twitter:card" content="summary_large_image">
-
-    <!-- Icons -->
-    <link rel="stylesheet" type="text/css" href="/assets/css/vendors/font-awesome.css">
-
-    <!--Slick slider css-->
-    <link rel="stylesheet" type="text/css" href="/assets/css/vendors/slick.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/vendors/slick-theme.css">
-
-    <!-- Animate icon -->
-    <link rel="stylesheet" type="text/css" href="/assets/css/vendors/animate.css">
-
-    <!-- Themify icon -->
-    <link rel="stylesheet" type="text/css" href="/assets/css/vendors/themify-icons.css">
-
-    <!-- Bootstrap css -->
-    <link rel="stylesheet" type="text/css" href="/assets/css/vendors/bootstrap.css">
-
-    <!-- Theme css -->
-    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
 
     <%- include('includes/head-extra') %>
 
@@ -97,8 +76,8 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-12 blog-detail">
-                            <img loading="lazy" src="<%- blog.BLOG_IMAGE %>" class="w-100  lazyload ob-fit"
-                                style="aspect-ratio: 16/6;" alt="">
+                            <img src="<%- blog.BLOG_IMAGE %>" class="w-100   ob-fit" style="aspect-ratio: 16/6;"
+                                alt="blog post image">
                             <h3><%- blog.BLOG_TITLE %></h3>
                             <ul class="post-social">
                                 <li><%- blog.DATE.toLocaleDateString('en-us',{ month: 'long' , day: '2-digit' ,
@@ -117,8 +96,7 @@
                             <ul class="comment-section">
                                 <% for(comment of comments){ %>
                                     <li class="w-100">
-                                        <div class="media"><img loading="lazy" src="<%- comment.USER_IMAGE %>"
-                                                alt="Generic placeholder image">
+                                        <div class="media"><img src="<%- comment.USER_IMAGE %>" alt="user image">
                                             <div class="media-body">
                                                 <h6><%- comment.NAME %> <span>(
                                                             <% const dateObj=new Date(comment.DATE); const
@@ -222,8 +200,7 @@
                 <!-- menu js-->
                 <script src="/assets/js/menu.js"></script>
 
-                <!-- lazyload js-->
-                <script src="/assets/js/lazysizes.min.js"></script>
+
 
                 <!-- Bootstrap js-->
                 <script src="/assets/js/bootstrap.bundle.min.js"></script>
@@ -236,7 +213,7 @@
                 <script src="/CUSTOM/js/sweetalert.form.js"></script>
                 <script src="/CUSTOM/js/sweetalert.min.js"></script>
 
-                <script src="/assets/js/script.js"></script>
+                <script src="/assets/js/script.min.js"></script>
                 <script src="/CUSTOM/js/homeScript.js"></script>
 
                 <script>

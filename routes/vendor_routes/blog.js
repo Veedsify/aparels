@@ -9,53 +9,62 @@ const multer = require('multer');
 const createSlug = require('../../configs/slug');
 const path = require('path');
 const freeMail = require('../../mailer/freemail')
+const fs = require('fs');
+
+const blogId = `BLG_${randThisNum(1000000, 9999999)}`;
+
+const directory = `public/BLOG_IMAGES/${blogId}/`;
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, "public/BLOG_IMAGES/");
+        if (!fs.existsSync(directory)) {
+            fs.mkdirSync(directory, { recursive: true });
+        }
+        cb(null, directory);
     },
     filename: function (req, file, cb) {
         const fileName = file.originalname;
         const ext = path.extname(fileName);
-        const imageName = `BIMG_${randThisNum(10000000, 99999999)}${ext}`;
+        const imageName = `BIMG_1${ext}`;
         cb(null, imageName);
     },
 });
-const upload = multer({storage: storage});
+
+const upload = multer({ storage: storage });
 
 router.get('/new', (req, res) => {
     res.render('vendor/new-blog')
 })
 
 router.get('/edit/:blog_id', async (req, res) => {
-    const {blog_id} = req.params
+    const { blog_id } = req.params
     const blogs = await SQLquery(`SELECT *
                                   FROM blogs
                                   WHERE BLOG_ID = ?`, [blog_id])
-    res.render('vendor/edit-blog', {blogData: blogs[0]})
+    res.render('vendor/edit-blog', { blogData: blogs[0] })
 })
 
 router.get('/', checkUserStatus, async (req, res) => {
     const blogs = await SQLquery(`SELECT *
                                   FROM blogs
                                   WHERE BLOG_ADMIN_STATUS = ?`, ['inactive'])
-    res.render('vendor/blog', {blogs})
+    res.render('vendor/blog', { blogs })
 })
 
 router.get('/views', async (req, res, next) => {
-    const {USER_ID} = req.session.user
+    const { USER_ID } = req.session.user
     const blogs = await SQLquery(`SELECT *
                                   FROM blogs
                                   WHERE BLOG_USER = ?
                                   ORDER BY ID DESC`, [USER_ID])
-    res.render('vendor/editblog', {blogs})
+    res.render('vendor/editblog', { blogs })
 })
 
 router.delete("/audit", async (req, res) => {
     try {
 
-        const {id} = req.body;
-        const {USER_ID} = req.session.user
+        const { id } = req.body;
+        const { USER_ID } = req.session.user
 
         await SQLquery(
             `DELETE
@@ -64,7 +73,14 @@ router.delete("/audit", async (req, res) => {
                AND BLOG_USER = ?`,
             [id, USER_ID]
         )
-        // EMAIL OR NOTIFY BLOG USER WITH THE TEXTAREA
+        const directoryPath = `public/BLOG_IMAGES/${id}`
+
+        fs.rmdir(directoryPath, { recursive: true }, (err) => {
+            if (err) {
+                console.error(err);
+                console.log(err);
+            }
+        });
 
         res.json({
             message: 'Post Deleted Successfully'
@@ -80,12 +96,12 @@ router.delete("/audit", async (req, res) => {
 router.post('/add-new-blog', upload.single('image'), async (req, res, next) => {
     try {
         // Validate input
-        const {title, description, keywords, category, htmlEditor, action} = req.body;
+        const { title, description, keywords, category, htmlEditor, action } = req.body;
         if (!title || !description || !category || !htmlEditor || !action) {
             return res.redirect('/vendor/blog?err=empty-fields')
         }
-        const imageLink = `/BLOG_IMAGES/${req.file.filename}`;
-        const blogId = `BLG_${randThisNum(1000000, 9999999)}`;
+        const imageLink = `/BLOG_IMAGES/${blogId}/${req.file.filename}`;
+        // const blogId = `BLG_${randThisNum(1000000, 9999999)}`;
         const userId = req.session.user.USER_ID;
         const username = req.session.user.NAME;
         const userImage = req.session.user.PROFILE_IMAGE;
@@ -116,7 +132,7 @@ router.post('/add-new-blog', upload.single('image'), async (req, res, next) => {
             "false"
         ];
         await SQLquery(query, data);
-        
+
         const allAdmins = await SQLquery(`SELECT *
                                           FROM user
                                           WHERE ROLE = ?`, ['admin'])
@@ -135,8 +151,8 @@ router.post('/add-new-blog', upload.single('image'), async (req, res, next) => {
 
 router.post('/up-new-blog/:id', upload.single('image'), async (req, res) => {
     try {
-        const {id} = req.params
-        const blog = await SQLquery(
+        const { id } = req.params
+        const [blog] = await SQLquery(
             `SELECT *
              FROM blogs
              WHERE BLOG_ID = ?
@@ -146,11 +162,11 @@ router.post('/up-new-blog/:id', upload.single('image'), async (req, res) => {
 
         if (!blog) return res.redirect('/vendor/blog');
 
-        const {filename} = req.file || {};
-        const {title, description, Keywords, category, htmlEditor, action} = req.body;
-        const imageLink = filename ? `/BLOG_IMAGES/${filename}` : blog[0].BLOG_IMAGE;
-        const {USER_ID, NAME, PROFILE_IMAGE, ROLE} = req.session.user;
-        const blogId = blog[0].BLOG_ID;
+        const { filename } = req.file || {};
+        const { title, description, Keywords, category, htmlEditor, action } = req.body;
+        const imageLink = filename ? `/BLOG_IMAGES/${id}/${filename}` : blog.BLOG_IMAGE;
+        const { USER_ID, NAME, PROFILE_IMAGE, ROLE } = req.session.user;
+        const blogId = blog.BLOG_ID;
         const status = action === 'public' ? 'active' : 'inactive';
         const adminStatus = ROLE === 'admin' ? 'active' : 'inactive';
         const data = [
@@ -168,7 +184,7 @@ router.post('/up-new-blog/:id', upload.single('image'), async (req, res) => {
             status,
             adminStatus,
             "false",
-            blog[0].BLOG_ID,
+            blog.BLOG_ID,
         ];
         const query = `
             UPDATE blogs
@@ -198,7 +214,7 @@ router.post('/up-new-blog/:id', upload.single('image'), async (req, res) => {
             const subject = `New Blog Post Added To Medic Aparrels`;
             await freeMail(admin.ROLE, admin.EMAIL, message, subject);
         }
-        
+
         if (response) {
             res.redirect(`/${ROLE}/blog/views?action=${action}`);
         }
@@ -217,7 +233,7 @@ function checkUserStatus(req, res, next) {
         return res.redirect("/login");
     }
 
-    const {VERIFICATION, ROLE} = req.session.user;
+    const { VERIFICATION, ROLE } = req.session.user;
 
     if (ROLE !== "admin") {
         return res.redirect(`/${ROLE}`);

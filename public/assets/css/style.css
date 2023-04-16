@@ -370,7 +370,7 @@
 }
 
 body {
-    font-family: 'Jost', sans-serif;
+    font-family: 'Outfit', sans-serif;
     position: relative;
     background: #fff;
     font-size: 14px
@@ -395,7 +395,8 @@ body.mulish-font {
 h1 {
     font-size: 60px;
     color: #222;
-    font-weight: 700;;
+    font-weight: 700;
+    ;
     text-transform: capitalize;
 }
 
@@ -15299,6 +15300,7 @@ header.stickycls {
     background: -webkit-gradient(linear, left top, left bottom, color-stop(22%, #cfc09f), color-stop(10%, #cfc1a0), color-stop(26%, #cfc09f), color-stop(27%, #cfc09f), color-stop(40%, #f1dea7), color-stop(78%, #736236));
     background: linear-gradient(to bottom, #cfc09f 22%, #cfc1a0 10%, #cfc09f 26%, #cfc09f 27%, #f1dea7 40%, #736236 78%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: calc(30px + (80 - 30) * ((100vw - 320px) / (1920 - 320)));
     max-width: 60%;
@@ -41029,3 +41031,7 @@ body.rtl .account-setting {
 }
 
 
+html {
+    font-size: 85.2% !important;
+    scroll-behavior: smooth;
+}

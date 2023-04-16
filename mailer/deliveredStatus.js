@@ -1,6 +1,6 @@
 let mailer = require("./nodemailer");
 
-async function orderStatus(
+async function deliveredStatus(
  name, email,message, order, subject
 ) {
   const template = `
@@ -906,7 +906,7 @@ async function orderStatus(
                     <div class="btn btn--ghost btn--medium" style="Margin-bottom: 20px;text-align: center;">
                       <!--[if !mso]><!--><a
                         style="border-radius: 4px;display: inline-block;font-size: 12px;font-weight: bold;line-height: 22px;padding: 10px 20px;text-align: center;text-decoration: none !important;transition: opacity 0.1s ease-in;color: #ff3b48 !important;border: 1px solid #41637e;font-family: Lato, Tahoma, sans-serif;border-color: #ff3b48;"
-                        href="${process.env.SITE_LINK}/order/track/${order.ORDER_ID}">Track Order</a><!--<![endif]-->
+                        href="${process.env.SITE_LINK}/product/review/${order.ORDER_ID}">Submit a Review</a><!--<![endif]-->
                       <!--[if mso]><p style="line-height:0;margin:0;">&nbsp;</p><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" href="${process.env.SITE_LINK}/order/track/${order.ORDER_ID}" style="width:78.75pt" arcsize="10%" filled="f" strokecolor="#41637E" strokeweight="1px"><v:textbox style="mso-fit-shape-to-text:t" inset="0pt,6.75pt,0pt,6.75pt"><center style="font-size:12px;line-height:22px;color:#FF3B48;font-family:Lato,Tahoma,sans-serif;font-weight:bold;mso-line-height-rule:exactly;mso-text-raise:2px">Track Order</center></v:textbox></v:roundrect><![endif]-->
                     </div>
                   </div>
@@ -1029,4 +1029,4 @@ async function orderStatus(
   );
 }
 
-module.exports = orderStatus;
+module.exports = deliveredStatus;

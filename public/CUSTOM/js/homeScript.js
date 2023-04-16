@@ -30,8 +30,8 @@ $("#loginForm").submit(function (e) {
             email,
             password,
         })
-        .then((res) => {
-            checkResponse(res.data);
+        .then(({ data }) => {
+            checkResponse(data);
         })
         .catch((err) => {
             console.log(err);
@@ -65,12 +65,12 @@ function editcard(cardId) {
         });
 }
 
-function checkResponse(res) {
-    if (res.link) {
-        window.location.href = res.link;
+function checkResponse({ link, message }) {
+    if (link) {
+        window.location.href = link;
     } else {
         swal({
-            text: res.message,
+            text: message,
         });
     }
 }
@@ -81,13 +81,13 @@ function wishlist(product_id) {
         .post("/wishlist/create-new-wishlist", {
             ID: product_id,
         })
-        .then((res) => {
-            if (res.data.type == "link") {
-                window.location.href = res.data.link;
+        .then(({ data }) => {
+            if (data.type == "link") {
+                window.location.href = data.link;
             } else {
                 swal({
                     icon: "success",
-                    text: res.data.message,
+                    text: data.message,
                     button: {
                         className: "btn-solid",
                     },
@@ -565,3 +565,5 @@ listProduct?.addEventListener('change', (event) => {
         "count": id
     });
 })
+
+document.querySelector('#year').innerHTML = new Date().getFullYear()

@@ -5,13 +5,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Medic Apparels">
-    <meta name="keywords" content="Medic Apparels">
-    <meta name="author" content="Medic Apparels">
+
+    <meta name="author" content="<%- siteData.SITE_NAME %>">
     <link rel="icon" href="<%- siteData.SITE_LOGO %>" type="image/x-icon">
-    <title>Account Info - Medic Apparels - </title>
+    <title>Account Info - <%- siteData.SITE_NAME %> - </title>
     <meta name="description"
-        content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs. Shop now and experience the comfort and quality of our medical apparel.">
+        content="<%- siteData.SITE_NAME %> Shop now and experience the comfort and quality of our medical apparel.">
     <meta name="keywords" content="Medical, Clothing, Medical scrubs,
     Lab coats,
     Medical uniforms,
@@ -37,27 +36,25 @@
     Uniform embroidery,
     Custom medical apparel,
     Scrub caps">
-    <meta name="author" content=Veedsify">
+    <meta name="author" content="Veedsify">
     <meta name="robots" content="index,follow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="Medical Apparels">
     <meta property="og:description"
-        content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs. Shop now and experience the comfort and quality of our medical apparel.">
+        content="<%- siteData.SITE_NAME %> Shop now and experience the comfort and quality of our medical apparel.">
     <meta property="og:url" content="<%- siteLink %>">
     <meta property="og:image" content="<%- siteData.SITE_LOGO %>">
     <meta property="og:type" content="website">
 
     <!-- Facebook Meta Tags -->
     <meta property="og:title" content="Medical Apparels">
-    <meta property="og:description"
-        content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs.">
+    <meta property="og:description" content="<%- siteData.SITE_FOOTER_DESC %>">
     <meta property="og:url" content="<%- siteLink %>" <meta property="og:image" content="<%- siteData.SITE_LOGO %>">
     <meta property="og:type" content="website">
 
     <!-- Twitter Meta Tags -->
     <meta name="twitter:title" content="Medical Apparels">
-    <meta name="twitter:description"
-        content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs.">
+    <meta name="twitter:description" content="<%- siteData.SITE_NAME %>">
     <meta name="twitter:url" content="<%- siteLink %>">
     <meta name="twitter:image" content="<%- siteData.SITE_LOGO %>">
     <meta name="twitter:card" content="summary_large_image">
@@ -108,7 +105,8 @@
                                     <div class="form-group col-sm-12">
                                         <label class="d-block">
                                             Full Name:
-                                            <input required type="text" value="<%- user.NAME  %>" class="form-control" id="name" name="name">
+                                            <input required type="text" value="<%- user.NAME  %>" class="form-control"
+                                                id="name" name="name">
                                         </label>
                                     </div>
                                     <div class="form-group">
@@ -121,8 +119,8 @@
                                     <div class="form-group col-sm-6">
                                         <label class="d-block">
                                             Country:
-                                            <input required type="text" value="<%- user.COUNTRY  %>" class="form-control"
-                                                id="country" name="country">
+                                            <input required type="text" value="<%- user.COUNTRY  %>"
+                                                class="form-control" id="country" name="country">
                                         </label>
                                     </div>
                                     <div class="form-group col-sm-6">
@@ -135,21 +133,22 @@
                                     <div class="form-group col-sm-6">
                                         <label class="d-block">
                                             City:
-                                            <input required type="text" value="<%- user.CITY  %>" class="form-control" id="city" name="city">
+                                            <input required type="text" value="<%- user.CITY  %>" class="form-control"
+                                                id="city" name="city">
                                         </label>
                                     </div>
                                     <div class="form-group col-sm-6">
                                         <label class="d-block">
                                             Zip Code:
-                                            <input required type="number" value="<%- user.ZIP_CODE  %>" class="form-control"
-                                                id="zip" name="zip">
+                                            <input required type="number" value="<%- user.ZIP_CODE  %>"
+                                                class="form-control" id="zip" name="zip">
                                         </label>
                                     </div>
                                     <div class="form-group col-sm-6 w-100">
                                         <label class="d-block">
                                             Street Address:
-                                            <input required type="text" value="<%- user.ADDRESS  %>" class="form-control"
-                                                id="street" name="street">
+                                            <input required type="text" value="<%- user.ADDRESS  %>"
+                                                class="form-control" id="street" name="street">
                                         </label>
                                     </div>
                                     <div class="form-group col-sm-6 w-100">
@@ -181,7 +180,8 @@
                                             class="img-fluid img-thumbnail rounded-circle ob-fit-square d-block curp" />
                                         <small class="text-center">click to upload</small>
                                         <span class="fro-profile_main-pic-change">
-                                            <input required type="file" name="profileImage" class="d-none" id="preview-file">
+                                            <input required type="file" name="profileImage" class="d-none"
+                                                id="preview-file">
                                         </span>
                                     </label>
                                     <div class="form-group">

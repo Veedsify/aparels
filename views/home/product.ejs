@@ -5,46 +5,33 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="description" content="Medic Apparels">
-    <meta name="keywords" content="Medic Apparels">
-    <meta name="author" content="Medic Apparels">
+
+    <meta name="author" content="<%- siteData.SITE_NAME %>">
     <link rel="icon" href="<%- siteData.SITE_LOGO %>" type="image/x-icon">
-    <title><%- productDetails.PRODUCT_NAME %> Medic Apparels</title>
-    <meta name="description"
-        content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs. Shop now and experience the comfort and quality of our medical apparel.">
-    <meta name="keywords" content="Medical, Clothing, Medical scrubs,
-  Lab coats,
-  Medical uniforms,
-  Nurse uniforms,
-  Medical shoes,
-  
-  Antimicrobial scrubs,
-  Uniform embroidery,
-  Custom medical apparel,
-  Scrub caps">
-    <meta name="author" content=Veedsify">
+    <title><%- productDetails.PRODUCT_NAME %> <%- siteData.SITE_NAME %></title>
+    <meta name="description" content="<%- siteData.SITE_FOOTER_DESC %>">
+    <meta name="keywords" content="<%- productDetails.PRODUCT_NAME %> - <%- productDetails.PRODUCT_DESCRIPTION %>">
+    <meta name="author" content="<%-siteData.SITE_NAME %>">
     <meta name="robots" content="index,follow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="Medical Apparels">
-    <meta property="og:description"
-        content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs. Shop now and experience the comfort and quality of our medical apparel.">
-    <meta property="og:url" content="<%- siteLink %>">
-    <meta property="og:image" content="<%- siteData.SITE_LOGO %>">
+    <meta property="og:title" content="<%- productDetails.PRODUCT_NAME %>">
+    <meta property="og:description" content="<%- siteData.PRODUCT_DESCRIPTION %>">
+    <meta property="og:url" content="<%- siteLink %>/product/<%- productDetails.SLUG_ID %>">
+    <meta property="og:image" content="<%- productDetails.MAIN_IMAGE %>">
     <meta property="og:type" content="website">
 
     <!-- Facebook Meta Tags -->
-    <meta property="og:title" content="Medical Apparels">
-    <meta property="og:description"
-        content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs.">
-    <meta property="og:url" content="<%- siteLink %>" <meta property="og:image" content="<%- siteData.SITE_LOGO %>">
+    <meta property="og:title" content="<%- productDetails.PRODUCT_NAME %>">
+    <meta property="og:description" content="<%- siteData.PRODUCT_DESCRIPTION %>">
+    <meta property="og:url" content="<%- siteLink %>/product/<%- productDetails.SLUG_ID %>">
+    <meta property="og:image" content="<%- productDetails.MAIN_IMAGE %>">
     <meta property="og:type" content="website">
 
     <!-- Twitter Meta Tags -->
-    <meta name="twitter:title" content="Medical Apparels">
-    <meta name="twitter:description"
-        content="Find the perfect medical apparel for your profession at Medical Apparels. We offer a wide range of comfortable and stylish medical scrubs, lab coats, shoes, and more. Browse our collection and discover the perfect fit for your needs.">
-    <meta name="twitter:url" content="<%- siteLink %>">
-    <meta name="twitter:image" content="<%- siteData.SITE_LOGO %>">
+    <meta name="twitter:title" content="<%- productDetails.PRODUCT_NAME %>">
+    <meta name="twitter:description" content="<%- productDetails.PRODUCT_DESCRIPTION %>">
+    <meta name="twitter:url" content="<%- siteLink %>/product/<%- productDetails.SLUG_ID %>">
+    <meta name="twitter:image" content="<%- productDetails.MAIN_IMAGE %>">
     <meta name="twitter:card" content="summary_large_image">
 
 
@@ -62,10 +49,10 @@
     <link rel="stylesheet" type="text/css" href="/assets/css/vendors/themify-icons.css">
 
     <!-- Bootstrap css -->
-    <link rel="stylesheet" type="text/css" href="/assets/css/vendors/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/vendors/bootstrap.min.css">
 
     <!-- Theme css -->
-    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.min.css">
 
     <%- include('includes/head-extra') %>
 
@@ -229,30 +216,30 @@
                                     <div class="row">
                                         <div class="col-lg-6">
                                             <div class="product-slick">
-                                                <div><img loading="lazy" src="<%- productDetails.MAIN_IMAGE %>" alt=""
-                                                        class="img-fluid blur-up  lazyload image_zoom_cls-0 ob-fit">
+                                                <div><img src="<%- productDetails.MAIN_IMAGE %>" alt=""
+                                                        class="img-fluid    image_zoom_cls-0 ob-fit">
                                                 </div>
-                                                <div><img loading="lazy" src="<%- productDetails.IMAGE_1 %>" alt=""
-                                                        class="img-fluid blur-up  lazyload image_zoom_cls-1 ob-fit">
+                                                <div><img src="<%- productDetails.IMAGE_1 %>" alt=""
+                                                        class="img-fluid    image_zoom_cls-1 ob-fit">
                                                 </div>
-                                                <div><img loading="lazy" src="<%- productDetails.IMAGE_2 %>" alt=""
-                                                        class="img-fluid blur-up  lazyload image_zoom_cls-2 ob-fit">
+                                                <div><img src="<%- productDetails.IMAGE_2 %>" alt=""
+                                                        class="img-fluid    image_zoom_cls-2 ob-fit">
                                                 </div>
-                                                <div><img loading="lazy" src="<%- productDetails.IMAGE_3 %>" alt=""
-                                                        class="img-fluid blur-up  lazyload image_zoom_cls-3 ob-fit">
+                                                <div><img src="<%- productDetails.IMAGE_3 %>" alt=""
+                                                        class="img-fluid    image_zoom_cls-3 ob-fit">
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="col-12 p-0">
                                                     <div class="slider-nav">
-                                                        <div><img loading="lazy" src="<%- productDetails.MAIN_IMAGE %>"
-                                                                alt="" class="img-fluid blur-up  lazyload"></div>
-                                                        <div><img loading="lazy" src="<%- productDetails.IMAGE_1 %>"
-                                                                alt="" class="img-fluid blur-up  lazyload"></div>
-                                                        <div><img loading="lazy" src="<%- productDetails.IMAGE_2 %>"
-                                                                alt="" class="img-fluid blur-up  lazyload"></div>
-                                                        <div><img loading="lazy" src="<%- productDetails.IMAGE_3 %>"
-                                                                alt="" class="img-fluid blur-up  lazyload"></div>
+                                                        <div><img src="<%- productDetails.MAIN_IMAGE %>" alt=""
+                                                                class="img-fluid   "></div>
+                                                        <div><img src="<%- productDetails.IMAGE_1 %>" alt=""
+                                                                class="img-fluid   "></div>
+                                                        <div><img src="<%- productDetails.IMAGE_2 %>" alt=""
+                                                                class="img-fluid   "></div>
+                                                        <div><img src="<%- productDetails.IMAGE_3 %>" alt=""
+                                                                class="img-fluid   "></div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -262,8 +249,8 @@
                                                 <!-- <div class="product-count">
                                                     <ul>
                                                         <li>
-                                                            <img loading="lazy" src="/assets/images/person.gif"
-                                                                class="img-fluid blur-up user_img" alt="image">
+                                                            <img  src="/assets/images/person.gif"
+                                                                class="img-fluid  user_img" alt="image">
                                                             <span class="p-counter">44</span>
                                                             <span class="lang">Watching this</span>
                                                         </li>
@@ -306,9 +293,9 @@
                                                                         data-bs-dismiss="modal" aria-label="Close"><span
                                                                             aria-hidden="true">&times;</span></button>
                                                                 </div>
-                                                                <div class="modal-body"><img loading="lazy"
+                                                                <div class="modal-body"><img
                                                                         src="/assets/images/size-chart.jpg" alt=""
-                                                                        class="img-fluid blur-up  lazyload"></div>
+                                                                        class="img-fluid   "></div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -360,25 +347,25 @@
                                                     </div>
                                                 </div>
                                                 <div class="product-buttons">
-                                                    <a href="#"
+                                                    <button
                                                         onclick="addToCartPage('<%-  productDetails.PRODUCT_ID %>', '<%-  productDetails.MAIN_IMAGE %>')"
                                                         data-productImg="<%- productDetails.MAIN_IMAGE %>"
                                                         id="cartEffect" class="btn btn-solid hover-solid btn-animation">
                                                         <i class="fa fa-shopping-cart me-1" aria-hidden="true"></i> add
                                                         to cart
-                                                    </a>
-                                                    <a href="#" onclick="wishlist('<%-  productDetails.PRODUCT_ID %>')"
+                                                    </button>
+                                                    <button onclick="wishlist('<%-  productDetails.PRODUCT_ID %>')"
                                                         class="btn btn-solid">
                                                         <i class="fa fa-bookmark fz-16 me-2" aria-hidden="true"></i>
                                                         wishlist
-                                                    </a>
+                                                    </button>
                                                 </div>
 
                                                 <div class="product-count">
                                                     <ul>
                                                         <li>
-                                                            <img loading="lazy" src="/assets/images/icon/truck.png"
-                                                                class="img-fluid blur-up" alt="image">
+                                                            <img src="/assets/images/icon/truck.png" class="img-fluid "
+                                                                alt="image">
                                                             <span class="lang">Free shipping for orders above $500
                                                                 USD</span>
                                                         </li>
@@ -551,12 +538,12 @@
                             <div class="product-box">
                                 <div class="img-wrapper">
                                     <div class="front">
-                                        <a href="#"><img loading="lazy" src="/assets/images/pro3/33.jpg"
-                                                class="img-fluid blur-up  lazyload bg-img" alt=""></a>
+                                        <a href="#"><img src="/assets/images/pro3/33.jpg" class="img-fluid    bg-img"
+                                                alt=""></a>
                                     </div>
                                     <div class="back">
-                                        <a href="#"><img loading="lazy" src="/assets/images/pro3/34.jpg"
-                                                class="img-fluid blur-up  lazyload bg-img" alt=""></a>
+                                        <a href="#"><img src="/assets/images/pro3/34.jpg" class="img-fluid    bg-img"
+                                                alt=""></a>
                                     </div>
                                     <div class="cart-info cart-wrap">
                                         <button data-bs-toggle="modal" data-bs-target="#addtocart"
@@ -589,12 +576,12 @@
                             <div class="product-box">
                                 <div class="img-wrapper">
                                     <div class="front">
-                                        <a href="#"><img loading="lazy" src="/assets/images/pro3/1.jpg"
-                                                class="img-fluid blur-up  lazyload bg-img" alt=""></a>
+                                        <a href="#"><img src="/assets/images/pro3/1.jpg" class="img-fluid    bg-img"
+                                                alt=""></a>
                                     </div>
                                     <div class="back">
-                                        <a href="#"><img loading="lazy" src="/assets/images/pro3/2.jpg"
-                                                class="img-fluid blur-up  lazyload bg-img" alt=""></a>
+                                        <a href="#"><img src="/assets/images/pro3/2.jpg" class="img-fluid    bg-img"
+                                                alt=""></a>
                                     </div>
                                     <div class="cart-info cart-wrap">
                                         <button data-bs-toggle="modal" data-bs-target="#addtocart"
@@ -627,12 +614,12 @@
                             <div class="product-box">
                                 <div class="img-wrapper">
                                     <div class="front">
-                                        <a href="#"><img loading="lazy" src="/assets/images/pro3/27.jpg"
-                                                class="img-fluid blur-up  lazyload bg-img" alt=""></a>
+                                        <a href="#"><img src="/assets/images/pro3/27.jpg" class="img-fluid    bg-img"
+                                                alt=""></a>
                                     </div>
                                     <div class="back">
-                                        <a href="#"><img loading="lazy" src="/assets/images/pro3/28.jpg"
-                                                class="img-fluid blur-up  lazyload bg-img" alt=""></a>
+                                        <a href="#"><img src="/assets/images/pro3/28.jpg" class="img-fluid    bg-img"
+                                                alt=""></a>
                                     </div>
                                     <div class="cart-info cart-wrap">
                                         <button data-bs-toggle="modal" data-bs-target="#addtocart"
@@ -665,12 +652,12 @@
                             <div class="product-box">
                                 <div class="img-wrapper">
                                     <div class="front">
-                                        <a href="#"><img loading="lazy" src="/assets/images/pro3/35.jpg"
-                                                class="img-fluid blur-up  lazyload bg-img" alt=""></a>
+                                        <a href="#"><img src="/assets/images/pro3/35.jpg" class="img-fluid    bg-img"
+                                                alt=""></a>
                                     </div>
                                     <div class="back">
-                                        <a href="#"><img loading="lazy" src="/assets/images/pro3/36.jpg"
-                                                class="img-fluid blur-up  lazyload bg-img" alt=""></a>
+                                        <a href="#"><img src="/assets/images/pro3/36.jpg" class="img-fluid    bg-img"
+                                                alt=""></a>
                                     </div>
                                     <div class="cart-info cart-wrap">
                                         <button data-bs-toggle="modal" data-bs-target="#addtocart"
@@ -703,12 +690,12 @@
                             <div class="product-box">
                                 <div class="img-wrapper">
                                     <div class="front">
-                                        <a href="#"><img loading="lazy" src="/assets/images/pro3/2.jpg"
-                                                class="img-fluid blur-up  lazyload bg-img" alt=""></a>
+                                        <a href="#"><img src="/assets/images/pro3/2.jpg" class="img-fluid    bg-img"
+                                                alt=""></a>
                                     </div>
                                     <div class="back">
-                                        <a href="#"><img loading="lazy" src="/assets/images/pro3/1.jpg"
-                                                class="img-fluid blur-up  lazyload bg-img" alt=""></a>
+                                        <a href="#"><img src="/assets/images/pro3/1.jpg" class="img-fluid    bg-img"
+                                                alt=""></a>
                                     </div>
                                     <div class="cart-info cart-wrap">
                                         <button data-bs-toggle="modal" data-bs-target="#addtocart"
@@ -741,12 +728,12 @@
                             <div class="product-box">
                                 <div class="img-wrapper">
                                     <div class="front">
-                                        <a href="#"><img loading="lazy" src="/assets/images/pro3/28.jpg"
-                                                class="img-fluid blur-up  lazyload bg-img" alt=""></a>
+                                        <a href="#"><img src="/assets/images/pro3/28.jpg" class="img-fluid    bg-img"
+                                                alt=""></a>
                                     </div>
                                     <div class="back">
-                                        <a href="#"><img loading="lazy" src="/assets/images/pro3/27.jpg"
-                                                class="img-fluid blur-up  lazyload bg-img" alt=""></a>
+                                        <a href="#"><img src="/assets/images/pro3/27.jpg" class="img-fluid    bg-img"
+                                                alt=""></a>
                                     </div>
                                     <div class="cart-info cart-wrap">
                                         <button data-bs-toggle="modal" data-bs-target="#addtocart"
@@ -785,72 +772,6 @@
             <%- include('includes/footer.ejs') %>
                 <!-- footer end -->
 
-
-                <!-- recently purchase product -->
-                <div class="media recently-purchase">
-                    <img loading="lazy" src="/assets/images/pro3/sm.jpg" alt="Floral Dress ">
-                    <div class="media-body">
-                        <div>
-                            <div class="title">
-                                Some recently purchase this item
-                            </div>
-                            <a href="#">
-                                <span class="product-name">
-                                    Floral Dress
-                                </span>
-                            </a>
-                            <small class="timeAgo">50 minutes ago</small>
-                        </div>
-                    </div>
-                    <a href="javascript:void(0)" class="close-popup fa fa-times"></a>
-                </div>
-
-                <!-- Add to cart modal popup start-->
-                <div class="modal fade bd-example-modal-lg theme-modal cart-modal" id="addtocart" tabindex="-1"
-                    role="dialog" aria-hidden="true">
-                    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                            <div class="modal-body modal1">
-                                <div class="container-fluid p-0">
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <div class="modal-bg addtocart">
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                    aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button>
-                                                <div class="media">
-                                                    <a href="#">
-                                                        <img loading="lazy" class="img-fluid blur-up  lazyload pro-img"
-                                                            src="<%- productDetails.MAIN_IMAGE %>" alt="">
-                                                    </a>
-                                                    <div class="media-body align-self-center text-center">
-                                                        <a href="#">
-                                                            <h6>
-                                                                <i class="fa fa-check"></i>Item
-                                                                <span>men full sleeves</span>
-                                                                <span> successfully added to your Cart</span>
-                                                            </h6>
-                                                        </a>
-                                                        <div class="buttons">
-                                                            <a href="#" class="view-cart btn btn-solid">Your cart</a>
-                                                            <a href="#" class="checkout btn btn-solid">Check out</a>
-                                                            <a href="#" class="continue btn btn-solid">Continue
-                                                                shopping</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Add to cart modal popup end-->
-
-
                 <!-- tap to top start -->
                 <div class="tap-top">
                     <div><i class="fa fa-angle-double-up"></i></div>
@@ -860,7 +781,7 @@
 
                 <!-- added to cart notification -->
                 <div class="added-notification">
-                    <img loading="lazy" src="" class="img-fluid " alt="">
+                    <img src="" class="img-fluid " alt="">
                     <h3>added to cart</h3>
                 </div>
 
@@ -873,8 +794,7 @@
                 <!-- menu js-->
                 <script src="/assets/js/menu.js"></script>
 
-                <!-- lazyload js-->
-                <script src="/assets/js/lazysizes.min.js"></script>
+
 
                 <!-- timer js
                 <script src="/assets/js/timer.js"></script> -->
@@ -899,7 +819,7 @@
                 <script src="/CUSTOM/js/sweetalert.form.js"></script>
                 <script src="/CUSTOM/js/sweetalert.min.js"></script>
 
-                <script src="/assets/js/script.js"></script>
+                <script src="/assets/js/script.min.js"></script>
                 <script src="/CUSTOM/js/homeScript.js"></script>
 
                 <script>
